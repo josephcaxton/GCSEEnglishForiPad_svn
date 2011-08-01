@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C8AAA9613E6ECE900C70B2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9513E6ECE900C70B2E /* UIKit.framework */; };
+		7C8AAA9813E6ECE900C70B2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9713E6ECE900C70B2E /* Foundation.framework */; };
+		7C8AAA9A13E6ECE900C70B2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9913E6ECE900C70B2E /* CoreGraphics.framework */; };
+		7C8AAA9C13E6ECE900C70B2E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9B13E6ECE900C70B2E /* CoreData.framework */; };
+		7C8AAAA213E6ECE900C70B2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA013E6ECE900C70B2E /* InfoPlist.strings */; };
+		7C8AAAA413E6ECE900C70B2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA313E6ECE900C70B2E /* main.m */; };
+		7C8AAAA813E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA713E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.m */; };
+		7C8AAAAB13E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA913E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodeld */; };
+		7C8AAAAE13E6ECE900C70B2E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AAAAC13E6ECE900C70B2E /* MainWindow.xib */; };
+		7C8AAAB113E6ECE900C70B2E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AAAB013E6ECE900C70B2E /* RootViewController.m */; };
+		7C8AAAB413E6ECE900C70B2E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AAAB213E6ECE900C70B2E /* RootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7C8AAA9113E6ECE900C70B2E /* GCSEEnglishForiPad_svn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCSEEnglishForiPad_svn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C8AAA9513E6ECE900C70B2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7C8AAA9713E6ECE900C70B2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7C8AAA9913E6ECE900C70B2E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7C8AAA9B13E6ECE900C70B2E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7C8AAA9F13E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Info.plist */ = {isa = PBXFileReference; path = "GCSEEnglishForiPad_svn-Info.plist"; sourceTree = "<group>"; };
+		7C8AAAA113E6ECE900C70B2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7C8AAAA313E6ECE900C70B2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7C8AAAA513E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Prefix.pch */ = {isa = PBXFileReference; path = "GCSEEnglishForiPad_svn-Prefix.pch"; sourceTree = "<group>"; };
+		7C8AAAA613E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.h */ = {isa = PBXFileReference; path = GCSEEnglishForiPad_svnAppDelegate.h; sourceTree = "<group>"; };
+		7C8AAAA713E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCSEEnglishForiPad_svnAppDelegate.m; sourceTree = "<group>"; };
+		7C8AAAAA13E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GCSEEnglishForiPad_svn.xcdatamodel; sourceTree = "<group>"; };
+		7C8AAAAD13E6ECE900C70B2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7C8AAAAF13E6ECE900C70B2E /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		7C8AAAB013E6ECE900C70B2E /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		7C8AAAB313E6ECE900C70B2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C8AAA8E13E6ECE900C70B2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C8AAA9613E6ECE900C70B2E /* UIKit.framework in Frameworks */,
+				7C8AAA9813E6ECE900C70B2E /* Foundation.framework in Frameworks */,
+				7C8AAA9A13E6ECE900C70B2E /* CoreGraphics.framework in Frameworks */,
+				7C8AAA9C13E6ECE900C70B2E /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7C8AAA8613E6ECE900C70B2E = {
+			isa = PBXGroup;
+			children = (
+				7C8AAA9D13E6ECE900C70B2E /* GCSEEnglishForiPad_svn */,
+				7C8AAA9413E6ECE900C70B2E /* Frameworks */,
+				7C8AAA9213E6ECE900C70B2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7C8AAA9213E6ECE900C70B2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C8AAA9113E6ECE900C70B2E /* GCSEEnglishForiPad_svn.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C8AAA9413E6ECE900C70B2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C8AAA9513E6ECE900C70B2E /* UIKit.framework */,
+				7C8AAA9713E6ECE900C70B2E /* Foundation.framework */,
+				7C8AAA9913E6ECE900C70B2E /* CoreGraphics.framework */,
+				7C8AAA9B13E6ECE900C70B2E /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C8AAA9D13E6ECE900C70B2E /* GCSEEnglishForiPad_svn */ = {
+			isa = PBXGroup;
+			children = (
+				7C8AAAA613E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.h */,
+				7C8AAAA713E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.m */,
+				7C8AAAAC13E6ECE900C70B2E /* MainWindow.xib */,
+				7C8AAAAF13E6ECE900C70B2E /* RootViewController.h */,
+				7C8AAAB013E6ECE900C70B2E /* RootViewController.m */,
+				7C8AAAB213E6ECE900C70B2E /* RootViewController.xib */,
+				7C8AAAA913E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodeld */,
+				7C8AAA9E13E6ECE900C70B2E /* Supporting Files */,
+			);
+			path = GCSEEnglishForiPad_svn;
+			sourceTree = "<group>";
+		};
+		7C8AAA9E13E6ECE900C70B2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C8AAA9F13E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Info.plist */,
+				7C8AAAA013E6ECE900C70B2E /* InfoPlist.strings */,
+				7C8AAAA313E6ECE900C70B2E /* main.m */,
+				7C8AAAA513E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7C8AAA9013E6ECE900C70B2E /* GCSEEnglishForiPad_svn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C8AAAB713E6ECE900C70B2E /* Build configuration list for PBXNativeTarget "GCSEEnglishForiPad_svn" */;
+			buildPhases = (
+				7C8AAA8D13E6ECE900C70B2E /* Sources */,
+				7C8AAA8E13E6ECE900C70B2E /* Frameworks */,
+				7C8AAA8F13E6ECE900C70B2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GCSEEnglishForiPad_svn;
+			productName = GCSEEnglishForiPad_svn;
+			productReference = 7C8AAA9113E6ECE900C70B2E /* GCSEEnglishForiPad_svn.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C8AAA8813E6ECE900C70B2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = caxtonidowu;
+			};
+			buildConfigurationList = 7C8AAA8B13E6ECE900C70B2E /* Build configuration list for PBXProject "GCSEEnglishForiPad_svn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7C8AAA8613E6ECE900C70B2E;
+			productRefGroup = 7C8AAA9213E6ECE900C70B2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7C8AAA9013E6ECE900C70B2E /* GCSEEnglishForiPad_svn */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7C8AAA8F13E6ECE900C70B2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C8AAAA213E6ECE900C70B2E /* InfoPlist.strings in Resources */,
+				7C8AAAAE13E6ECE900C70B2E /* MainWindow.xib in Resources */,
+				7C8AAAB413E6ECE900C70B2E /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C8AAA8D13E6ECE900C70B2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C8AAAA413E6ECE900C70B2E /* main.m in Sources */,
+				7C8AAAA813E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.m in Sources */,
+				7C8AAAAB13E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodeld in Sources */,
+				7C8AAAB113E6ECE900C70B2E /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7C8AAAA013E6ECE900C70B2E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C8AAAA113E6ECE900C70B2E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7C8AAAAC13E6ECE900C70B2E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C8AAAAD13E6ECE900C70B2E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		7C8AAAB213E6ECE900C70B2E /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C8AAAB313E6ECE900C70B2E /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7C8AAAB513E6ECE900C70B2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7C8AAAB613E6ECE900C70B2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7C8AAAB813E6ECE900C70B2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch";
+				INFOPLIST_FILE = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7C8AAAB913E6ECE900C70B2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch";
+				INFOPLIST_FILE = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7C8AAA8B13E6ECE900C70B2E /* Build configuration list for PBXProject "GCSEEnglishForiPad_svn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C8AAAB513E6ECE900C70B2E /* Debug */,
+				7C8AAAB613E6ECE900C70B2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C8AAAB713E6ECE900C70B2E /* Build configuration list for PBXNativeTarget "GCSEEnglishForiPad_svn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C8AAAB813E6ECE900C70B2E /* Debug */,
+				7C8AAAB913E6ECE900C70B2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7C8AAAA913E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7C8AAAAA13E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodel */,
+			);
+			currentVersion = 7C8AAAAA13E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodel */;
+			path = GCSEEnglishForiPad_svn.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7C8AAA8813E6ECE900C70B2E /* Project object */;
+}
