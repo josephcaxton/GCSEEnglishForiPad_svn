@@ -13,7 +13,7 @@
 
 @synthesize managedObjectContext;  //, fetchedResultsController;
 @synthesize fetchedResultsController_QT,fetchedResultsController_Topics,fetchedResultsController_Version,QTArray,TopArray;
-@synthesize FileName,Topicbutton,QuestionTemplatebutton,Databutton,VersionButton,PdfButton,VerNumber;
+@synthesize FileName,Topicbutton,QuestionTemplatebutton,Databutton,VersionButton,VerNumber;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -46,15 +46,12 @@ int Version = 0;
 	
 	
 	NSArray *Objs = [fetchedResultsController_Version fetchedObjects];
-	if ([Objs count] > 0) {
-		
-	
 	VerNumber = (DBVersion *)[Objs objectAtIndex:0];
 		
 	if (VerNumber) {
 			Version = [VerNumber.VersionNumber intValue];
 		}
-	}
+	
 	
 }
 
@@ -64,7 +61,7 @@ int Version = 0;
 	int row = button.tag;
 
 	
-	NSString *Mtext = @"";
+	NSString *Mtext =@"";
 	switch (row) {
 		case 0:
 			;
@@ -179,8 +176,10 @@ int Version = 0;
 				NSString *Dataresult = [DataDirectory stringByAppendingString:@"/Chemistry_Data.xml"];
 				
 				//[self loadDataFromXML:Dataresult];
+				
 				[self MyParser:Dataresult]; // I have had to write my own parser as Xml and Html cannot marry.
 				[self DeleteFile:Dataresult]; //Delete file when finished
+				
 				
 				
 			}
@@ -261,7 +260,6 @@ int Version = 0;
 	else if([elementName isEqualToString:@"Question"]){
 		
 		NSManagedObjectContext *context = [self ManagedObjectContext];
-		
 		
 		// QUESTION HEADER TABLE
 		QuestionHeader *QH = [NSEntityDescription insertNewObjectForEntityForName:@"QuestionHeader" inManagedObjectContext:context];
@@ -404,8 +402,8 @@ int Version = 0;
 }
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-	
-	
+	//the parser found some characters inbetween an opening and closing tag
+	//what are you going to do?
 }
 
 
@@ -454,7 +452,9 @@ int Version = 0;
 		NSString *Answer5Correct = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:43]];
 		NSString *Answer5Reason = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:45]];
 		NSString *AccessLevel = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:47]];
-	
+        NSString *Explanation = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:49]];
+
+		
 		NSManagedObjectContext *context = [self ManagedObjectContext];
 		
 		
@@ -497,7 +497,7 @@ int Version = 0;
 		QI.Question = Question;
 		QI.RequireActivityMarker = [NSNumber numberWithInt:[RequireActivityMarker intValue]];
 		QI.AccessLevel = [NSNumber numberWithInt:[AccessLevel intValue]];
-	
+		
 		
 		if ([Answer1Text length] > 0) {
 			
@@ -505,6 +505,11 @@ int Version = 0;
 			[QI addAnswers1Object:Ans1];
 			Ans1.AnswerText = Answer1Text;
 			Ans1.Correct = [NSNumber numberWithInt:[Answer1Correct intValue]];
+            if (Ans1.Correct == [NSNumber numberWithInt:1] && [Explanation length] > 0) {
+                // Which mean we have an explanation to the answer
+                Ans1.Reason = Explanation;
+            }
+
 		}
 		
 		if ([Answer2Text length] > 0) {
@@ -513,6 +518,12 @@ int Version = 0;
 			[QI addAnswers1Object:Ans2];
 			Ans2.AnswerText = Answer2Text;
 			Ans2.Correct = [NSNumber numberWithInt:[Answer2Correct intValue]];
+            if (Ans2.Correct == [NSNumber numberWithInt:1] && [Explanation length] > 0) {
+                // Which mean we have an explanation to the answer
+                Ans2.Reason = Explanation;
+            }
+            
+
 		}
 		
 		
@@ -522,6 +533,12 @@ int Version = 0;
 			[QI addAnswers1Object:Ans3];
 			Ans3.AnswerText = Answer3Text;
 			Ans3.Correct = [NSNumber numberWithInt:[Answer3Correct intValue]];
+            if (Ans3.Correct == [NSNumber numberWithInt:1] && [Explanation length] > 0) {
+                // Which mean we have an explanation to the answer
+                Ans3.Reason = Explanation;
+            }
+            
+
 		}
 		
 		
@@ -531,14 +548,26 @@ int Version = 0;
 			[QI addAnswers1Object:Ans4];
 			Ans4.AnswerText = Answer4Text;
 			Ans4.Correct = [NSNumber numberWithInt:[Answer4Correct intValue]];
+            if (Ans4.Correct == [NSNumber numberWithInt:1] && [Explanation length] > 0) {
+                // Which mean we have an explanation to the answer
+                Ans4.Reason = Explanation;
+            }
+            
+
 		}
-				
+		
 		if ([Answer5Text length] > 0) {
 			
 			Answers *Ans5  = [NSEntityDescription insertNewObjectForEntityForName:@"Answers" inManagedObjectContext:context];
 			[QI addAnswers1Object:Ans5];
 			Ans5.AnswerText = Answer5Text;
 			Ans5.Correct = [NSNumber numberWithInt:[Answer5Correct intValue]];
+            if (Ans5.Correct == [NSNumber numberWithInt:1] && [Explanation length] > 0) {
+                // Which mean we have an explanation to the answer
+                Ans5.Reason = Explanation;
+            }
+            
+
 		}
 		
 		NSError *error = nil;
@@ -586,9 +615,11 @@ int Version = 0;
 		[Answer5Correct release];
 		[Answer5Reason release];
 		[AccessLevel release];
+        [Explanation release];
 		
 	}
 }
+
 
 						 
 
@@ -636,178 +667,6 @@ int Version = 0;
 	[self.navigationController popViewControllerAnimated:YES];
 }
 
-/*-(IBAction)CreatePdfs:(id)sender{
-	
-	/// The Problem with using a webview is that webview does cannot finish loading in the UIwebview in the runloop 
-	// Except at the end.. So i am dumping this.
-	
-	NSArray *Templatepaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *TemplatedocumentsDirectory = [Templatepaths objectAtIndex:0];
-	NSString *Templateresult = [TemplatedocumentsDirectory stringByAppendingString:@"/Chemistry_Data_bak.xml"];
-	
-	NSError* error;
-	NSString* fileContents = [NSString stringWithContentsOfFile:Templateresult encoding:NSWindowsCP1252StringEncoding error:&error];
-	
-	NSArray* pointStrings = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"±"]];
-	
-	for(int idx = 0; idx < pointStrings.count; idx++)
-	{
-		NSString* currentPointString = [pointStrings objectAtIndex:idx];
-		NSArray* arr = [currentPointString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"|"]];
-		NSMutableString *QTDescription = [[NSMutableString alloc] initWithFormat:@"%@",[arr objectAtIndex:1]];
-		NSString *Question = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:13]];
-		
-	UIWebView *webview = [[UIWebView alloc] initWithFrame:CGRectMake(0,0,768,550)];
-	
-	NSMutableString *HTMLString =[[NSMutableString alloc]initWithString:@"<html><body><p>"];
-	[HTMLString appendString:QTDescription];
-	[HTMLString appendString:@"</p></body></html>"];
-						  
-	[webview loadHTMLString:HTMLString baseURL:nil];
-	
-	
-		NSString *DestFileName = [NSString stringWithFormat:@"%@/%@",TemplatedocumentsDirectory,Question];
-		CGRect mediaBox = webview.bounds;     //CGRectMake(0, 0, 768, 550);
-		CGContextRef ctx = CGPDFContextCreateWithURL((CFURLRef)[NSURL fileURLWithPath:DestFileName isDirectory:NO],&mediaBox,NULL);
-		CGPDFContextBeginPage(ctx, NULL);
-		//CGContextScaleCTM(ctx, 1, -1);
-		//CGContextTranslateCTM(ctx, 0, -mediaBox.size.height);
-		
-		//CALayer *webViewLayer;
-//		for (UIView *_subview in [[[webview subviews] objectAtIndex:0] subviews]) {  // Note comment this out if not apple will give you a slap
-//			if ([_subview isKindOfClass:[UIWebDocumentView class]]) {
-//				webViewLayer = [_subview layer];
-//			}
-//		}
-		[webview.layer renderInContext:ctx];
-		CGPDFContextEndPage(ctx);
-		CFRelease(ctx);
-		
-		[QTDescription release];
-		[HTMLString release];
-		[Question release];
-	}
-	
-}*/
-
-void CreateMyPDFFile (CGRect pageRect, const char *filename,const char *picture,const char *text) {
-	
-	// This code block sets up our PDF Context so that we can draw to it
-	CGContextRef pdfContext;
-	CFStringRef path;
-	CFURLRef url;
-	CFMutableDictionaryRef myDictionary = NULL;
-	// Create a CFString from the filename we provide to this method when we call it
-	path = CFStringCreateWithCString (NULL, filename,
-									  kCFStringEncodingUTF8);
-	// Create a CFURL using the CFString we just defined
-	url = CFURLCreateWithFileSystemPath (NULL, path,
-										 kCFURLPOSIXPathStyle, 0);
-	CFRelease (path);
-	// This dictionary contains extra options mostly for 'signing' the PDF
-	myDictionary = CFDictionaryCreateMutable(NULL, 0,
-											 &kCFTypeDictionaryKeyCallBacks,
-											 &kCFTypeDictionaryValueCallBacks);
-	CFDictionarySetValue(myDictionary, kCGPDFContextTitle, CFSTR("My PDF File"));
-	CFDictionarySetValue(myDictionary, kCGPDFContextCreator, CFSTR("My Name"));
-	// Create our PDF Context with the CFURL, the CGRect we provide, and the above defined dictionary
-	pdfContext = CGPDFContextCreateWithURL (url, &pageRect, myDictionary);
-	// Cleanup our mess
-	CFRelease(myDictionary);
-	CFRelease(url);
-	// Done creating our PDF Context, now it's time to draw to it
-	
-	// Starts our first page
-	CGContextBeginPage (pdfContext, &pageRect);
-	
-	// Draws a black rectangle around the page inset by 50 on all sides
-	CGContextStrokeRect(pdfContext, CGRectMake(50, 50, pageRect.size.width - 100, pageRect.size.height - 100));
-	
-	// This code block will create an image that we then draw to the page
-	//const char *picture = "Picture";
-	if ( strcmp(picture, "1")  == 1) {
-		
-	
-	CGImageRef image;
-    CGDataProviderRef provider;
-    CFStringRef picturePath;
-    CFURLRef pictureURL;
-	
-    picturePath = CFStringCreateWithCString (NULL, picture,
-											 kCFStringEncodingUTF8);
-    pictureURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), picturePath, CFSTR("png"), NULL);
-	CFRelease(picturePath);
-    provider = CGDataProviderCreateWithURL (pictureURL);
-    CFRelease (pictureURL);
-    image = CGImageCreateWithPNGDataProvider (provider, NULL, true, kCGRenderingIntentDefault);
-    CGDataProviderRelease (provider);
-    CGContextDrawImage (pdfContext, CGRectMake(200, 200, 207, 385),image);
-    CGImageRelease (image);
-	}
-	// End image code
-	
-	// Adding some text on top of the image we just added
-	CGContextSelectFont (pdfContext, "Helvetica", 16, kCGEncodingMacRoman);
-	CGContextSetTextDrawingMode (pdfContext, kCGTextFill);
-	CGContextSetRGBFillColor (pdfContext, 0, 0, 0, 1);
-	//const char *text = "Hello World!";
-	CGContextShowTextAtPoint (pdfContext, 60, 440, text, strlen(text));
-	// End text
-	
-	// We are done drawing to this page, let's end it
-	// We could add as many pages as we wanted using CGContextBeginPage/CGContextEndPage
-	CGContextEndPage (pdfContext);
-	
-	// We are done with our context now, so we release it
-	CGContextRelease (pdfContext);
-}
-
-
-
--(IBAction)CreatePdfs:(id)sender{
-	
-	NSArray *Templatepaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *TemplatedocumentsDirectory = [Templatepaths objectAtIndex:0];
-	NSString *Templateresult = [TemplatedocumentsDirectory stringByAppendingString:@"/Chemistry_Data.xml"];
-	
-	NSError* error;
-	NSString* fileContents = [NSString stringWithContentsOfFile:Templateresult encoding:NSWindowsCP1252StringEncoding error:&error];
-	
-	NSArray* pointStrings = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"±"]];
-	
-	for(int idx = 0; idx < pointStrings.count -1; idx++)
-	{
-		NSString* currentPointString = [pointStrings objectAtIndex:idx];
-		NSArray* arr = [currentPointString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"|"]];
-		NSString *QText = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:49]];
-		NSString *Question = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:13]];
-		NSString *Picture = [[NSString alloc] initWithFormat:@"%@",[arr objectAtIndex:51]];
-		
-		NSString *DestFileName = [NSString stringWithFormat:@"%@/PDFResults/%@",TemplatedocumentsDirectory,Question];
-		const char *Mfilename =[DestFileName UTF8String];
-		
-		const char *Mpicture =[Picture UTF8String];
-		const char *Mtext = [QText UTF8String];
-		CGRect mediaBox = CGRectMake(0, 0, 768, 550);
-		
-		
-		CreateMyPDFFile(mediaBox,Mfilename,Mpicture,Mtext);
-	
-		[QText release];
-		[Question release];
-		[Picture release];
-	}
-}
-
-
-
-- (void)webViewDidFinishLoad:(UIWebView *)webview {
-	
-	
-	
-	
-}
-	 
 
 #pragma mark -
 #pragma mark Table view data source
@@ -820,7 +679,7 @@ void CreateMyPDFFile (CGRect pageRect, const char *filename,const char *picture,
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 5;
+    return 4;
 }
 
 
@@ -838,7 +697,7 @@ void CreateMyPDFFile (CGRect pageRect, const char *filename,const char *picture,
 			;
 			Topicbutton = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
 			[Topicbutton setTitle:@"Topics" forState:UIControlStateNormal];
-			Topicbutton.frame = CGRectMake(0, 0, 680, 45);
+			Topicbutton.frame = CGRectMake(0, 0, 300, 40);
 			[Topicbutton addTarget:self action:@selector(StartUpload:) forControlEvents:UIControlEventTouchUpInside];
 			[Topicbutton setTag:indexPath.row];
 			[cell.contentView addSubview:Topicbutton]; 
@@ -848,7 +707,7 @@ void CreateMyPDFFile (CGRect pageRect, const char *filename,const char *picture,
 			;
 			QuestionTemplatebutton = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
 			[QuestionTemplatebutton setTitle:@"QuestionTemplate" forState:UIControlStateNormal];
-			QuestionTemplatebutton.frame = CGRectMake(0, 0, 680, 45);
+			QuestionTemplatebutton.frame = CGRectMake(0, 0, 300, 40);
 			[QuestionTemplatebutton addTarget:self action:@selector(StartUpload:) forControlEvents:UIControlEventTouchUpInside];
 			[QuestionTemplatebutton setTag:indexPath.row];
 			[cell.contentView addSubview:QuestionTemplatebutton];
@@ -858,7 +717,7 @@ void CreateMyPDFFile (CGRect pageRect, const char *filename,const char *picture,
 			;
 			Databutton = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
 			[Databutton setTitle:@"Data" forState:UIControlStateNormal];
-			Databutton.frame = CGRectMake(0, 0, 680, 45);
+			Databutton.frame = CGRectMake(0, 0, 300, 40);
 			[Databutton addTarget:self action:@selector(StartUpload:) forControlEvents:UIControlEventTouchUpInside];
 			[Databutton setTag:indexPath.row];
 			[cell.contentView addSubview:Databutton]; 
@@ -867,22 +726,11 @@ void CreateMyPDFFile (CGRect pageRect, const char *filename,const char *picture,
 			;
 			VersionButton = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
 			[VersionButton setTitle:[NSString stringWithFormat:@"Version: %i",Version] forState:UIControlStateNormal];
-			VersionButton.frame = CGRectMake(0, 0, 680, 45);
+			VersionButton.frame = CGRectMake(0, 0, 300, 40);
 			[VersionButton addTarget:self action:@selector(ChangeVersionNumber:) forControlEvents:UIControlEventTouchUpInside];
 			[VersionButton setTag:indexPath.row];
 			[cell.contentView addSubview:VersionButton]; 
 			break;
-			
-		case 4:
-			;
-			PdfButton = [[UIButton buttonWithType:UIButtonTypeRoundedRect] retain];
-			[PdfButton setTitle:[NSString stringWithFormat:@"Create PDFs"] forState:UIControlStateNormal];
-			PdfButton.frame = CGRectMake(0, 0, 680, 45);
-			[PdfButton addTarget:self action:@selector(CreatePdfs:) forControlEvents:UIControlEventTouchUpInside];
-			[PdfButton setTag:indexPath.row];
-			[cell.contentView addSubview:PdfButton]; 
-			break;
-			
 	}
     
     
@@ -1035,7 +883,6 @@ void CreateMyPDFFile (CGRect pageRect, const char *filename,const char *picture,
 	[QuestionTemplatebutton release];
 	[Databutton release];
 	[VersionButton release];
-	[PdfButton release];
 	[fetchedResultsController_Version release];
 	//[VerNumber release];
     [super dealloc];

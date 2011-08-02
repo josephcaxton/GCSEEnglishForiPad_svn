@@ -5,7 +5,7 @@
 //  Created by Joseph caxton-Idowu on 20/10/2010.
 //  Copyright 2010 caxtonidowu. All rights reserved.
 //
-#import <QuartzCore/QuartzCore.h>
+
 #import <UIKit/UIKit.h>
 #import "lk_Topics.h"
 #import "lk_QuestionTemplate.h"
@@ -15,8 +15,7 @@
 #import "Answers.h"
 #import "DBVersion.h"
 
-
-@interface Uploads : UITableViewController <NSFetchedResultsControllerDelegate,UIActionSheetDelegate,NSXMLParserDelegate,UIWebViewDelegate>{
+@interface Uploads : UITableViewController <NSFetchedResultsControllerDelegate,UIActionSheetDelegate,NSXMLParserDelegate>{
 	
 	NSString *FileName;
 	UIButton  *Topicbutton;
@@ -25,7 +24,6 @@
 	NSArray *QTArray;  // array of Question templates
 	NSArray *TopArray;   // array of topics
 	UIButton *VersionButton;
-	UIButton *PdfButton;
 	
 	DBVersion *VerNumber;
 		
@@ -52,7 +50,6 @@
 @property (nonatomic, retain) NSArray *QTArray;
 @property (nonatomic, retain) NSArray *TopArray;
 @property (nonatomic, retain) UIButton *VersionButton;
-@property (nonatomic, retain) UIButton *PdfButton;
 
 @property (nonatomic, retain) DBVersion *VerNumber;
 
@@ -62,7 +59,4 @@
 -(void)loadDataFromXML:(NSString *)FileLocation;
 -(BOOL)DeleteFile:(NSString*)documentFullName;
 -(IBAction)ChangeVersionNumber:(id)sender;
--(IBAction)CreatePdfs:(id)sender;
-- (void)webViewDidFinishLoad:(UIWebView *)webview;
-//-(void) CreatePDFFile (CGRect pageRect, const char *filename,const char *picture,const char *text);
 @end

@@ -47,7 +47,6 @@
 		7C7950B913E81D7C001950EA /* QuestionItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950B113E81D7C001950EA /* QuestionItems.m */; };
 		7C7950BA13E81D7C001950EA /* Topics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950B313E81D7C001950EA /* Topics.m */; };
 		7C7950BD13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950BC13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.m */; };
-		7C7950C013E81E4D001950EA /* Uploads.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950BF13E81E4D001950EA /* Uploads.m */; };
 		7C7950C513E81E77001950EA /* MultipleChoiceSingleAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950C213E81E77001950EA /* MultipleChoiceSingleAnswer.m */; };
 		7C7950C613E81E77001950EA /* MultipleChoiceSingleAnswer1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950C413E81E77001950EA /* MultipleChoiceSingleAnswer1.m */; };
 		7C7950CB13E81E8F001950EA /* DescriptiveType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950C813E81E8F001950EA /* DescriptiveType.m */; };
@@ -100,6 +99,9 @@
 		7C79514413E82427001950EA /* Results.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514313E82427001950EA /* Results.xml */; };
 		7C79514613E82434001950EA /* DescriptiveAnswers.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514513E82434001950EA /* DescriptiveAnswers.xml */; };
 		7C79514B13E824AF001950EA /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514A13E824AF001950EA /* GCSEEnglish.sqlite */; };
+		7C79515013E82FC8001950EA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514F13E82FC7001950EA /* Settings.bundle */; };
+		7C79515213E8300D001950EA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C79515113E8300D001950EA /* MessageUI.framework */; };
+		7C79516013E83437001950EA /* Uploads.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79515E13E83437001950EA /* Uploads.m */; };
 		7C8AAA9613E6ECE900C70B2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9513E6ECE900C70B2E /* UIKit.framework */; };
 		7C8AAA9813E6ECE900C70B2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9713E6ECE900C70B2E /* Foundation.framework */; };
 		7C8AAA9A13E6ECE900C70B2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9913E6ECE900C70B2E /* CoreGraphics.framework */; };
@@ -159,8 +161,6 @@
 		7C7950B313E81D7C001950EA /* Topics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topics.m; sourceTree = "<group>"; };
 		7C7950BB13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerDataSource_Num_Questions.h; sourceTree = "<group>"; };
 		7C7950BC13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerDataSource_Num_Questions.m; sourceTree = "<group>"; };
-		7C7950BE13E81E4D001950EA /* Uploads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uploads.h; sourceTree = "<group>"; };
-		7C7950BF13E81E4D001950EA /* Uploads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Uploads.m; sourceTree = "<group>"; };
 		7C7950C113E81E77001950EA /* MultipleChoiceSingleAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleChoiceSingleAnswer.h; sourceTree = "<group>"; };
 		7C7950C213E81E77001950EA /* MultipleChoiceSingleAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleChoiceSingleAnswer.m; sourceTree = "<group>"; };
 		7C7950C313E81E77001950EA /* MultipleChoiceSingleAnswer1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleChoiceSingleAnswer1.h; sourceTree = "<group>"; };
@@ -245,6 +245,10 @@
 		7C79514313E82427001950EA /* Results.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Results.xml; sourceTree = "<group>"; };
 		7C79514513E82434001950EA /* DescriptiveAnswers.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DescriptiveAnswers.xml; sourceTree = "<group>"; };
 		7C79514A13E824AF001950EA /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
+		7C79514F13E82FC7001950EA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		7C79515113E8300D001950EA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessageUI.framework; sourceTree = "<group>"; };
+		7C79515E13E83437001950EA /* Uploads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Uploads.m; sourceTree = "<group>"; };
+		7C79515F13E83437001950EA /* Uploads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uploads.h; sourceTree = "<group>"; };
 		7C8AAA9113E6ECE900C70B2E /* iTest U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTest U.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8AAA9513E6ECE900C70B2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C8AAA9713E6ECE900C70B2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -271,6 +275,7 @@
 				7C7950E913E81FFB001950EA /* StoreKit.framework in Frameworks */,
 				7C7950EB13E82013001950EA /* QuartzCore.framework in Frameworks */,
 				7C7950ED13E8203E001950EA /* libsqlite3.dylib in Frameworks */,
+				7C79515213E8300D001950EA /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,8 +480,8 @@
 		7C79505D13E8028B001950EA /* UploadData */ = {
 			isa = PBXGroup;
 			children = (
-				7C7950BE13E81E4D001950EA /* Uploads.h */,
-				7C7950BF13E81E4D001950EA /* Uploads.m */,
+				7C79515E13E83437001950EA /* Uploads.m */,
+				7C79515F13E83437001950EA /* Uploads.h */,
 			);
 			name = UploadData;
 			sourceTree = "<group>";
@@ -484,6 +489,7 @@
 		7C8AAA8613E6ECE900C70B2E = {
 			isa = PBXGroup;
 			children = (
+				7C79514F13E82FC7001950EA /* Settings.bundle */,
 				7C79505113E800DD001950EA /* App Files */,
 				7C79505313E8010A001950EA /* Classes */,
 				7C79505413E80142001950EA /* ClientSideClasses */,
@@ -512,6 +518,7 @@
 		7C8AAA9413E6ECE900C70B2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C79515113E8300D001950EA /* MessageUI.framework */,
 				7C7950EC13E8203E001950EA /* libsqlite3.dylib */,
 				7C7950EA13E82013001950EA /* QuartzCore.framework */,
 				7C7950E813E81FFB001950EA /* StoreKit.framework */,
@@ -635,6 +642,7 @@
 				7C79514413E82427001950EA /* Results.xml in Resources */,
 				7C79514613E82434001950EA /* DescriptiveAnswers.xml in Resources */,
 				7C79514B13E824AF001950EA /* GCSEEnglish.sqlite in Resources */,
+				7C79515013E82FC8001950EA /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,7 +665,6 @@
 				7C7950B913E81D7C001950EA /* QuestionItems.m in Sources */,
 				7C7950BA13E81D7C001950EA /* Topics.m in Sources */,
 				7C7950BD13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.m in Sources */,
-				7C7950C013E81E4D001950EA /* Uploads.m in Sources */,
 				7C7950C513E81E77001950EA /* MultipleChoiceSingleAnswer.m in Sources */,
 				7C7950C613E81E77001950EA /* MultipleChoiceSingleAnswer1.m in Sources */,
 				7C7950CB13E81E8F001950EA /* DescriptiveType.m in Sources */,
@@ -690,6 +697,7 @@
 				7C79513A13E823C3001950EA /* CustomStoreObserver.m in Sources */,
 				7C79513D13E823D4001950EA /* LearnersCloudSamplesVideos.m in Sources */,
 				7C79514013E823E5001950EA /* VideoPlayer.m in Sources */,
+				7C79516013E83437001950EA /* Uploads.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
