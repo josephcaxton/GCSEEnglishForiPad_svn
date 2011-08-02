@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>250To500</key>
-	<string>com.LearnersCloud.iEvaluatorforIpad.chemistry.250To500</string>
+	<string>com.LearnersCloud.iEvaluatorforIpad.English.250To500</string>
 	<key>250To750</key>
-	<string>com.LearnersCloud.iEvaluatorforIpad.chemistry.250To750</string>
+	<string>com.LearnersCloud.iEvaluatorforIpad.English.250To750</string>
 	<key>250To1040</key>
-	<string>com.LearnersCloud.iEvaluatorforIpad.chemistry.250To1040</string>
+	<string>com.LearnersCloud.iEvaluatorforIpad.English.250To1040</string>
 </dict>
 </plist>
