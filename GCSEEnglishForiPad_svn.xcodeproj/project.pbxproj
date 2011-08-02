@@ -35,18 +35,42 @@
 		7C79509713E80F7C001950EA /* English.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79509613E80F7C001950EA /* English.png */; };
 		7C79509913E80F91001950EA /* Physics.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79509813E80F91001950EA /* Physics.png */; };
 		7C79509B13E80FA6001950EA /* Chemistry.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79509A13E80FA6001950EA /* Chemistry.png */; };
+		7C79509D13E81C86001950EA /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C79509C13E81C86001950EA /* MainWindow.xib */; };
+		7C7950A013E81CC3001950EA /* EvaluatorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79509F13E81CC3001950EA /* EvaluatorAppDelegate.m */; };
+		7C7950A313E81CEE001950EA /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950A213E81CEE001950EA /* TabBar.m */; };
+		7C7950A613E81D12001950EA /* ActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950A513E81D12001950EA /* ActivityIndicator.m */; };
+		7C7950B413E81D7C001950EA /* Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950A813E81D7C001950EA /* Answers.m */; };
+		7C7950B513E81D7C001950EA /* DBVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950AA13E81D7C001950EA /* DBVersion.m */; };
+		7C7950B613E81D7C001950EA /* Evaluator.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950AB13E81D7C001950EA /* Evaluator.xcdatamodel */; };
+		7C7950B713E81D7C001950EA /* lk_QuestionTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950AD13E81D7C001950EA /* lk_QuestionTemplate.m */; };
+		7C7950B813E81D7C001950EA /* QuestionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950AF13E81D7C001950EA /* QuestionHeader.m */; };
+		7C7950B913E81D7C001950EA /* QuestionItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950B113E81D7C001950EA /* QuestionItems.m */; };
+		7C7950BA13E81D7C001950EA /* Topics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950B313E81D7C001950EA /* Topics.m */; };
+		7C7950BD13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950BC13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.m */; };
+		7C7950C013E81E4D001950EA /* Uploads.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950BF13E81E4D001950EA /* Uploads.m */; };
+		7C7950C513E81E77001950EA /* MultipleChoiceSingleAnswer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950C213E81E77001950EA /* MultipleChoiceSingleAnswer.m */; };
+		7C7950C613E81E77001950EA /* MultipleChoiceSingleAnswer1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950C413E81E77001950EA /* MultipleChoiceSingleAnswer1.m */; };
+		7C7950CB13E81E8F001950EA /* DescriptiveType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950C813E81E8F001950EA /* DescriptiveType.m */; };
+		7C7950CC13E81E8F001950EA /* DescriptiveType1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950CA13E81E8F001950EA /* DescriptiveType1.m */; };
+		7C7950D113E81EA6001950EA /* TrueOrFalseYesOrNo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950CE13E81EA6001950EA /* TrueOrFalseYesOrNo.m */; };
+		7C7950D213E81EA6001950EA /* TrueOrFalseYesOrNo1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950D013E81EA6001950EA /* TrueOrFalseYesOrNo1.m */; };
+		7C7950D713E81EB8001950EA /* FillTheBlanks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950D413E81EB8001950EA /* FillTheBlanks.m */; };
+		7C7950D813E81EB8001950EA /* FillTheBlanks1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950D613E81EB8001950EA /* FillTheBlanks1.m */; };
+		7C7950DD13E81EDE001950EA /* lk_QuestionListsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950DA13E81EDE001950EA /* lk_QuestionListsCell.m */; };
+		7C7950DE13E81EDE001950EA /* lk_TopicsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950DC13E81EDE001950EA /* lk_TopicsCell.m */; };
+		7C7950E113E81EFB001950EA /* WebViewInCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950E013E81EFB001950EA /* WebViewInCell.m */; };
+		7C7950E313E81FC1001950EA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950E213E81FC1001950EA /* AudioToolbox.framework */; };
+		7C7950E513E81FDC001950EA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950E413E81FDC001950EA /* SystemConfiguration.framework */; };
+		7C7950E713E81FEC001950EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950E613E81FEC001950EA /* MediaPlayer.framework */; };
+		7C7950E913E81FFB001950EA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950E813E81FFB001950EA /* StoreKit.framework */; };
+		7C7950EB13E82013001950EA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950EA13E82013001950EA /* QuartzCore.framework */; };
+		7C7950ED13E8203E001950EA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950EC13E8203E001950EA /* libsqlite3.dylib */; };
 		7C8AAA9613E6ECE900C70B2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9513E6ECE900C70B2E /* UIKit.framework */; };
 		7C8AAA9813E6ECE900C70B2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9713E6ECE900C70B2E /* Foundation.framework */; };
 		7C8AAA9A13E6ECE900C70B2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9913E6ECE900C70B2E /* CoreGraphics.framework */; };
 		7C8AAA9C13E6ECE900C70B2E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9B13E6ECE900C70B2E /* CoreData.framework */; };
 		7C8AAAA213E6ECE900C70B2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA013E6ECE900C70B2E /* InfoPlist.strings */; };
 		7C8AAAA413E6ECE900C70B2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA313E6ECE900C70B2E /* main.m */; };
-		7C8AAAA813E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA713E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.m */; };
-		7C8AAAAB13E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA913E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodeld */; };
-		7C8AAAAE13E6ECE900C70B2E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AAAAC13E6ECE900C70B2E /* MainWindow.xib */; };
-		7C8AAAB113E6ECE900C70B2E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AAAB013E6ECE900C70B2E /* RootViewController.m */; };
-		7C8AAAB413E6ECE900C70B2E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AAAB213E6ECE900C70B2E /* RootViewController.xib */; };
-		7C8AAABD13E6F05900C70B2E /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AAABB13E6F05900C70B2E /* MainWindow-iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +102,58 @@
 		7C79509613E80F7C001950EA /* English.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = English.png; sourceTree = "<group>"; };
 		7C79509813E80F91001950EA /* Physics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Physics.png; sourceTree = "<group>"; };
 		7C79509A13E80FA6001950EA /* Chemistry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chemistry.png; sourceTree = "<group>"; };
+		7C79509C13E81C86001950EA /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		7C79509E13E81CC3001950EA /* EvaluatorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluatorAppDelegate.h; sourceTree = "<group>"; };
+		7C79509F13E81CC3001950EA /* EvaluatorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaluatorAppDelegate.m; sourceTree = "<group>"; };
+		7C7950A113E81CEE001950EA /* TabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBar.h; sourceTree = "<group>"; };
+		7C7950A213E81CEE001950EA /* TabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar.m; sourceTree = "<group>"; };
+		7C7950A413E81D12001950EA /* ActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicator.h; sourceTree = "<group>"; };
+		7C7950A513E81D12001950EA /* ActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicator.m; sourceTree = "<group>"; };
+		7C7950A713E81D7C001950EA /* Answers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answers.h; sourceTree = "<group>"; };
+		7C7950A813E81D7C001950EA /* Answers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answers.m; sourceTree = "<group>"; };
+		7C7950A913E81D7C001950EA /* DBVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBVersion.h; sourceTree = "<group>"; };
+		7C7950AA13E81D7C001950EA /* DBVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBVersion.m; sourceTree = "<group>"; };
+		7C7950AB13E81D7C001950EA /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evaluator.xcdatamodel; sourceTree = "<group>"; };
+		7C7950AC13E81D7C001950EA /* lk_QuestionTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lk_QuestionTemplate.h; sourceTree = "<group>"; };
+		7C7950AD13E81D7C001950EA /* lk_QuestionTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lk_QuestionTemplate.m; sourceTree = "<group>"; };
+		7C7950AE13E81D7C001950EA /* QuestionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionHeader.h; sourceTree = "<group>"; };
+		7C7950AF13E81D7C001950EA /* QuestionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionHeader.m; sourceTree = "<group>"; };
+		7C7950B013E81D7C001950EA /* QuestionItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionItems.h; sourceTree = "<group>"; };
+		7C7950B113E81D7C001950EA /* QuestionItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionItems.m; sourceTree = "<group>"; };
+		7C7950B213E81D7C001950EA /* Topics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Topics.h; sourceTree = "<group>"; };
+		7C7950B313E81D7C001950EA /* Topics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Topics.m; sourceTree = "<group>"; };
+		7C7950BB13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerDataSource_Num_Questions.h; sourceTree = "<group>"; };
+		7C7950BC13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerDataSource_Num_Questions.m; sourceTree = "<group>"; };
+		7C7950BE13E81E4D001950EA /* Uploads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uploads.h; sourceTree = "<group>"; };
+		7C7950BF13E81E4D001950EA /* Uploads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Uploads.m; sourceTree = "<group>"; };
+		7C7950C113E81E77001950EA /* MultipleChoiceSingleAnswer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleChoiceSingleAnswer.h; sourceTree = "<group>"; };
+		7C7950C213E81E77001950EA /* MultipleChoiceSingleAnswer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleChoiceSingleAnswer.m; sourceTree = "<group>"; };
+		7C7950C313E81E77001950EA /* MultipleChoiceSingleAnswer1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleChoiceSingleAnswer1.h; sourceTree = "<group>"; };
+		7C7950C413E81E77001950EA /* MultipleChoiceSingleAnswer1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleChoiceSingleAnswer1.m; sourceTree = "<group>"; };
+		7C7950C713E81E8F001950EA /* DescriptiveType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptiveType.h; sourceTree = "<group>"; };
+		7C7950C813E81E8F001950EA /* DescriptiveType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptiveType.m; sourceTree = "<group>"; };
+		7C7950C913E81E8F001950EA /* DescriptiveType1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptiveType1.h; sourceTree = "<group>"; };
+		7C7950CA13E81E8F001950EA /* DescriptiveType1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptiveType1.m; sourceTree = "<group>"; };
+		7C7950CD13E81EA6001950EA /* TrueOrFalseYesOrNo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrueOrFalseYesOrNo.h; sourceTree = "<group>"; };
+		7C7950CE13E81EA6001950EA /* TrueOrFalseYesOrNo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrueOrFalseYesOrNo.m; sourceTree = "<group>"; };
+		7C7950CF13E81EA6001950EA /* TrueOrFalseYesOrNo1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrueOrFalseYesOrNo1.h; sourceTree = "<group>"; };
+		7C7950D013E81EA6001950EA /* TrueOrFalseYesOrNo1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrueOrFalseYesOrNo1.m; sourceTree = "<group>"; };
+		7C7950D313E81EB8001950EA /* FillTheBlanks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillTheBlanks.h; sourceTree = "<group>"; };
+		7C7950D413E81EB8001950EA /* FillTheBlanks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FillTheBlanks.m; sourceTree = "<group>"; };
+		7C7950D513E81EB8001950EA /* FillTheBlanks1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FillTheBlanks1.h; sourceTree = "<group>"; };
+		7C7950D613E81EB8001950EA /* FillTheBlanks1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FillTheBlanks1.m; sourceTree = "<group>"; };
+		7C7950D913E81EDE001950EA /* lk_QuestionListsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lk_QuestionListsCell.h; sourceTree = "<group>"; };
+		7C7950DA13E81EDE001950EA /* lk_QuestionListsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lk_QuestionListsCell.m; sourceTree = "<group>"; };
+		7C7950DB13E81EDE001950EA /* lk_TopicsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lk_TopicsCell.h; sourceTree = "<group>"; };
+		7C7950DC13E81EDE001950EA /* lk_TopicsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lk_TopicsCell.m; sourceTree = "<group>"; };
+		7C7950DF13E81EFB001950EA /* WebViewInCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewInCell.h; sourceTree = "<group>"; };
+		7C7950E013E81EFB001950EA /* WebViewInCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewInCell.m; sourceTree = "<group>"; };
+		7C7950E213E81FC1001950EA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioToolbox.framework; sourceTree = "<group>"; };
+		7C7950E413E81FDC001950EA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemConfiguration.framework; sourceTree = "<group>"; };
+		7C7950E613E81FEC001950EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MediaPlayer.framework; sourceTree = "<group>"; };
+		7C7950E813E81FFB001950EA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StoreKit.framework; sourceTree = "<group>"; };
+		7C7950EA13E82013001950EA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
+		7C7950EC13E8203E001950EA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.dylib; sourceTree = "<group>"; };
 		7C8AAA9113E6ECE900C70B2E /* iTest U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTest U.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8AAA9513E6ECE900C70B2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C8AAA9713E6ECE900C70B2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,14 +163,6 @@
 		7C8AAAA113E6ECE900C70B2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C8AAAA313E6ECE900C70B2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GCSEEnglishForiPad_svn/main.m; sourceTree = "<group>"; };
 		7C8AAAA513E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GCSEEnglishForiPad_svn-Prefix.pch"; path = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch"; sourceTree = "<group>"; };
-		7C8AAAA613E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCSEEnglishForiPad_svnAppDelegate.h; sourceTree = "<group>"; };
-		7C8AAAA713E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCSEEnglishForiPad_svnAppDelegate.m; sourceTree = "<group>"; };
-		7C8AAAAA13E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GCSEEnglishForiPad_svn.xcdatamodel; sourceTree = "<group>"; };
-		7C8AAAAD13E6ECE900C70B2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		7C8AAAAF13E6ECE900C70B2E /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		7C8AAAB013E6ECE900C70B2E /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		7C8AAAB313E6ECE900C70B2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
-		7C8AAABC13E6F05900C70B2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +174,12 @@
 				7C8AAA9813E6ECE900C70B2E /* Foundation.framework in Frameworks */,
 				7C8AAA9A13E6ECE900C70B2E /* CoreGraphics.framework in Frameworks */,
 				7C8AAA9C13E6ECE900C70B2E /* CoreData.framework in Frameworks */,
+				7C7950E313E81FC1001950EA /* AudioToolbox.framework in Frameworks */,
+				7C7950E513E81FDC001950EA /* SystemConfiguration.framework in Frameworks */,
+				7C7950E713E81FEC001950EA /* MediaPlayer.framework in Frameworks */,
+				7C7950E913E81FFB001950EA /* StoreKit.framework in Frameworks */,
+				7C7950EB13E82013001950EA /* QuartzCore.framework in Frameworks */,
+				7C7950ED13E8203E001950EA /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +217,19 @@
 		7C79505713E801D8001950EA /* Model and Model Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7C7950AB13E81D7C001950EA /* Evaluator.xcdatamodel */,
+				7C7950A713E81D7C001950EA /* Answers.h */,
+				7C7950A813E81D7C001950EA /* Answers.m */,
+				7C7950A913E81D7C001950EA /* DBVersion.h */,
+				7C7950AA13E81D7C001950EA /* DBVersion.m */,
+				7C7950AC13E81D7C001950EA /* lk_QuestionTemplate.h */,
+				7C7950AD13E81D7C001950EA /* lk_QuestionTemplate.m */,
+				7C7950AE13E81D7C001950EA /* QuestionHeader.h */,
+				7C7950AF13E81D7C001950EA /* QuestionHeader.m */,
+				7C7950B013E81D7C001950EA /* QuestionItems.h */,
+				7C7950B113E81D7C001950EA /* QuestionItems.m */,
+				7C7950B213E81D7C001950EA /* Topics.h */,
+				7C7950B313E81D7C001950EA /* Topics.m */,
 			);
 			name = "Model and Model Classes";
 			sourceTree = "<group>";
@@ -159,6 +246,8 @@
 		7C79505913E80220001950EA /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				7C7950BB13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.h */,
+				7C7950BC13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.m */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -203,6 +292,12 @@
 		7C79505B13E80263001950EA /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7C7950D913E81EDE001950EA /* lk_QuestionListsCell.h */,
+				7C7950DA13E81EDE001950EA /* lk_QuestionListsCell.m */,
+				7C7950DB13E81EDE001950EA /* lk_TopicsCell.h */,
+				7C7950DC13E81EDE001950EA /* lk_TopicsCell.m */,
+				7C7950DF13E81EFB001950EA /* WebViewInCell.h */,
+				7C7950E013E81EFB001950EA /* WebViewInCell.m */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -210,6 +305,22 @@
 		7C79505C13E80275001950EA /* Template Views */ = {
 			isa = PBXGroup;
 			children = (
+				7C7950C113E81E77001950EA /* MultipleChoiceSingleAnswer.h */,
+				7C7950C213E81E77001950EA /* MultipleChoiceSingleAnswer.m */,
+				7C7950C313E81E77001950EA /* MultipleChoiceSingleAnswer1.h */,
+				7C7950C413E81E77001950EA /* MultipleChoiceSingleAnswer1.m */,
+				7C7950C713E81E8F001950EA /* DescriptiveType.h */,
+				7C7950C813E81E8F001950EA /* DescriptiveType.m */,
+				7C7950C913E81E8F001950EA /* DescriptiveType1.h */,
+				7C7950CA13E81E8F001950EA /* DescriptiveType1.m */,
+				7C7950CD13E81EA6001950EA /* TrueOrFalseYesOrNo.h */,
+				7C7950CE13E81EA6001950EA /* TrueOrFalseYesOrNo.m */,
+				7C7950CF13E81EA6001950EA /* TrueOrFalseYesOrNo1.h */,
+				7C7950D013E81EA6001950EA /* TrueOrFalseYesOrNo1.m */,
+				7C7950D313E81EB8001950EA /* FillTheBlanks.h */,
+				7C7950D413E81EB8001950EA /* FillTheBlanks.m */,
+				7C7950D513E81EB8001950EA /* FillTheBlanks1.h */,
+				7C7950D613E81EB8001950EA /* FillTheBlanks1.m */,
 			);
 			name = "Template Views";
 			sourceTree = "<group>";
@@ -217,6 +328,8 @@
 		7C79505D13E8028B001950EA /* UploadData */ = {
 			isa = PBXGroup;
 			children = (
+				7C7950BE13E81E4D001950EA /* Uploads.h */,
+				7C7950BF13E81E4D001950EA /* Uploads.m */,
 			);
 			name = UploadData;
 			sourceTree = "<group>";
@@ -252,6 +365,12 @@
 		7C8AAA9413E6ECE900C70B2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C7950EC13E8203E001950EA /* libsqlite3.dylib */,
+				7C7950EA13E82013001950EA /* QuartzCore.framework */,
+				7C7950E813E81FFB001950EA /* StoreKit.framework */,
+				7C7950E613E81FEC001950EA /* MediaPlayer.framework */,
+				7C7950E413E81FDC001950EA /* SystemConfiguration.framework */,
+				7C7950E213E81FC1001950EA /* AudioToolbox.framework */,
 				7C8AAA9513E6ECE900C70B2E /* UIKit.framework */,
 				7C8AAA9713E6ECE900C70B2E /* Foundation.framework */,
 				7C8AAA9913E6ECE900C70B2E /* CoreGraphics.framework */,
@@ -263,14 +382,13 @@
 		7C8AAA9D13E6ECE900C70B2E /* Main Window */ = {
 			isa = PBXGroup;
 			children = (
-				7C8AAABB13E6F05900C70B2E /* MainWindow-iPad.xib */,
-				7C8AAAA613E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.h */,
-				7C8AAAA713E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.m */,
-				7C8AAAAC13E6ECE900C70B2E /* MainWindow.xib */,
-				7C8AAAAF13E6ECE900C70B2E /* RootViewController.h */,
-				7C8AAAB013E6ECE900C70B2E /* RootViewController.m */,
-				7C8AAAB213E6ECE900C70B2E /* RootViewController.xib */,
-				7C8AAAA913E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodeld */,
+				7C79509C13E81C86001950EA /* MainWindow.xib */,
+				7C79509E13E81CC3001950EA /* EvaluatorAppDelegate.h */,
+				7C79509F13E81CC3001950EA /* EvaluatorAppDelegate.m */,
+				7C7950A113E81CEE001950EA /* TabBar.h */,
+				7C7950A213E81CEE001950EA /* TabBar.m */,
+				7C7950A413E81D12001950EA /* ActivityIndicator.h */,
+				7C7950A513E81D12001950EA /* ActivityIndicator.m */,
 			);
 			name = "Main Window";
 			path = GCSEEnglishForiPad_svn;
@@ -327,9 +445,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C8AAAA213E6ECE900C70B2E /* InfoPlist.strings in Resources */,
-				7C8AAAAE13E6ECE900C70B2E /* MainWindow.xib in Resources */,
-				7C8AAAB413E6ECE900C70B2E /* RootViewController.xib in Resources */,
-				7C8AAABD13E6F05900C70B2E /* MainWindow-iPad.xib in Resources */,
 				7C79506313E80979001950EA /* Icon@2x.png in Resources */,
 				7C79506413E80979001950EA /* Icon.png in Resources */,
 				7C79506613E809C0001950EA /* Icon-72.png in Resources */,
@@ -358,6 +473,7 @@
 				7C79509713E80F7C001950EA /* English.png in Resources */,
 				7C79509913E80F91001950EA /* Physics.png in Resources */,
 				7C79509B13E80FA6001950EA /* Chemistry.png in Resources */,
+				7C79509D13E81C86001950EA /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,9 +485,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C8AAAA413E6ECE900C70B2E /* main.m in Sources */,
-				7C8AAAA813E6ECE900C70B2E /* GCSEEnglishForiPad_svnAppDelegate.m in Sources */,
-				7C8AAAAB13E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodeld in Sources */,
-				7C8AAAB113E6ECE900C70B2E /* RootViewController.m in Sources */,
+				7C7950A013E81CC3001950EA /* EvaluatorAppDelegate.m in Sources */,
+				7C7950A313E81CEE001950EA /* TabBar.m in Sources */,
+				7C7950A613E81D12001950EA /* ActivityIndicator.m in Sources */,
+				7C7950B413E81D7C001950EA /* Answers.m in Sources */,
+				7C7950B513E81D7C001950EA /* DBVersion.m in Sources */,
+				7C7950B613E81D7C001950EA /* Evaluator.xcdatamodel in Sources */,
+				7C7950B713E81D7C001950EA /* lk_QuestionTemplate.m in Sources */,
+				7C7950B813E81D7C001950EA /* QuestionHeader.m in Sources */,
+				7C7950B913E81D7C001950EA /* QuestionItems.m in Sources */,
+				7C7950BA13E81D7C001950EA /* Topics.m in Sources */,
+				7C7950BD13E81E0E001950EA /* CustomPickerDataSource_Num_Questions.m in Sources */,
+				7C7950C013E81E4D001950EA /* Uploads.m in Sources */,
+				7C7950C513E81E77001950EA /* MultipleChoiceSingleAnswer.m in Sources */,
+				7C7950C613E81E77001950EA /* MultipleChoiceSingleAnswer1.m in Sources */,
+				7C7950CB13E81E8F001950EA /* DescriptiveType.m in Sources */,
+				7C7950CC13E81E8F001950EA /* DescriptiveType1.m in Sources */,
+				7C7950D113E81EA6001950EA /* TrueOrFalseYesOrNo.m in Sources */,
+				7C7950D213E81EA6001950EA /* TrueOrFalseYesOrNo1.m in Sources */,
+				7C7950D713E81EB8001950EA /* FillTheBlanks.m in Sources */,
+				7C7950D813E81EB8001950EA /* FillTheBlanks1.m in Sources */,
+				7C7950DD13E81EDE001950EA /* lk_QuestionListsCell.m in Sources */,
+				7C7950DE13E81EDE001950EA /* lk_TopicsCell.m in Sources */,
+				7C7950E113E81EFB001950EA /* WebViewInCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,30 +521,6 @@
 			);
 			name = InfoPlist.strings;
 			path = GCSEEnglishForiPad_svn;
-			sourceTree = "<group>";
-		};
-		7C8AAAAC13E6ECE900C70B2E /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C8AAAAD13E6ECE900C70B2E /* en */,
-			);
-			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		7C8AAAB213E6ECE900C70B2E /* RootViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C8AAAB313E6ECE900C70B2E /* en */,
-			);
-			name = RootViewController.xib;
-			sourceTree = "<group>";
-		};
-		7C8AAABB13E6F05900C70B2E /* MainWindow-iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C8AAABC13E6F05900C70B2E /* en */,
-			);
-			name = "MainWindow-iPad.xib";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -464,10 +576,18 @@
 		7C8AAAB813E6ECE900C70B2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch";
 				INFOPLIST_FILE = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "iTest U";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
@@ -477,10 +597,18 @@
 		7C8AAAB913E6ECE900C70B2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch";
 				INFOPLIST_FILE = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "iTest U";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
@@ -509,19 +637,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7C8AAAA913E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7C8AAAAA13E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodel */,
-			);
-			currentVersion = 7C8AAAAA13E6ECE900C70B2E /* GCSEEnglishForiPad_svn.xcdatamodel */;
-			path = GCSEEnglishForiPad_svn.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7C8AAA8813E6ECE900C70B2E /* Project object */;
 }
