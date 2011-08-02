@@ -99,6 +99,7 @@
 		7C79514213E82411001950EA /* AttributionIpad.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514113E82411001950EA /* AttributionIpad.pdf */; };
 		7C79514413E82427001950EA /* Results.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514313E82427001950EA /* Results.xml */; };
 		7C79514613E82434001950EA /* DescriptiveAnswers.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514513E82434001950EA /* DescriptiveAnswers.xml */; };
+		7C79514B13E824AF001950EA /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514A13E824AF001950EA /* GCSEEnglish.sqlite */; };
 		7C8AAA9613E6ECE900C70B2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9513E6ECE900C70B2E /* UIKit.framework */; };
 		7C8AAA9813E6ECE900C70B2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9713E6ECE900C70B2E /* Foundation.framework */; };
 		7C8AAA9A13E6ECE900C70B2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9913E6ECE900C70B2E /* CoreGraphics.framework */; };
@@ -243,6 +244,7 @@
 		7C79514113E82411001950EA /* AttributionIpad.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AttributionIpad.pdf; sourceTree = "<group>"; };
 		7C79514313E82427001950EA /* Results.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Results.xml; sourceTree = "<group>"; };
 		7C79514513E82434001950EA /* DescriptiveAnswers.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DescriptiveAnswers.xml; sourceTree = "<group>"; };
+		7C79514A13E824AF001950EA /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
 		7C8AAA9113E6ECE900C70B2E /* iTest U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTest U.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8AAA9513E6ECE900C70B2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C8AAA9713E6ECE900C70B2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -278,6 +280,7 @@
 		7C79505113E800DD001950EA /* App Files */ = {
 			isa = PBXGroup;
 			children = (
+				7C79514A13E824AF001950EA /* GCSEEnglish.sqlite */,
 				7C79514113E82411001950EA /* AttributionIpad.pdf */,
 				7C79514313E82427001950EA /* Results.xml */,
 				7C79514513E82434001950EA /* DescriptiveAnswers.xml */,
@@ -631,6 +634,7 @@
 				7C79514213E82411001950EA /* AttributionIpad.pdf in Resources */,
 				7C79514413E82427001950EA /* Results.xml in Resources */,
 				7C79514613E82434001950EA /* DescriptiveAnswers.xml in Resources */,
+				7C79514B13E824AF001950EA /* GCSEEnglish.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

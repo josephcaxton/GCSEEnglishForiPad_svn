@@ -36,7 +36,7 @@
 	if (!context) {
 		
 		UIAlertView *ContextError = [[UIAlertView alloc] initWithTitle: @"Cannot create context" 
-									message: @"Error creating a connction to database" delegate: self 
+									message: @"Error creating a connection to database" delegate: self 
 													cancelButtonTitle: @"Ok" otherButtonTitles: nil];
 	
 		
@@ -225,11 +225,11 @@
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
     NSString *documentsDir = [paths objectAtIndex:0];
-    DevicePath = [documentsDir stringByAppendingPathComponent:@"Evaluator.sqlite"];
+    DevicePath = [documentsDir stringByAppendingPathComponent:@"GCSEEnglish.sqlite"];
 	ResultsXMLDestination = [documentsDir stringByAppendingPathComponent:@"Results.xml"];
 	DescriptiveAnswersXMLDestination = [documentsDir stringByAppendingPathComponent:@"DescriptiveAnswers.xml"];
 	
-    BundlePath = [[NSBundle mainBundle] pathForResource:@"Evaluator" ofType:@"sqlite"];
+    BundlePath = [[NSBundle mainBundle] pathForResource:@"GCSEEnglish" ofType:@"sqlite"];
 	ResultsXML = [[NSBundle mainBundle] pathForResource:@"Results" ofType:@"xml"];
 	DescriptiveAnswersXML = [[NSBundle mainBundle] pathForResource:@"DescriptiveAnswers" ofType:@"xml"];
 	
@@ -459,7 +459,7 @@
         return persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"Evaluator.sqlite"]];
+    NSURL *storeURL = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"GCSEEnglish.sqlite"]];
 	
 	/* Turn on automatic store migration
 	NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
