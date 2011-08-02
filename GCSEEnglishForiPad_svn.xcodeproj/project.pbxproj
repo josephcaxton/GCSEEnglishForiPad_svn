@@ -65,6 +65,40 @@
 		7C7950E913E81FFB001950EA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950E813E81FFB001950EA /* StoreKit.framework */; };
 		7C7950EB13E82013001950EA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950EA13E82013001950EA /* QuartzCore.framework */; };
 		7C7950ED13E8203E001950EA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950EC13E8203E001950EA /* libsqlite3.dylib */; };
+		7C7950EF13E82123001950EA /* 60-signpost.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7950EE13E82123001950EA /* 60-signpost.png */; };
+		7C7950F113E82135001950EA /* buynow.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7C7950F013E82135001950EA /* buynow.jpeg */; };
+		7C7950F313E82143001950EA /* 80-shopping-cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7950F213E82143001950EA /* 80-shopping-cart.png */; };
+		7C7950F513E82153001950EA /* LearnersCloudLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7950F413E82153001950EA /* LearnersCloudLogo.png */; };
+		7C7950F713E82162001950EA /* 130-dice.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7950F613E82162001950EA /* 130-dice.png */; };
+		7C7950F913E8216F001950EA /* 44-shoebox.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7950F813E8216F001950EA /* 44-shoebox.png */; };
+		7C7950FB13E8217C001950EA /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7950FA13E8217C001950EA /* 20-gear2.png */; };
+		7C7950FD13E8218A001950EA /* 10-medical.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7950FC13E8218A001950EA /* 10-medical.png */; };
+		7C79510013E821A8001950EA /* Start.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950FF13E821A8001950EA /* Start.m */; };
+		7C79510313E821B8001950EA /* ClientEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79510213E821B8001950EA /* ClientEngine.m */; };
+		7C79510613E821CD001950EA /* ClientAnswers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79510513E821CD001950EA /* ClientAnswers.m */; };
+		7C79510913E821F9001950EA /* AdminDashBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79510813E821F9001950EA /* AdminDashBoard.m */; };
+		7C79510C13E82209001950EA /* lk_QuestionLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79510B13E82209001950EA /* lk_QuestionLists.m */; };
+		7C79510E13E82218001950EA /* lk_QuestionListHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C79510D13E82218001950EA /* lk_QuestionListHeader.xib */; };
+		7C79511213E82227001950EA /* lk_Topics.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79511013E82227001950EA /* lk_Topics.m */; };
+		7C79511313E82227001950EA /* lk_Topics.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C79511113E82227001950EA /* lk_Topics.xib */; };
+		7C79511613E822F3001950EA /* SelectQuestionTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79511513E822F3001950EA /* SelectQuestionTemplate.m */; };
+		7C79511913E82306001950EA /* SelectTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79511813E82306001950EA /* SelectTopic.m */; };
+		7C79511C13E82317001950EA /* SelectAllocatedMarks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79511B13E82317001950EA /* SelectAllocatedMarks.m */; };
+		7C79511F13E82329001950EA /* SelectDifficulty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79511E13E82328001950EA /* SelectDifficulty.m */; };
+		7C79512213E8233B001950EA /* ViewQuestionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79512113E8233B001950EA /* ViewQuestionList.m */; };
+		7C79512513E82350001950EA /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79512413E82350001950EA /* Report.m */; };
+		7C79512813E82360001950EA /* CheckExistingFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79512713E82360001950EA /* CheckExistingFiles.m */; };
+		7C79512B13E82370001950EA /* Help.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79512A13E82370001950EA /* Help.m */; };
+		7C79512E13E82380001950EA /* CopyrightLicense.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79512D13E82380001950EA /* CopyrightLicense.m */; };
+		7C79513113E82390001950EA /* HelpVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79513013E82390001950EA /* HelpVideo.m */; };
+		7C79513413E8239E001950EA /* Attribution.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79513313E8239E001950EA /* Attribution.m */; };
+		7C79513713E823AE001950EA /* Buy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79513613E823AE001950EA /* Buy.m */; };
+		7C79513A13E823C3001950EA /* CustomStoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79513913E823C3001950EA /* CustomStoreObserver.m */; };
+		7C79513D13E823D4001950EA /* LearnersCloudSamplesVideos.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79513C13E823D4001950EA /* LearnersCloudSamplesVideos.m */; };
+		7C79514013E823E5001950EA /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79513F13E823E5001950EA /* VideoPlayer.m */; };
+		7C79514213E82411001950EA /* AttributionIpad.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514113E82411001950EA /* AttributionIpad.pdf */; };
+		7C79514413E82427001950EA /* Results.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514313E82427001950EA /* Results.xml */; };
+		7C79514613E82434001950EA /* DescriptiveAnswers.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514513E82434001950EA /* DescriptiveAnswers.xml */; };
 		7C8AAA9613E6ECE900C70B2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9513E6ECE900C70B2E /* UIKit.framework */; };
 		7C8AAA9813E6ECE900C70B2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9713E6ECE900C70B2E /* Foundation.framework */; };
 		7C8AAA9A13E6ECE900C70B2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9913E6ECE900C70B2E /* CoreGraphics.framework */; };
@@ -154,6 +188,61 @@
 		7C7950E813E81FFB001950EA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StoreKit.framework; sourceTree = "<group>"; };
 		7C7950EA13E82013001950EA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
 		7C7950EC13E8203E001950EA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.dylib; sourceTree = "<group>"; };
+		7C7950EE13E82123001950EA /* 60-signpost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "60-signpost.png"; sourceTree = "<group>"; };
+		7C7950F013E82135001950EA /* buynow.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = buynow.jpeg; sourceTree = "<group>"; };
+		7C7950F213E82143001950EA /* 80-shopping-cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "80-shopping-cart.png"; sourceTree = "<group>"; };
+		7C7950F413E82153001950EA /* LearnersCloudLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LearnersCloudLogo.png; sourceTree = "<group>"; };
+		7C7950F613E82162001950EA /* 130-dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "130-dice.png"; sourceTree = "<group>"; };
+		7C7950F813E8216F001950EA /* 44-shoebox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "44-shoebox.png"; sourceTree = "<group>"; };
+		7C7950FA13E8217C001950EA /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
+		7C7950FC13E8218A001950EA /* 10-medical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10-medical.png"; sourceTree = "<group>"; };
+		7C7950FE13E821A8001950EA /* Start.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Start.h; sourceTree = "<group>"; };
+		7C7950FF13E821A8001950EA /* Start.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Start.m; sourceTree = "<group>"; };
+		7C79510113E821B8001950EA /* ClientEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientEngine.h; sourceTree = "<group>"; };
+		7C79510213E821B8001950EA /* ClientEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientEngine.m; sourceTree = "<group>"; };
+		7C79510413E821CD001950EA /* ClientAnswers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientAnswers.h; sourceTree = "<group>"; };
+		7C79510513E821CD001950EA /* ClientAnswers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientAnswers.m; sourceTree = "<group>"; };
+		7C79510713E821F9001950EA /* AdminDashBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminDashBoard.h; sourceTree = "<group>"; };
+		7C79510813E821F9001950EA /* AdminDashBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminDashBoard.m; sourceTree = "<group>"; };
+		7C79510A13E82209001950EA /* lk_QuestionLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lk_QuestionLists.h; sourceTree = "<group>"; };
+		7C79510B13E82209001950EA /* lk_QuestionLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lk_QuestionLists.m; sourceTree = "<group>"; };
+		7C79510D13E82218001950EA /* lk_QuestionListHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = lk_QuestionListHeader.xib; sourceTree = "<group>"; };
+		7C79510F13E82227001950EA /* lk_Topics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lk_Topics.h; sourceTree = "<group>"; };
+		7C79511013E82227001950EA /* lk_Topics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lk_Topics.m; sourceTree = "<group>"; };
+		7C79511113E82227001950EA /* lk_Topics.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = lk_Topics.xib; sourceTree = "<group>"; };
+		7C79511413E822F3001950EA /* SelectQuestionTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectQuestionTemplate.h; sourceTree = "<group>"; };
+		7C79511513E822F3001950EA /* SelectQuestionTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectQuestionTemplate.m; sourceTree = "<group>"; };
+		7C79511713E82306001950EA /* SelectTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTopic.h; sourceTree = "<group>"; };
+		7C79511813E82306001950EA /* SelectTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTopic.m; sourceTree = "<group>"; };
+		7C79511A13E82317001950EA /* SelectAllocatedMarks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAllocatedMarks.h; sourceTree = "<group>"; };
+		7C79511B13E82317001950EA /* SelectAllocatedMarks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAllocatedMarks.m; sourceTree = "<group>"; };
+		7C79511D13E82328001950EA /* SelectDifficulty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectDifficulty.h; sourceTree = "<group>"; };
+		7C79511E13E82328001950EA /* SelectDifficulty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectDifficulty.m; sourceTree = "<group>"; };
+		7C79512013E8233B001950EA /* ViewQuestionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewQuestionList.h; sourceTree = "<group>"; };
+		7C79512113E8233B001950EA /* ViewQuestionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewQuestionList.m; sourceTree = "<group>"; };
+		7C79512313E82350001950EA /* Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Report.h; sourceTree = "<group>"; };
+		7C79512413E82350001950EA /* Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Report.m; sourceTree = "<group>"; };
+		7C79512613E82360001950EA /* CheckExistingFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckExistingFiles.h; sourceTree = "<group>"; };
+		7C79512713E82360001950EA /* CheckExistingFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckExistingFiles.m; sourceTree = "<group>"; };
+		7C79512913E82370001950EA /* Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Help.h; sourceTree = "<group>"; };
+		7C79512A13E82370001950EA /* Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Help.m; sourceTree = "<group>"; };
+		7C79512C13E82380001950EA /* CopyrightLicense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyrightLicense.h; sourceTree = "<group>"; };
+		7C79512D13E82380001950EA /* CopyrightLicense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyrightLicense.m; sourceTree = "<group>"; };
+		7C79512F13E82390001950EA /* HelpVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpVideo.h; sourceTree = "<group>"; };
+		7C79513013E82390001950EA /* HelpVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpVideo.m; sourceTree = "<group>"; };
+		7C79513213E8239E001950EA /* Attribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attribution.h; sourceTree = "<group>"; };
+		7C79513313E8239E001950EA /* Attribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attribution.m; sourceTree = "<group>"; };
+		7C79513513E823AE001950EA /* Buy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buy.h; sourceTree = "<group>"; };
+		7C79513613E823AE001950EA /* Buy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buy.m; sourceTree = "<group>"; };
+		7C79513813E823C3001950EA /* CustomStoreObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomStoreObserver.h; sourceTree = "<group>"; };
+		7C79513913E823C3001950EA /* CustomStoreObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomStoreObserver.m; sourceTree = "<group>"; };
+		7C79513B13E823D4001950EA /* LearnersCloudSamplesVideos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnersCloudSamplesVideos.h; sourceTree = "<group>"; };
+		7C79513C13E823D4001950EA /* LearnersCloudSamplesVideos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnersCloudSamplesVideos.m; sourceTree = "<group>"; };
+		7C79513E13E823E5001950EA /* VideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
+		7C79513F13E823E5001950EA /* VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
+		7C79514113E82411001950EA /* AttributionIpad.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AttributionIpad.pdf; sourceTree = "<group>"; };
+		7C79514313E82427001950EA /* Results.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Results.xml; sourceTree = "<group>"; };
+		7C79514513E82434001950EA /* DescriptiveAnswers.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DescriptiveAnswers.xml; sourceTree = "<group>"; };
 		7C8AAA9113E6ECE900C70B2E /* iTest U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTest U.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8AAA9513E6ECE900C70B2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C8AAA9713E6ECE900C70B2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -189,6 +278,9 @@
 		7C79505113E800DD001950EA /* App Files */ = {
 			isa = PBXGroup;
 			children = (
+				7C79514113E82411001950EA /* AttributionIpad.pdf */,
+				7C79514313E82427001950EA /* Results.xml */,
+				7C79514513E82434001950EA /* DescriptiveAnswers.xml */,
 			);
 			name = "App Files";
 			sourceTree = "<group>";
@@ -196,6 +288,44 @@
 		7C79505313E8010A001950EA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7C79510713E821F9001950EA /* AdminDashBoard.h */,
+				7C79510813E821F9001950EA /* AdminDashBoard.m */,
+				7C79510A13E82209001950EA /* lk_QuestionLists.h */,
+				7C79510B13E82209001950EA /* lk_QuestionLists.m */,
+				7C79510D13E82218001950EA /* lk_QuestionListHeader.xib */,
+				7C79510F13E82227001950EA /* lk_Topics.h */,
+				7C79511013E82227001950EA /* lk_Topics.m */,
+				7C79511113E82227001950EA /* lk_Topics.xib */,
+				7C79511413E822F3001950EA /* SelectQuestionTemplate.h */,
+				7C79511513E822F3001950EA /* SelectQuestionTemplate.m */,
+				7C79511713E82306001950EA /* SelectTopic.h */,
+				7C79511813E82306001950EA /* SelectTopic.m */,
+				7C79511A13E82317001950EA /* SelectAllocatedMarks.h */,
+				7C79511B13E82317001950EA /* SelectAllocatedMarks.m */,
+				7C79511D13E82328001950EA /* SelectDifficulty.h */,
+				7C79511E13E82328001950EA /* SelectDifficulty.m */,
+				7C79512013E8233B001950EA /* ViewQuestionList.h */,
+				7C79512113E8233B001950EA /* ViewQuestionList.m */,
+				7C79512313E82350001950EA /* Report.h */,
+				7C79512413E82350001950EA /* Report.m */,
+				7C79512613E82360001950EA /* CheckExistingFiles.h */,
+				7C79512713E82360001950EA /* CheckExistingFiles.m */,
+				7C79512913E82370001950EA /* Help.h */,
+				7C79512A13E82370001950EA /* Help.m */,
+				7C79512C13E82380001950EA /* CopyrightLicense.h */,
+				7C79512D13E82380001950EA /* CopyrightLicense.m */,
+				7C79512F13E82390001950EA /* HelpVideo.h */,
+				7C79513013E82390001950EA /* HelpVideo.m */,
+				7C79513213E8239E001950EA /* Attribution.h */,
+				7C79513313E8239E001950EA /* Attribution.m */,
+				7C79513513E823AE001950EA /* Buy.h */,
+				7C79513613E823AE001950EA /* Buy.m */,
+				7C79513813E823C3001950EA /* CustomStoreObserver.h */,
+				7C79513913E823C3001950EA /* CustomStoreObserver.m */,
+				7C79513B13E823D4001950EA /* LearnersCloudSamplesVideos.h */,
+				7C79513C13E823D4001950EA /* LearnersCloudSamplesVideos.m */,
+				7C79513E13E823E5001950EA /* VideoPlayer.h */,
+				7C79513F13E823E5001950EA /* VideoPlayer.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -203,6 +333,12 @@
 		7C79505413E80142001950EA /* ClientSideClasses */ = {
 			isa = PBXGroup;
 			children = (
+				7C7950FE13E821A8001950EA /* Start.h */,
+				7C7950FF13E821A8001950EA /* Start.m */,
+				7C79510113E821B8001950EA /* ClientEngine.h */,
+				7C79510213E821B8001950EA /* ClientEngine.m */,
+				7C79510413E821CD001950EA /* ClientAnswers.h */,
+				7C79510513E821CD001950EA /* ClientAnswers.m */,
 			);
 			name = ClientSideClasses;
 			sourceTree = "<group>";
@@ -210,6 +346,14 @@
 		7C79505613E80176001950EA /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				7C7950EE13E82123001950EA /* 60-signpost.png */,
+				7C7950F013E82135001950EA /* buynow.jpeg */,
+				7C7950F213E82143001950EA /* 80-shopping-cart.png */,
+				7C7950F413E82153001950EA /* LearnersCloudLogo.png */,
+				7C7950F613E82162001950EA /* 130-dice.png */,
+				7C7950F813E8216F001950EA /* 44-shoebox.png */,
+				7C7950FA13E8217C001950EA /* 20-gear2.png */,
+				7C7950FC13E8218A001950EA /* 10-medical.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -474,6 +618,19 @@
 				7C79509913E80F91001950EA /* Physics.png in Resources */,
 				7C79509B13E80FA6001950EA /* Chemistry.png in Resources */,
 				7C79509D13E81C86001950EA /* MainWindow.xib in Resources */,
+				7C7950EF13E82123001950EA /* 60-signpost.png in Resources */,
+				7C7950F113E82135001950EA /* buynow.jpeg in Resources */,
+				7C7950F313E82143001950EA /* 80-shopping-cart.png in Resources */,
+				7C7950F513E82153001950EA /* LearnersCloudLogo.png in Resources */,
+				7C7950F713E82162001950EA /* 130-dice.png in Resources */,
+				7C7950F913E8216F001950EA /* 44-shoebox.png in Resources */,
+				7C7950FB13E8217C001950EA /* 20-gear2.png in Resources */,
+				7C7950FD13E8218A001950EA /* 10-medical.png in Resources */,
+				7C79510E13E82218001950EA /* lk_QuestionListHeader.xib in Resources */,
+				7C79511313E82227001950EA /* lk_Topics.xib in Resources */,
+				7C79514213E82411001950EA /* AttributionIpad.pdf in Resources */,
+				7C79514413E82427001950EA /* Results.xml in Resources */,
+				7C79514613E82434001950EA /* DescriptiveAnswers.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +665,27 @@
 				7C7950DD13E81EDE001950EA /* lk_QuestionListsCell.m in Sources */,
 				7C7950DE13E81EDE001950EA /* lk_TopicsCell.m in Sources */,
 				7C7950E113E81EFB001950EA /* WebViewInCell.m in Sources */,
+				7C79510013E821A8001950EA /* Start.m in Sources */,
+				7C79510313E821B8001950EA /* ClientEngine.m in Sources */,
+				7C79510613E821CD001950EA /* ClientAnswers.m in Sources */,
+				7C79510913E821F9001950EA /* AdminDashBoard.m in Sources */,
+				7C79510C13E82209001950EA /* lk_QuestionLists.m in Sources */,
+				7C79511213E82227001950EA /* lk_Topics.m in Sources */,
+				7C79511613E822F3001950EA /* SelectQuestionTemplate.m in Sources */,
+				7C79511913E82306001950EA /* SelectTopic.m in Sources */,
+				7C79511C13E82317001950EA /* SelectAllocatedMarks.m in Sources */,
+				7C79511F13E82329001950EA /* SelectDifficulty.m in Sources */,
+				7C79512213E8233B001950EA /* ViewQuestionList.m in Sources */,
+				7C79512513E82350001950EA /* Report.m in Sources */,
+				7C79512813E82360001950EA /* CheckExistingFiles.m in Sources */,
+				7C79512B13E82370001950EA /* Help.m in Sources */,
+				7C79512E13E82380001950EA /* CopyrightLicense.m in Sources */,
+				7C79513113E82390001950EA /* HelpVideo.m in Sources */,
+				7C79513413E8239E001950EA /* Attribution.m in Sources */,
+				7C79513713E823AE001950EA /* Buy.m in Sources */,
+				7C79513A13E823C3001950EA /* CustomStoreObserver.m in Sources */,
+				7C79513D13E823D4001950EA /* LearnersCloudSamplesVideos.m in Sources */,
+				7C79514013E823E5001950EA /* VideoPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
