@@ -58,7 +58,6 @@
 		7C7950DD13E81EDE001950EA /* lk_QuestionListsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950DA13E81EDE001950EA /* lk_QuestionListsCell.m */; };
 		7C7950DE13E81EDE001950EA /* lk_TopicsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950DC13E81EDE001950EA /* lk_TopicsCell.m */; };
 		7C7950E113E81EFB001950EA /* WebViewInCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7950E013E81EFB001950EA /* WebViewInCell.m */; };
-		7C7950E313E81FC1001950EA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950E213E81FC1001950EA /* AudioToolbox.framework */; };
 		7C7950E513E81FDC001950EA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950E413E81FDC001950EA /* SystemConfiguration.framework */; };
 		7C7950E713E81FEC001950EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950E613E81FEC001950EA /* MediaPlayer.framework */; };
 		7C7950E913E81FFB001950EA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7950E813E81FFB001950EA /* StoreKit.framework */; };
@@ -102,6 +101,7 @@
 		7C79515013E82FC8001950EA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514F13E82FC7001950EA /* Settings.bundle */; };
 		7C79515213E8300D001950EA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C79515113E8300D001950EA /* MessageUI.framework */; };
 		7C79516013E83437001950EA /* Uploads.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79515E13E83437001950EA /* Uploads.m */; };
+		7C79516213E83528001950EA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C79516113E83528001950EA /* AudioToolbox.framework */; };
 		7C8AAA9613E6ECE900C70B2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9513E6ECE900C70B2E /* UIKit.framework */; };
 		7C8AAA9813E6ECE900C70B2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9713E6ECE900C70B2E /* Foundation.framework */; };
 		7C8AAA9A13E6ECE900C70B2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9913E6ECE900C70B2E /* CoreGraphics.framework */; };
@@ -183,7 +183,6 @@
 		7C7950DC13E81EDE001950EA /* lk_TopicsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lk_TopicsCell.m; sourceTree = "<group>"; };
 		7C7950DF13E81EFB001950EA /* WebViewInCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewInCell.h; sourceTree = "<group>"; };
 		7C7950E013E81EFB001950EA /* WebViewInCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewInCell.m; sourceTree = "<group>"; };
-		7C7950E213E81FC1001950EA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioToolbox.framework; sourceTree = "<group>"; };
 		7C7950E413E81FDC001950EA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemConfiguration.framework; sourceTree = "<group>"; };
 		7C7950E613E81FEC001950EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MediaPlayer.framework; sourceTree = "<group>"; };
 		7C7950E813E81FFB001950EA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StoreKit.framework; sourceTree = "<group>"; };
@@ -249,6 +248,7 @@
 		7C79515113E8300D001950EA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessageUI.framework; sourceTree = "<group>"; };
 		7C79515E13E83437001950EA /* Uploads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Uploads.m; sourceTree = "<group>"; };
 		7C79515F13E83437001950EA /* Uploads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uploads.h; sourceTree = "<group>"; };
+		7C79516113E83528001950EA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioToolbox.framework; sourceTree = "<group>"; };
 		7C8AAA9113E6ECE900C70B2E /* iTest U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTest U.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8AAA9513E6ECE900C70B2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C8AAA9713E6ECE900C70B2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -269,13 +269,13 @@
 				7C8AAA9813E6ECE900C70B2E /* Foundation.framework in Frameworks */,
 				7C8AAA9A13E6ECE900C70B2E /* CoreGraphics.framework in Frameworks */,
 				7C8AAA9C13E6ECE900C70B2E /* CoreData.framework in Frameworks */,
-				7C7950E313E81FC1001950EA /* AudioToolbox.framework in Frameworks */,
 				7C7950E513E81FDC001950EA /* SystemConfiguration.framework in Frameworks */,
 				7C7950E713E81FEC001950EA /* MediaPlayer.framework in Frameworks */,
 				7C7950E913E81FFB001950EA /* StoreKit.framework in Frameworks */,
 				7C7950EB13E82013001950EA /* QuartzCore.framework in Frameworks */,
 				7C7950ED13E8203E001950EA /* libsqlite3.dylib in Frameworks */,
 				7C79515213E8300D001950EA /* MessageUI.framework in Frameworks */,
+				7C79516213E83528001950EA /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,13 +518,13 @@
 		7C8AAA9413E6ECE900C70B2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C79516113E83528001950EA /* AudioToolbox.framework */,
 				7C79515113E8300D001950EA /* MessageUI.framework */,
 				7C7950EC13E8203E001950EA /* libsqlite3.dylib */,
 				7C7950EA13E82013001950EA /* QuartzCore.framework */,
 				7C7950E813E81FFB001950EA /* StoreKit.framework */,
 				7C7950E613E81FEC001950EA /* MediaPlayer.framework */,
 				7C7950E413E81FDC001950EA /* SystemConfiguration.framework */,
-				7C7950E213E81FC1001950EA /* AudioToolbox.framework */,
 				7C8AAA9513E6ECE900C70B2E /* UIKit.framework */,
 				7C8AAA9713E6ECE900C70B2E /* Foundation.framework */,
 				7C8AAA9913E6ECE900C70B2E /* CoreGraphics.framework */,
