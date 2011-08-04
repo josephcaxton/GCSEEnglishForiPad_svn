@@ -26,7 +26,7 @@
     [tabBarController setViewControllers:viewControllers];
 
     
-    //Copy database over if the database is not there on the device.
+    //Copy database over if the database is not there on the device. test
 	
 	[self CopyDataBase];
 	SecondThread = nil;
