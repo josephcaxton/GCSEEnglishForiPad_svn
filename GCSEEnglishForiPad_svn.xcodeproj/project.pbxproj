@@ -107,7 +107,6 @@
 		7C8AAA9C13E6ECE900C70B2E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9B13E6ECE900C70B2E /* CoreData.framework */; };
 		7C8AAAA213E6ECE900C70B2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA013E6ECE900C70B2E /* InfoPlist.strings */; };
 		7C8AAAA413E6ECE900C70B2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA313E6ECE900C70B2E /* main.m */; };
-		7C934D7713EA8DE1009CAF38 /* Evaluator.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 7C934D7613EA8DE1009CAF38 /* Evaluator.xcdatamodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -258,7 +257,6 @@
 		7C8AAAA113E6ECE900C70B2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C8AAAA313E6ECE900C70B2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GCSEEnglishForiPad_svn/main.m; sourceTree = "<group>"; };
 		7C8AAAA513E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GCSEEnglishForiPad_svn-Prefix.pch"; path = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch"; sourceTree = "<group>"; };
-		7C934D7613EA8DE1009CAF38 /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = Evaluator.xcdatamodel; path = ../EvaluatorForIPad_svn/Evaluator.xcdatamodeld/Evaluator.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,7 +368,6 @@
 		7C79505713E801D8001950EA /* Model and Model Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7C934D7613EA8DE1009CAF38 /* Evaluator.xcdatamodel */,
 				7C7950A713E81D7C001950EA /* Answers.h */,
 				7C7950A813E81D7C001950EA /* Answers.m */,
 				7C7950A913E81D7C001950EA /* DBVersion.h */,
@@ -699,7 +696,6 @@
 				7C79513D13E823D4001950EA /* LearnersCloudSamplesVideos.m in Sources */,
 				7C79514013E823E5001950EA /* VideoPlayer.m in Sources */,
 				7C79516013E83437001950EA /* Uploads.m in Sources */,
-				7C934D7713EA8DE1009CAF38 /* Evaluator.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
