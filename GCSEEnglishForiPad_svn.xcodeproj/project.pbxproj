@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C5DBE6E13EA9EBF00E404BB /* Evaluator.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DBE6D13EA9EBF00E404BB /* Evaluator.xcdatamodel */; };
 		7C79506313E80979001950EA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79506113E80979001950EA /* Icon@2x.png */; };
 		7C79506413E80979001950EA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79506213E80979001950EA /* Icon.png */; };
 		7C79506613E809C0001950EA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79506513E809C0001950EA /* Icon-72.png */; };
@@ -110,6 +111,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C5DBE6D13EA9EBF00E404BB /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evaluator.xcdatamodel; sourceTree = "<group>"; };
 		7C79506113E80979001950EA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		7C79506213E80979001950EA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		7C79506513E809C0001950EA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 		7C79505713E801D8001950EA /* Model and Model Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7C5DBE6D13EA9EBF00E404BB /* Evaluator.xcdatamodel */,
 				7C7950A713E81D7C001950EA /* Answers.h */,
 				7C7950A813E81D7C001950EA /* Answers.m */,
 				7C7950A913E81D7C001950EA /* DBVersion.h */,
@@ -696,6 +699,7 @@
 				7C79513D13E823D4001950EA /* LearnersCloudSamplesVideos.m in Sources */,
 				7C79514013E823E5001950EA /* VideoPlayer.m in Sources */,
 				7C79516013E83437001950EA /* Uploads.m in Sources */,
+				7C5DBE6E13EA9EBF00E404BB /* Evaluator.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
