@@ -1276,7 +1276,7 @@
 		7C79513213E8239E001950EA /* Attribution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attribution.h; sourceTree = "<group>"; };
 		7C79513313E8239E001950EA /* Attribution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attribution.m; sourceTree = "<group>"; };
 		7C79513513E823AE001950EA /* Buy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buy.h; sourceTree = "<group>"; };
-		7C79513613E823AE001950EA /* Buy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buy.m; sourceTree = "<group>"; };
+		7C79513613E823AE001950EA /* Buy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Buy.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7C79513813E823C3001950EA /* CustomStoreObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomStoreObserver.h; sourceTree = "<group>"; };
 		7C79513913E823C3001950EA /* CustomStoreObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomStoreObserver.m; sourceTree = "<group>"; };
 		7C79513B13E823D4001950EA /* LearnersCloudSamplesVideos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnersCloudSamplesVideos.h; sourceTree = "<group>"; };

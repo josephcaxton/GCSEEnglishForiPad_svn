@@ -150,7 +150,7 @@ int Version = 0;
 				
 			NSArray *Topicspaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 			NSString *TopicsdocumentsDirectory = [Topicspaths objectAtIndex:0];
-			NSString *Topicsresult = [TopicsdocumentsDirectory stringByAppendingString:@"/ChemistryTopics.xml"];
+			NSString *Topicsresult = [TopicsdocumentsDirectory stringByAppendingString:@"/EnglishTopics.xml"];
 				
 			[self loadDataFromXML:Topicsresult];
 			
@@ -162,7 +162,7 @@ int Version = 0;
 				
 				NSArray *Templatepaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 				NSString *TemplatedocumentsDirectory = [Templatepaths objectAtIndex:0];
-				NSString *Templateresult = [TemplatedocumentsDirectory stringByAppendingString:@"/ChemistryQuestionTemplates.xml"];
+				NSString *Templateresult = [TemplatedocumentsDirectory stringByAppendingString:@"/EnglishQuestionTemplates.xml"];
 				
 				[self loadDataFromXML:Templateresult];
 				
@@ -173,7 +173,7 @@ int Version = 0;
 				
 				NSArray *DataPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 				NSString *DataDirectory = [DataPaths objectAtIndex:0];
-				NSString *Dataresult = [DataDirectory stringByAppendingString:@"/Chemistry_Data.xml"];
+				NSString *Dataresult = [DataDirectory stringByAppendingString:@"/English_Data.xml"];
 				
 				//[self loadDataFromXML:Dataresult];
 				
