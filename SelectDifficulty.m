@@ -23,15 +23,15 @@
 	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	
 		switch ([QItem_ForEdit.Difficulty intValue]) {
-		case 1:
-			appDelegate.Difficulty =@"Foundation";
-			break;
-		case 0:
-			appDelegate.Difficulty =@"Foundation & Higher";
-			break;
-		case 3:
-			appDelegate.Difficulty =@"Higher";
-			break;
+            case 1:
+                appDelegate.Difficulty =@"Easy";
+                break;
+            case 2:
+                appDelegate.Difficulty =@"Medium";
+                break;
+            case 3:
+                appDelegate.Difficulty =@"Difficult";
+                break;
 				
 		
 		}
@@ -81,11 +81,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section. If User is configuring the  we need to add ALL
 	if (UserConfigure) {
-		return 3;
+		return 4;
 	}
 	else{
 		
-		return 2;
+		return 3;
 	}
 }
 
@@ -106,9 +106,9 @@
 		case 0:
 			
 			
-			cell.textLabel.text = @"Foundation";
+			cell.textLabel.text = @"Easy";
 			
-			if ([appDelegate.Difficulty  isEqualToString:@"Foundation" ]) {
+			if ([appDelegate.Difficulty  isEqualToString:@"Easy" ]) {
 				
 				cell.accessoryType = UITableViewCellAccessoryCheckmark;
 			}
@@ -117,27 +117,27 @@
 				cell.accessoryType =UITableViewCellAccessoryNone;
 				
 			}
-			
-			break;
-		case 2:
-			
-			cell.textLabel.text = @"Foundation & Higher";
-			if ([appDelegate.Difficulty  isEqualToString: @"Foundation & Higher" ]) {
-				
-				cell.accessoryType = UITableViewCellAccessoryCheckmark;
-			}
-			else {
-				
-				cell.accessoryType =UITableViewCellAccessoryNone;
-				
-			}
-			
 			
 			break;
 		case 1:
 			
-			cell.textLabel.text = @"Higher";
-			if ([appDelegate.Difficulty  isEqualToString: @"Higher" ]) {
+			cell.textLabel.text = @"Medium";
+			if ([appDelegate.Difficulty  isEqualToString: @"Medium" ]) {
+				
+				cell.accessoryType = UITableViewCellAccessoryCheckmark;
+			}
+			else {
+				
+				cell.accessoryType =UITableViewCellAccessoryNone;
+				
+			}
+			
+			
+			break;
+		case 2:
+			
+			cell.textLabel.text = @"Difficult";
+			if ([appDelegate.Difficulty  isEqualToString: @"Difficult" ]) {
 				
 				cell.accessoryType = UITableViewCellAccessoryCheckmark;
 			}
@@ -148,20 +148,21 @@
 			}
 			
 			break;
-//		case 3:
-//			
-//			cell.textLabel.text = @"All";
-//			if ([appDelegate.Difficulty  isEqualToString: @"All" ]) {
-//				
-//				cell.accessoryType = UITableViewCellAccessoryCheckmark;
-//			}
-//			else {
-//				
-//				cell.accessoryType =UITableViewCellAccessoryNone;
-//				
-//			}
-//			
-//			break;
+		case 3:
+			
+			cell.textLabel.text = @"All";
+			if ([appDelegate.Difficulty  isEqualToString: @"All" ]) {
+				
+				cell.accessoryType = UITableViewCellAccessoryCheckmark;
+			}
+			else {
+				
+				cell.accessoryType =UITableViewCellAccessoryNone;
+				
+			}
+			
+			break;
+            
 		
 	}
     // Configure the cell...
@@ -229,13 +230,13 @@
 	
 	if (QItem_ForEdit != nil) {
 		
-		if ([appDelegate.Difficulty  isEqualToString:@"Foundation" ]) {
+		if ([appDelegate.Difficulty  isEqualToString:@"Easy" ]) {
 			
 			QItem_ForEdit.Difficulty = [NSNumber numberWithInt:1];
 		}
-		else if ([appDelegate.Difficulty isEqualToString:@"Foundation & Higher"]){
+		else if ([appDelegate.Difficulty isEqualToString:@"Medium"]){
 			
-			QItem_ForEdit.Difficulty = [NSNumber numberWithInt:0];
+			QItem_ForEdit.Difficulty = [NSNumber numberWithInt:2];
 			
 		}
 		else{

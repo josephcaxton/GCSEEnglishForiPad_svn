@@ -296,7 +296,7 @@ int ToReviewQuestions = 0;
 - (void)timerFired:(NSTimer *)timer{
 	
 	
-	seconds ++;
+	seconds++;
 	
 	if (seconds	> 59) {
 		
@@ -306,7 +306,7 @@ int ToReviewQuestions = 0;
 	
 	if (mins > 59) {
 		mins = 0;
-		Hours ++;
+		Hours++;
 	}
 	
 	UIBarButtonItem *time = [[UIBarButtonItem alloc] initWithTitle:[NSString stringWithFormat:@"%i h : %i m : %i s",Hours,mins,seconds] style:UIBarButtonItemStylePlain target:nil action:nil  ];
@@ -428,16 +428,16 @@ int ToReviewQuestions = 0;
 	
 	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	
-	if ([appDelegate.Difficulty  isEqualToString:@"Foundation" ] ) {
+	if ([appDelegate.Difficulty  isEqualToString:@"Easy" ] ) {
 		return [NSNumber numberWithInt:1];
 	}	
 	
-	else if ([appDelegate.Difficulty isEqualToString:@"Foundation & Higher"]){
+	else if ([appDelegate.Difficulty isEqualToString:@"Medium"]){
 		
-		return [NSNumber numberWithInt:0];
+		return [NSNumber numberWithInt:2];
 	}
 	
-	else if([appDelegate.Difficulty isEqualToString:@"Higher"]){
+	else if([appDelegate.Difficulty isEqualToString:@"Difficult"]){
 		
 		return [NSNumber numberWithInt:3];
 		

@@ -50,7 +50,7 @@
 	
 	
 	AllocatedMarks = [NSNumber numberWithInt:1];
-	NSString *difficulty =(NSString *)@"Foundation";
+	NSString *difficulty =(NSString *)@"Easy";
 	[self setDifficulty:difficulty];
 	
 	NSString *Top = [[NSString alloc] initWithFormat:@"All"];
