@@ -125,7 +125,7 @@
 		
 	}
 	
-	else if ([productIdentifier isEqualToString:@"com.LearnersCloud.iEvaluatorForiPad.English.1000"])
+	else if ([productIdentifier isEqualToString:@"com.LearnersCloud.iEvaluatorForiPad.English.1040"])
 		
 	{
 		[[NSUserDefaults standardUserDefaults] setObject:@"5" forKey:@"AccessLevel"];	 

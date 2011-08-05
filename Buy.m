@@ -311,7 +311,7 @@ int dontShowPriceList = 0;
 						break;
 				case 4:
 					;
-					SKPayment *payment4 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPad.English.1000"];
+					SKPayment *payment4 = [SKPayment paymentWithProductIdentifier:@"com.LearnersCloud.iEvaluatorForiPad.English.1040"];
 					[[SKPaymentQueue defaultQueue] addPayment:payment4];
 					break;
 
