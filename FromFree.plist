@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>250Questions</key>
-	<string>com.LearnersCloud.iEvaluatorforIpad.English.250</string>
+	<string>com.LearnersCloud.iEvaluatorForiPad.English.250</string>
 	<key>500Questions</key>
-	<string>com.LearnersCloud.iEvaluatorforIpad.English.500</string>
+	<string>com.LearnersCloud.iEvaluatorForiPad.English.500</string>
 	<key>750Questions</key>
-	<string>com.LearnersCloud.iEvaluatorforIpad.English.750</string>
+	<string>com.LearnersCloud.iEvaluatorForiPad.English.750</string>
 	<key>1000Questions</key>
-	<string>com.LearnersCloud.iEvaluatorforIpad.English.1000</string>
+	<string>com.LearnersCloud.iEvaluatorForiPad.English.1000</string>
 </dict>
 </plist>
