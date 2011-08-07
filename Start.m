@@ -64,6 +64,7 @@
         CustomDataSource = [[CustomPickerDataSource_Num_Questions alloc] init];
         QuestionPickerView.delegate = CustomDataSource;
         QuestionPickerView.dataSource = CustomDataSource;
+        [QuestionPickerView selectRow:9 inComponent:1 animated:YES];  // sets the default on the PickerView to 10
     }
 
 	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
