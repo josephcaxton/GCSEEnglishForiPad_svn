@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C5DBE7913EAA16100E404BB /* Evaluator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DBE7613EAA16100E404BB /* Evaluator.xcdatamodeld */; };
+		7C703EC213EEA4C6001484FC /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C703EC113EEA4C6001484FC /* GCSEEnglish.sqlite */; };
 		7C79506313E80979001950EA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79506113E80979001950EA /* Icon@2x.png */; };
 		7C79506413E80979001950EA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79506213E80979001950EA /* Icon.png */; };
 		7C79506613E809C0001950EA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79506513E809C0001950EA /* Icon-72.png */; };
@@ -92,7 +93,6 @@
 		7C79514213E82411001950EA /* AttributionIpad.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514113E82411001950EA /* AttributionIpad.pdf */; };
 		7C79514413E82427001950EA /* Results.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514313E82427001950EA /* Results.xml */; };
 		7C79514613E82434001950EA /* DescriptiveAnswers.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514513E82434001950EA /* DescriptiveAnswers.xml */; };
-		7C79514B13E824AF001950EA /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514A13E824AF001950EA /* GCSEEnglish.sqlite */; };
 		7C79515013E82FC8001950EA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7C79514F13E82FC7001950EA /* Settings.bundle */; };
 		7C79516013E83437001950EA /* Uploads.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C79515E13E83437001950EA /* Uploads.m */; };
 		7C79516613E83DAD001950EA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C79516513E83DAD001950EA /* AudioToolbox.framework */; };
@@ -1160,6 +1160,7 @@
 /* Begin PBXFileReference section */
 		7C5DBE7713EAA16100E404BB /* Evaluator 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Evaluator 2.xcdatamodel"; sourceTree = "<group>"; };
 		7C5DBE7813EAA16100E404BB /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evaluator.xcdatamodel; sourceTree = "<group>"; };
+		7C703EC113EEA4C6001484FC /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
 		7C79506113E80979001950EA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		7C79506213E80979001950EA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		7C79506513E809C0001950EA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -1286,7 +1287,6 @@
 		7C79514113E82411001950EA /* AttributionIpad.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AttributionIpad.pdf; sourceTree = "<group>"; };
 		7C79514313E82427001950EA /* Results.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Results.xml; sourceTree = "<group>"; };
 		7C79514513E82434001950EA /* DescriptiveAnswers.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DescriptiveAnswers.xml; sourceTree = "<group>"; };
-		7C79514A13E824AF001950EA /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
 		7C79514F13E82FC7001950EA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		7C79515E13E83437001950EA /* Uploads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Uploads.m; sourceTree = "<group>"; };
 		7C79515F13E83437001950EA /* Uploads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uploads.h; sourceTree = "<group>"; };
@@ -3428,8 +3428,8 @@
 				7CD9D6C213EB000F00B63AEC /* 1045.pdf */,
 				7CD9D6C313EB000F00B63AEC /* 1046.pdf */,
 				7CD9D6C413EB000F00B63AEC /* 1047.pdf */,
-				7C79514A13E824AF001950EA /* GCSEEnglish.sqlite */,
 				7C79514113E82411001950EA /* AttributionIpad.pdf */,
+				7C703EC113EEA4C6001484FC /* GCSEEnglish.sqlite */,
 				7C79514313E82427001950EA /* Results.xml */,
 				7C79514513E82434001950EA /* DescriptiveAnswers.xml */,
 			);
@@ -3785,7 +3785,6 @@
 				7C79514213E82411001950EA /* AttributionIpad.pdf in Resources */,
 				7C79514413E82427001950EA /* Results.xml in Resources */,
 				7C79514613E82434001950EA /* DescriptiveAnswers.xml in Resources */,
-				7C79514B13E824AF001950EA /* GCSEEnglish.sqlite in Resources */,
 				7C79515013E82FC8001950EA /* Settings.bundle in Resources */,
 				7CD9D6C513EB000F00B63AEC /* 1.pdf in Resources */,
 				7CD9D6C613EB000F00B63AEC /* 2.pdf in Resources */,
@@ -4834,6 +4833,7 @@
 				7CD9DAD913EB001000B63AEC /* 1045.pdf in Resources */,
 				7CD9DADA13EB001000B63AEC /* 1046.pdf in Resources */,
 				7CD9DADB13EB001000B63AEC /* 1047.pdf in Resources */,
+				7C703EC213EEA4C6001484FC /* GCSEEnglish.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
