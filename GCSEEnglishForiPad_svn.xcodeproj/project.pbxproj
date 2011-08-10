@@ -108,6 +108,7 @@
 		7C8AAA9C13E6ECE900C70B2E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9B13E6ECE900C70B2E /* CoreData.framework */; };
 		7C8AAAA213E6ECE900C70B2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA013E6ECE900C70B2E /* InfoPlist.strings */; };
 		7C8AAAA413E6ECE900C70B2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA313E6ECE900C70B2E /* main.m */; };
+		7CACF1F213F2DFE1000F6CBA /* BlackBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CACF1F113F2DFE1000F6CBA /* BlackBackGround.png */; };
 		7CD9D6C513EB000F00B63AEC /* 1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D2AE13EB000D00B63AEC /* 1.pdf */; };
 		7CD9D6C613EB000F00B63AEC /* 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D2AF13EB000D00B63AEC /* 2.pdf */; };
 		7CD9D6C713EB000F00B63AEC /* 3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D2B013EB000D00B63AEC /* 3.pdf */; };
@@ -1307,6 +1308,7 @@
 		7C8AAAA113E6ECE900C70B2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C8AAAA313E6ECE900C70B2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GCSEEnglishForiPad_svn/main.m; sourceTree = "<group>"; };
 		7C8AAAA513E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GCSEEnglishForiPad_svn-Prefix.pch"; path = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch"; sourceTree = "<group>"; };
+		7CACF1F113F2DFE1000F6CBA /* BlackBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackBackGround.png; sourceTree = "<group>"; };
 		7CD9D2AE13EB000D00B63AEC /* 1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1.pdf; sourceTree = "<group>"; };
 		7CD9D2AF13EB000D00B63AEC /* 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2.pdf; sourceTree = "<group>"; };
 		7CD9D2B013EB000D00B63AEC /* 3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 3.pdf; sourceTree = "<group>"; };
@@ -3580,6 +3582,7 @@
 				7C79509A13E80FA6001950EA /* Chemistry.png */,
 				7C8AAAA013E6ECE900C70B2E /* InfoPlist.strings */,
 				7C8AAA9F13E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Info.plist */,
+				7CACF1F113F2DFE1000F6CBA /* BlackBackGround.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -4834,6 +4837,7 @@
 				7CD9DADB13EB001000B63AEC /* 1047.pdf in Resources */,
 				7C703EC413EEB2DE001484FC /* GCSEEnglish.sqlite in Resources */,
 				7C29352F13F16CE90057AC45 /* Chemistry.m4v in Resources */,
+				7CACF1F213F2DFE1000F6CBA /* BlackBackGround.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

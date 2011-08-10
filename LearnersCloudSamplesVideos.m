@@ -70,6 +70,8 @@
 //	[appDelegate.SecondThread cancel];
 //	[appDelegate.SecondThread release];
 //	appDelegate.SecondThread = nil;
+    
+    
 	
 }
 

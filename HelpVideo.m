@@ -41,6 +41,12 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlackBackGround.png"]];
+    [self.view addSubview:backgroundImage];
+    [self.view sendSubviewToBack:backgroundImage];
+    [backgroundImage release];
+
 	
 	NSString *filepath   =   [[NSBundle mainBundle] pathForResource:@"ITest U Video" ofType:@"m4v"];  //@"HelpvideoIphone"
 	NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath]; 
