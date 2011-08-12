@@ -1310,7 +1310,6 @@
 		7C8AAAA313E6ECE900C70B2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GCSEEnglishForiPad_svn/main.m; sourceTree = "<group>"; };
 		7C8AAAA513E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GCSEEnglishForiPad_svn-Prefix.pch"; path = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch"; sourceTree = "<group>"; };
 		7C9D619713F44006008F18AC /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
-		7C9D61A213F44522008F18AC /* iTest U.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "iTest U.entitlements"; path = "GCSEEnglishForiPad_svn/iTest U.entitlements"; sourceTree = "<group>"; };
 		7CACF1F113F2DFE1000F6CBA /* BlackBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackBackGround.png; sourceTree = "<group>"; };
 		7CD9D2AE13EB000D00B63AEC /* 1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1.pdf; sourceTree = "<group>"; };
 		7CD9D2AF13EB000D00B63AEC /* 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 2.pdf; sourceTree = "<group>"; };
@@ -3638,7 +3637,6 @@
 		7C8AAA8613E6ECE900C70B2E = {
 			isa = PBXGroup;
 			children = (
-				7C9D61A213F44522008F18AC /* iTest U.entitlements */,
 				7C9D619713F44006008F18AC /* Entitlements.plist */,
 				7C79514F13E82FC7001950EA /* Settings.bundle */,
 				7C79505113E800DD001950EA /* App Files */,
@@ -4969,7 +4967,7 @@
 		7C8AAAB813E6ECE900C70B2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Entitlements;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -4991,7 +4989,7 @@
 		7C8AAAB913E6ECE900C70B2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Entitlements;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -5036,7 +5034,7 @@
 		7C9D619C13F44134008F18AC /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Entitlements;
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
