@@ -164,7 +164,9 @@ static UIWebView *QuestionHeaderBox = nil;
 	int AnswerValues = [AnswerObjects count];
 	for (int i = 0; i< AnswerValues; i++) {
 		
-		NSString *Val =[[NSString alloc] initWithString:[[AnswerObjects objectAtIndex:i] valueForKey:@"AnswerText"]];
+		NSString *TempVal =[[NSString alloc] initWithString:[[AnswerObjects objectAtIndex:i] valueForKey:@"AnswerText"]];
+        // this is important to remove all leading and trailing spaces
+        NSString *Val = [TempVal stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 		Answers *Ans = [AnswerObjects objectAtIndex:i];
 		
 		for (int P = 0; P < AnswerValues; P++) {
@@ -185,7 +187,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		
 		
-		[Val release];
+		[TempVal release];
 	}
 	int AnswerObjectCount = [TempArray count];
 	
