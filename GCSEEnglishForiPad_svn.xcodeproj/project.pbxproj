@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C29352F13F16CE90057AC45 /* Chemistry.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7C29352E13F16CE90057AC45 /* Chemistry.m4v */; };
-		7C46D4D514235F3B003C64F6 /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C46D4D414235F3B003C64F6 /* GCSEEnglish.sqlite */; };
+		7C39AED11424915A008BDDEE /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C39AED01424915A008BDDEE /* GCSEEnglish.sqlite */; };
 		7C5DBE7913EAA16100E404BB /* Evaluator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DBE7613EAA16100E404BB /* Evaluator.xcdatamodeld */; };
 		7C79506313E80979001950EA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79506113E80979001950EA /* Icon@2x.png */; };
 		7C79506413E80979001950EA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79506213E80979001950EA /* Icon.png */; };
@@ -1161,7 +1161,7 @@
 
 /* Begin PBXFileReference section */
 		7C29352E13F16CE90057AC45 /* Chemistry.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chemistry.m4v; sourceTree = "<group>"; };
-		7C46D4D414235F3B003C64F6 /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
+		7C39AED01424915A008BDDEE /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
 		7C5DBE7713EAA16100E404BB /* Evaluator 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Evaluator 2.xcdatamodel"; sourceTree = "<group>"; };
 		7C5DBE7813EAA16100E404BB /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evaluator.xcdatamodel; sourceTree = "<group>"; };
 		7C79506113E80979001950EA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -3432,7 +3432,7 @@
 				7CD9D6C213EB000F00B63AEC /* 1045.pdf */,
 				7CD9D6C313EB000F00B63AEC /* 1046.pdf */,
 				7CD9D6C413EB000F00B63AEC /* 1047.pdf */,
-				7C46D4D414235F3B003C64F6 /* GCSEEnglish.sqlite */,
+				7C39AED01424915A008BDDEE /* GCSEEnglish.sqlite */,
 				7C79514113E82411001950EA /* AttributionIpad.pdf */,
 				7C79514313E82427001950EA /* Results.xml */,
 				7C79514513E82434001950EA /* DescriptiveAnswers.xml */,
@@ -4841,7 +4841,7 @@
 				7C29352F13F16CE90057AC45 /* Chemistry.m4v in Resources */,
 				7CACF1F213F2DFE1000F6CBA /* BlackBackGround.png in Resources */,
 				7C9D619813F44006008F18AC /* Entitlements.plist in Resources */,
-				7C46D4D514235F3B003C64F6 /* GCSEEnglish.sqlite in Resources */,
+				7C39AED11424915A008BDDEE /* GCSEEnglish.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
