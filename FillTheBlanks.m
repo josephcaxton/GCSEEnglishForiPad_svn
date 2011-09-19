@@ -636,8 +636,8 @@ static UIWebView *QuestionHeaderBox = nil;
 	/// Fix problem of Keyvboard blocking text fields
 	
 	switch (textField.tag) {
-			
-		case 0:
+			 // I have taken this off as the question moves off the screen 
+		/*case 0:
 		{
 			[UIView beginAnimations:nil context:NULL];
 			[UIView setAnimationDuration:0.3];
@@ -647,7 +647,7 @@ static UIWebView *QuestionHeaderBox = nil;
 			self.view.frame = rect;
 			[UIView commitAnimations];
 			break;
-		}
+		} */
 		case 1:
 		{
 			[UIView beginAnimations:nil context:NULL];
