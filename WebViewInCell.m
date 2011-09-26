@@ -23,6 +23,7 @@ static UIWebView *WebBox = nil;
        WebBox = [[UIWebView alloc ] initWithFrame:CGRectMake(0, 0, 800, 80)];
 		[WebBox	setBackgroundColor:[UIColor clearColor]];
 		[WebBox setOpaque:NO];
+        WebBox.dataDetectorTypes = 0; // This will remove the underlines i am experiencing
 		WebBox.userInteractionEnabled = NO;  // This allow the cell to  
 		//self.WebBox.scalesPageToFit = YES;
 		[self.contentView addSubview:WebBox];
