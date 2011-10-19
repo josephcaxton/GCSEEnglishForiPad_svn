@@ -137,6 +137,8 @@
     NSLog(@"Registering for push notifications...");    
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
 	
+    // Reset Badge Count 
+    application.applicationIconBadgeNumber = 0;
 	
 	return YES;
 }
