@@ -510,7 +510,7 @@ static UIWebView *QuestionHeaderBox = nil;
                 
                 NSMutableString *AnswerText = [NSMutableString stringWithFormat:@"%@",[[AnswerObjects objectAtIndex:indexPath.row] valueForKey:@"AnswerText"]];
                 NSMutableString *Reason = [NSMutableString stringWithFormat:@"%@",[[AnswerObjects objectAtIndex:indexPath.row] valueForKey:@"Reason"]];
-                NSMutableString *FormatedString =[[NSMutableString alloc]initWithString:@"<p><font size =\"2\" face =\"times new roman \"> "];
+                NSMutableString *FormatedString =[[NSMutableString alloc]initWithString:@"<p><font size =\"4\" face =\"times new roman \"> "];
                 
                 [FormatedString appendString:AnswerText];
                 [FormatedString appendFormat:@"<br/>"];
