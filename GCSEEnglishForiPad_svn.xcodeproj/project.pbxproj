@@ -3724,6 +3724,7 @@
 		7C8AAA8813E6ECE900C70B2E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = caxtonidowu;
 			};
 			buildConfigurationList = 7C8AAA8B13E6ECE900C70B2E /* Build configuration list for PBXProject "GCSEEnglishForiPad_svn" */;

@@ -132,7 +132,7 @@
 	
 		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	
-	if (indexPath.row > [[fetchedResultsController fetchedObjects]count] -1) {
+	if (indexPath.row == 0) {  //indexPath.row > [[fetchedResultsController fetchedObjects]count] -1
 		
 		cell.textLabel.text = @"All";
 		
@@ -149,8 +149,10 @@
 	}
 	else{
 		
+        NSInteger val = indexPath.row;
 		
-	Topics *T = (Topics *)[fetchedResultsController objectAtIndexPath:indexPath];
+        Topics *T = (Topics *)[[fetchedResultsController fetchedObjects] objectAtIndex:val - 1];
+
 	cell.textLabel.text = T.TopicName;
 		
 		if ([appDelegate.Topic  isEqualToString:T.TopicName ]) {
@@ -229,12 +231,13 @@
 	
 	if (UserConfigure) {
 		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
-		if (indexPath.row > [[fetchedResultsController fetchedObjects]count] -1) {
+		if (indexPath.row ==0) { //indexPath.row > [[fetchedResultsController fetchedObjects]count] -1
 			appDelegate.Topic = @"All";
 			[self.navigationController popViewControllerAnimated:TRUE];
 		}
 		else {
-			SelectedTopic = (Topics *)[fetchedResultsController objectAtIndexPath:indexPath];
+			NSInteger val = indexPath.row;
+			SelectedTopic = (Topics *)[[fetchedResultsController fetchedObjects] objectAtIndex:val - 1];
 			appDelegate.Topic = SelectedTopic.TopicName;
 			[self.navigationController popViewControllerAnimated:TRUE];
 		}

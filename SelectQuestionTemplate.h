@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "lk_QuestionTemplate.h";
+#import "lk_QuestionTemplate.h"
 
 @interface SelectQuestionTemplate : UITableViewController <NSFetchedResultsControllerDelegate,UIActionSheetDelegate>{
 
