@@ -120,7 +120,7 @@
 	if (UserConfigure) {
 		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 		
-		 if (indexPath.row > [[fetchedResultsController fetchedObjects]count] -1) {
+		 if (indexPath.row == 0) {  // [[fetchedResultsController fetchedObjects]count] -1) {
 			 
 			 cell.textLabel.text = @"All";
 			 
@@ -139,8 +139,9 @@
 		 }
 		 else{
 			 
-			 
-			 lk_QuestionTemplate *QT = (lk_QuestionTemplate *)[fetchedResultsController objectAtIndexPath:indexPath];
+			 NSInteger val = indexPath.row;
+             
+			 lk_QuestionTemplate *QT = (lk_QuestionTemplate *)[[fetchedResultsController fetchedObjects] objectAtIndex:val - 1];
 			 cell.textLabel.text = QT.Description;
 			 if ([QT.Description isEqualToString:@"Descriptive Type"]) {
 				 cell.detailTextLabel.text =@"(Do not count in overall marks)";
@@ -235,13 +236,14 @@
 		
 		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 		
-		if (indexPath.row > [[fetchedResultsController fetchedObjects]count] -1) {
+		if (indexPath.row ==0) { //[[fetchedResultsController fetchedObjects]count] -1) {
 			appDelegate.TypeOfQuestion = @"All";
 			
 			[self.navigationController popViewControllerAnimated:YES];
 		}
 		else {
-			SelectedTemplate = (lk_QuestionTemplate *)[fetchedResultsController objectAtIndexPath:indexPath];
+			NSInteger val = indexPath.row;
+			SelectedTemplate = (lk_QuestionTemplate *)[[fetchedResultsController fetchedObjects] objectAtIndex:val - 1];
 			appDelegate.TypeOfQuestion = SelectedTemplate.Description;
 			
 			[self.navigationController popViewControllerAnimated:YES];
