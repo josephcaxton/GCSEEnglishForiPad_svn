@@ -559,9 +559,28 @@
 
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     
-    NSString *str = [NSString 
-                     stringWithFormat:@"Device Token=%@",deviceToken];
-    NSLog(@"%@",str);
+    NSString *DeviceUDID = [NSString 
+                            stringWithFormat:@"%@",[UIDevice currentDevice].uniqueIdentifier];
+    
+    NSString *DeviceTokenRemoveCh1 = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    
+    NSString *DeviceToken = [DeviceTokenRemoveCh1 stringByReplacingOccurrencesOfString: @" " withString: @""];
+    
+    
+    NSURLConnection *conn;
+    NSString *queryString = [NSString stringWithFormat:@"http://www.learnerscloud.com/services/ios/deviceToken.asmx/Update?UDID=%@&deviceToken=%@" , DeviceUDID, DeviceToken ];
+    NSURL *url = [NSURL URLWithString:queryString];
+    
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
+    [req addValue:@"text/xml; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [req addValue:0 forHTTPHeaderField:@"Content-Length"];
+    [req setHTTPMethod:@"GET"];
+    
+    conn = [[NSURLConnection alloc] initWithRequest:req delegate:self];
+    if (conn) {
+        
+    } 
+
     
 }
 
