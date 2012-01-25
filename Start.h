@@ -31,6 +31,7 @@
 	UITextView *WebText;
 	UIButton *StartPractice;
 	UIButton *btnStartTest;
+     UILabel *Instruction;
 	
 }
 
@@ -48,6 +49,7 @@
 @property (nonatomic, retain) UITextView *WebText;
 @property (nonatomic, assign) UIButton *StartPractice;
 @property (nonatomic, assign) UIButton *btnStartTest;
+@property (nonatomic, assign) UILabel *Instruction;
 
 -(IBAction)Practice:(id)sender;
 -(IBAction)StartTest:(id)sender;

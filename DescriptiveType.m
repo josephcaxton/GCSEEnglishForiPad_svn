@@ -13,7 +13,7 @@
 
 @synthesize QuestionTemplate, SelectedTopic; //, QuestionHeaderBox; //Search;  //QuestionItemBox
 @synthesize  fileList, FileListTable, DirLocation,SFileName;
-@synthesize   SFileName_Edit,QItem_Edit,QItem_View,AnswerObjects,Answer1,ShowCorrectAnswer,ShowAnswer,ShowAnswerHere,Continue,WebControl;
+@synthesize   SFileName_Edit,QItem_Edit,QItem_View,AnswerObjects,Answer1,ShowCorrectAnswer,ShowAnswer,ShowAnswerHere,Continue,WebControl,Instruction;
 
 int AnswerShown= 0;
 static UIWebView *QuestionHeaderBox = nil;
@@ -457,9 +457,22 @@ static UIWebView *QuestionHeaderBox = nil;
 	 else if (QItem_View !=nil ) {
 		 
 		 if (indexPath.row == 0) {
-			 
+			
+             Instruction = [[[UILabel alloc] initWithFrame:CGRectMake(10, 13, 600, 20)] autorelease];
+             Instruction.font = [UIFont boldSystemFontOfSize: 12.0];
+             Instruction.textColor = [UIColor purpleColor];
+             Instruction.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
+             Instruction.backgroundColor = [UIColor clearColor];
+             
+             
+             
+             Instruction.text = @"You cannot type into this box. Work out your answer and press Show Answer ";
+             
+             
+
 		 
 		 Answer1.editable = NO;
+        [Answer1 addSubview:Instruction];
 //		 Answer1.delegate = self;
 //		 Answer1.textColor = [UIColor blackColor];
 //		 

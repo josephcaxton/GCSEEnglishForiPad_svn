@@ -42,6 +42,7 @@
 	UIButton *ShowAnswerHere;  // To show answer on question page
 	UIButton *Continue;
 	UIWebView *WebControl;
+    UILabel *Instruction;
 }
 
 @property (nonatomic, retain) lk_QuestionTemplate *QuestionTemplate;
@@ -67,6 +68,7 @@
 @property (nonatomic, retain) UIButton *ShowAnswerHere;
 @property (nonatomic, retain) UIButton *Continue;
 @property (nonatomic, retain) UIWebView *WebControl;
+@property (nonatomic, assign) UILabel *Instruction;
 
 //-(void)CheckAppDirectory:(NSString *)Location;
 //- (NSString *) getApplicationDirectory;

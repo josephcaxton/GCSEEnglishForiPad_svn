@@ -705,7 +705,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+/*- (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	
 	[textField resignFirstResponder];
 	
@@ -719,7 +719,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	
 	return YES;
-}
+}*/
 
 
 

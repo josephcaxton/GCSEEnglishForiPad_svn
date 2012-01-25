@@ -11,7 +11,7 @@
 
 @implementation Start
 
-@synthesize FirstView, SecondView,FirstTable,SecondTable,QuestionPickerView,CustomDataSource,Sound,ShowAnswers,logoView,Copyright,WebText,StartPractice,btnStartTest;
+@synthesize FirstView, SecondView,FirstTable,SecondTable,QuestionPickerView,CustomDataSource,Sound,ShowAnswers,logoView,Copyright,WebText,StartPractice,btnStartTest,Instruction;
 
 
 #define SCREEN_WIDTH 768
@@ -210,7 +210,7 @@
 	
 	if([AccessLevel intValue] == 1){
 		
-		NSString *message = [[NSString alloc] initWithFormat:@"You are using the free version of the app. The app will only deliver a maximum of 30 questions depending on your search criteria"];
+		NSString *message = [[NSString alloc] initWithFormat:@"You are using the free version of the app. The app will only deliver a maximum of 30 questions depending on your search criteria and does not necessarily have all type of questions"];
 		
 		UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Important Notice"
 													   message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -383,7 +383,7 @@
 	}
 	
 	else {
-		count = 6;
+		count = 7;
 	}
 
 	 
@@ -564,8 +564,28 @@
 				[ShowAnswers addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
 				[cell addSubview:ShowAnswers];
 				break;
+                
+            case 5:
+                
+                if(Instruction == nil){
+                    
+                    Instruction = [[UILabel alloc] initWithFrame:CGRectMake(10, 13, 600, 20)];
+                    
+                }
+                Instruction.font = [UIFont boldSystemFontOfSize: 12.0];
+                Instruction.textColor = [UIColor purpleColor];
+                Instruction.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
+                Instruction.backgroundColor = [UIColor clearColor];
+                [cell.contentView addSubview: Instruction];
+                
+                
+                Instruction.text = @"Please note: Some questions are best viewed in portrait mode due to limited space on your iPad.";
+                
+                
+                break;
+
 				
-				case 5:
+				case 6:
 					
 					if (btnStartTest == nil) {
 						
@@ -656,6 +676,7 @@
 	[CustomDataSource release];
 	[Sound release];
 	[ShowAnswers release];
+    [Instruction release];
 	//[logoView release];
     [super dealloc];
 }
