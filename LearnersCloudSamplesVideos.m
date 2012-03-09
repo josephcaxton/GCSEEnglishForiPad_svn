@@ -111,17 +111,21 @@
     
 	
 }
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (indexPath.section == 0) {
-//		
-//			return 50;
-//	}
-//		
-//		else {
-//			return 70;		}
-//		
-//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (indexPath.section == 1 && indexPath.row == 1  ) {		
+        return [indexPath row] + 180;
+    }
+    //        else if (indexPath.section == 1 && indexPath.row == 2){
+    //               return [indexPath row] + 120; 
+    //            }
+	
+    else
+        return 50;
+}
+
+
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -166,23 +170,23 @@
 		
 	}
 	
-	else if (indexPath.section == 1){
+	else if (indexPath.section == 1 && indexPath.row == 1){
 	
 		if (!WebText) {
 			
-			WebText =[[UITextView alloc] initWithFrame:CGRectMake(250,0,480,40)]; 
+			WebText =[[UIWebView alloc] initWithFrame:CGRectMake(250,0,480,240)]; 
 		}
 		
 		
-		WebText.editable = NO;
 		WebText.backgroundColor = [UIColor clearColor];
 		WebText.dataDetectorTypes = UIDataDetectorTypeLink;
+        WebText.delegate = self;
 		NSString *Visit = @"Visit ";
-		NSString *Website =[Visit stringByAppendingString: @"http://www.LearnersCloud.com "];
-		NSString *videos = [Website stringByAppendingString:@"for more videos"];
+		NSString *Website =[Visit stringByAppendingString: @"<a target=/'_blank/'  href=http://www.learnerscloud.com/?utm_source=itunes&utm_medium=link&utm_content=Maths&utm_campaign=App > LearnersCloud</a>"];
+		NSString *videos = [Website stringByAppendingString:@" <p>Watch hundreds of more HD videos <br/>Complete GCSE English & Maths available<br/><b>Sign up for a FREE trial account now</b></p><br/> Also for schools and colleges."];
 		
-		WebText.text =videos;
-		WebText.font= [UIFont systemFontOfSize:16.0];
+        [WebText loadHTMLString:videos baseURL:nil];
+		
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		cell.imageView.image = nil;
 		[cell addSubview:WebText];
@@ -331,6 +335,15 @@
 	}
 }
 
+// This stops the link in UIWebView open in the application. It should open in safari
+-(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+    if ( inType == UIWebViewNavigationTypeLinkClicked ) {
+        [[UIApplication sharedApplication] openURL:[inRequest URL]];
+        return NO;
+    }
+    
+    return YES;
+}
 
 
 
@@ -344,13 +357,13 @@
 	
 	if (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown ) {
 		
-		WebText.frame = CGRectMake(250,0,480,40);
+		WebText.frame = CGRectMake(250,0,480,240);
 		
 	}
 	
 	else {
 		
-		WebText.frame = CGRectMake(350,0,480,40);
+		WebText.frame = CGRectMake(350,0,480,240);
 		
 		
 	}
