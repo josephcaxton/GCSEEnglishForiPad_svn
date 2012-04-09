@@ -3724,7 +3724,7 @@
 		7C8AAA8813E6ECE900C70B2E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = caxtonidowu;
 			};
 			buildConfigurationList = 7C8AAA8B13E6ECE900C70B2E /* Build configuration list for PBXProject "GCSEEnglishForiPad_svn" */;
@@ -4979,6 +4979,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
@@ -5005,6 +5006,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
@@ -5054,6 +5056,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
