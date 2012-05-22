@@ -8,6 +8,9 @@
 
 #import "EvaluatorAppDelegate.h"
 
+// Dispatch period in seconds
+static const NSInteger kGANDispatchPeriodSec = 10;
+static NSString* const kAnalyticsAccountId = @"UA-31954687-1";
 
 @implementation EvaluatorAppDelegate
 
@@ -139,6 +142,34 @@
 	
     // Reset Badge Count 
     application.applicationIconBadgeNumber = 0;
+    
+    //Analytics
+    [[GANTracker sharedTracker] startTrackerWithAccountID:kAnalyticsAccountId
+                                           dispatchPeriod:kGANDispatchPeriodSec
+                                                 delegate:nil];
+    NSError *error;
+    
+    /* if (![[GANTracker sharedTracker] setCustomVariableAtIndex:1
+     name:@"iOS1"
+     value:@"iv1"
+     withError:&error]) {
+     NSLog(@"error in setCustomVariableAtIndex");
+     } */
+    
+    if (![[GANTracker sharedTracker] trackEvent:@"English iPad Started"
+                                         action:@"Launch iOS"
+                                          label:@"Launch iOS"
+                                          value:99
+                                      withError:&error]) {
+        NSLog(@"error in trackEvent");
+    }
+    
+    if (![[GANTracker sharedTracker] trackPageview:@"/AppDelegate"
+                                         withError:&error]) {
+        NSLog(@"error in trackPageview");
+    }
+    
+
 	
 	return YES;
 }
@@ -603,6 +634,8 @@
 
 
 - (void)dealloc {
+    
+    [[GANTracker sharedTracker] stopTracker];
     
     [managedObjectContext release];
     [managedObjectModel release];

@@ -11,7 +11,8 @@
 #import <AudioToolbox/AudioServices.h>
 #import "Sqlite3.h"
 #import "CustomStoreObserver.h"
-
+#import "GANTracker.h"
+#import <netinet/in.h>
 
 
 @interface EvaluatorAppDelegate : NSObject <UIApplicationDelegate> {

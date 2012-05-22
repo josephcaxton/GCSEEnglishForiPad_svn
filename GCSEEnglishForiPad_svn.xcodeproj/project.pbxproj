@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C045F3F156BA1310065E2DC /* 642.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F33156BA1310065E2DC /* 642.pdf */; };
+		7C045F40156BA1310065E2DC /* 643.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F34156BA1310065E2DC /* 643.pdf */; };
+		7C045F41156BA1310065E2DC /* 644.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F35156BA1310065E2DC /* 644.pdf */; };
+		7C045F42156BA1310065E2DC /* 645.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F36156BA1310065E2DC /* 645.pdf */; };
+		7C045F43156BA1310065E2DC /* 646.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F37156BA1310065E2DC /* 646.pdf */; };
+		7C045F44156BA1310065E2DC /* 647.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F38156BA1310065E2DC /* 647.pdf */; };
+		7C045F45156BA1310065E2DC /* 648.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F39156BA1310065E2DC /* 648.pdf */; };
+		7C045F46156BA1310065E2DC /* 649.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F3A156BA1310065E2DC /* 649.pdf */; };
+		7C045F47156BA1310065E2DC /* 650.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F3B156BA1310065E2DC /* 650.pdf */; };
+		7C045F48156BA1310065E2DC /* 651.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F3C156BA1310065E2DC /* 651.pdf */; };
+		7C045F49156BA1310065E2DC /* 652.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F3D156BA1310065E2DC /* 652.pdf */; };
+		7C045F4A156BA1310065E2DC /* 653.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7C045F3E156BA1310065E2DC /* 653.pdf */; };
+		7C045F51156BA8B80065E2DC /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C045F50156BA8B80065E2DC /* libGoogleAnalytics.a */; };
+		7C045F53156BBEBF0065E2DC /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C045F52156BBEBF0065E2DC /* libsqlite3.0.dylib */; };
+		7C045F55156BBECA0065E2DC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C045F54156BBECA0065E2DC /* CFNetwork.framework */; };
 		7C25C8F214FB96FB0019E899 /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C25C8F114FB96FB0019E899 /* GCSEEnglish.sqlite */; };
 		7C5DBE7913EAA16100E404BB /* Evaluator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DBE7613EAA16100E404BB /* Evaluator.xcdatamodeld */; };
 		7C6A5AC0150A6C5700DA9D9A /* Chemistry.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A5ABC150A6C5700DA9D9A /* Chemistry.m4v */; };
@@ -752,18 +767,6 @@
 		7CD9D94313EB001000B63AEC /* 639.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D52C13EB000D00B63AEC /* 639.pdf */; };
 		7CD9D94413EB001000B63AEC /* 640.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D52D13EB000D00B63AEC /* 640.pdf */; };
 		7CD9D94513EB001000B63AEC /* 641.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D52E13EB000D00B63AEC /* 641.pdf */; };
-		7CD9D94613EB001000B63AEC /* 642.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D52F13EB000D00B63AEC /* 642.pdf */; };
-		7CD9D94713EB001000B63AEC /* 643.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53013EB000D00B63AEC /* 643.pdf */; };
-		7CD9D94813EB001000B63AEC /* 644.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53113EB000D00B63AEC /* 644.pdf */; };
-		7CD9D94913EB001000B63AEC /* 645.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53213EB000D00B63AEC /* 645.pdf */; };
-		7CD9D94A13EB001000B63AEC /* 646.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53313EB000D00B63AEC /* 646.pdf */; };
-		7CD9D94B13EB001000B63AEC /* 647.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53413EB000D00B63AEC /* 647.pdf */; };
-		7CD9D94C13EB001000B63AEC /* 648.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53513EB000D00B63AEC /* 648.pdf */; };
-		7CD9D94D13EB001000B63AEC /* 649.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53613EB000D00B63AEC /* 649.pdf */; };
-		7CD9D94E13EB001000B63AEC /* 650.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53713EB000D00B63AEC /* 650.pdf */; };
-		7CD9D94F13EB001000B63AEC /* 651.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53813EB000D00B63AEC /* 651.pdf */; };
-		7CD9D95013EB001000B63AEC /* 652.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53913EB000D00B63AEC /* 652.pdf */; };
-		7CD9D95113EB001000B63AEC /* 653.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53A13EB000D00B63AEC /* 653.pdf */; };
 		7CD9D95213EB001000B63AEC /* 654.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53B13EB000D00B63AEC /* 654.pdf */; };
 		7CD9D95313EB001000B63AEC /* 655.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53C13EB000D00B63AEC /* 655.pdf */; };
 		7CD9D95413EB001000B63AEC /* 656.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D53D13EB000D00B63AEC /* 656.pdf */; };
@@ -1160,6 +1163,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C045F33156BA1310065E2DC /* 642.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 642.pdf; sourceTree = "<group>"; };
+		7C045F34156BA1310065E2DC /* 643.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 643.pdf; sourceTree = "<group>"; };
+		7C045F35156BA1310065E2DC /* 644.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 644.pdf; sourceTree = "<group>"; };
+		7C045F36156BA1310065E2DC /* 645.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 645.pdf; sourceTree = "<group>"; };
+		7C045F37156BA1310065E2DC /* 646.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 646.pdf; sourceTree = "<group>"; };
+		7C045F38156BA1310065E2DC /* 647.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 647.pdf; sourceTree = "<group>"; };
+		7C045F39156BA1310065E2DC /* 648.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 648.pdf; sourceTree = "<group>"; };
+		7C045F3A156BA1310065E2DC /* 649.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 649.pdf; sourceTree = "<group>"; };
+		7C045F3B156BA1310065E2DC /* 650.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 650.pdf; sourceTree = "<group>"; };
+		7C045F3C156BA1310065E2DC /* 651.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 651.pdf; sourceTree = "<group>"; };
+		7C045F3D156BA1310065E2DC /* 652.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 652.pdf; sourceTree = "<group>"; };
+		7C045F3E156BA1310065E2DC /* 653.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 653.pdf; sourceTree = "<group>"; };
+		7C045F4F156BA8A50065E2DC /* GANTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
+		7C045F50156BA8B80065E2DC /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		7C045F52156BBEBF0065E2DC /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		7C045F54156BBECA0065E2DC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		7C25C8F114FB96FB0019E899 /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
 		7C5DBE7713EAA16100E404BB /* Evaluator 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Evaluator 2.xcdatamodel"; sourceTree = "<group>"; };
 		7C5DBE7813EAA16100E404BB /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evaluator.xcdatamodel; sourceTree = "<group>"; };
@@ -1953,18 +1972,6 @@
 		7CD9D52C13EB000D00B63AEC /* 639.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 639.pdf; sourceTree = "<group>"; };
 		7CD9D52D13EB000D00B63AEC /* 640.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 640.pdf; sourceTree = "<group>"; };
 		7CD9D52E13EB000D00B63AEC /* 641.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 641.pdf; sourceTree = "<group>"; };
-		7CD9D52F13EB000D00B63AEC /* 642.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 642.pdf; sourceTree = "<group>"; };
-		7CD9D53013EB000D00B63AEC /* 643.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 643.pdf; sourceTree = "<group>"; };
-		7CD9D53113EB000D00B63AEC /* 644.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 644.pdf; sourceTree = "<group>"; };
-		7CD9D53213EB000D00B63AEC /* 645.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 645.pdf; sourceTree = "<group>"; };
-		7CD9D53313EB000D00B63AEC /* 646.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 646.pdf; sourceTree = "<group>"; };
-		7CD9D53413EB000D00B63AEC /* 647.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 647.pdf; sourceTree = "<group>"; };
-		7CD9D53513EB000D00B63AEC /* 648.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 648.pdf; sourceTree = "<group>"; };
-		7CD9D53613EB000D00B63AEC /* 649.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 649.pdf; sourceTree = "<group>"; };
-		7CD9D53713EB000D00B63AEC /* 650.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 650.pdf; sourceTree = "<group>"; };
-		7CD9D53813EB000D00B63AEC /* 651.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 651.pdf; sourceTree = "<group>"; };
-		7CD9D53913EB000D00B63AEC /* 652.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 652.pdf; sourceTree = "<group>"; };
-		7CD9D53A13EB000D00B63AEC /* 653.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 653.pdf; sourceTree = "<group>"; };
 		7CD9D53B13EB000D00B63AEC /* 654.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 654.pdf; sourceTree = "<group>"; };
 		7CD9D53C13EB000D00B63AEC /* 655.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 655.pdf; sourceTree = "<group>"; };
 		7CD9D53D13EB000D00B63AEC /* 656.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 656.pdf; sourceTree = "<group>"; };
@@ -2365,6 +2372,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C045F55156BBECA0065E2DC /* CFNetwork.framework in Frameworks */,
+				7C045F53156BBEBF0065E2DC /* libsqlite3.0.dylib in Frameworks */,
 				7C79517413E85373001950EA /* libsqlite3.dylib in Frameworks */,
 				7C79517013E8503E001950EA /* SystemConfiguration.framework in Frameworks */,
 				7C79516E13E83E26001950EA /* StoreKit.framework in Frameworks */,
@@ -2376,12 +2385,22 @@
 				7C8AAA9813E6ECE900C70B2E /* Foundation.framework in Frameworks */,
 				7C8AAA9A13E6ECE900C70B2E /* CoreGraphics.framework in Frameworks */,
 				7C8AAA9C13E6ECE900C70B2E /* CoreData.framework in Frameworks */,
+				7C045F51156BA8B80065E2DC /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C045F4E156BA88F0065E2DC /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				7C045F4F156BA8A50065E2DC /* GANTracker.h */,
+				7C045F50156BA8B80065E2DC /* libGoogleAnalytics.a */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
 		7C79505113E800DD001950EA /* App Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -3026,18 +3045,18 @@
 				7CD9D52C13EB000D00B63AEC /* 639.pdf */,
 				7CD9D52D13EB000D00B63AEC /* 640.pdf */,
 				7CD9D52E13EB000D00B63AEC /* 641.pdf */,
-				7CD9D52F13EB000D00B63AEC /* 642.pdf */,
-				7CD9D53013EB000D00B63AEC /* 643.pdf */,
-				7CD9D53113EB000D00B63AEC /* 644.pdf */,
-				7CD9D53213EB000D00B63AEC /* 645.pdf */,
-				7CD9D53313EB000D00B63AEC /* 646.pdf */,
-				7CD9D53413EB000D00B63AEC /* 647.pdf */,
-				7CD9D53513EB000D00B63AEC /* 648.pdf */,
-				7CD9D53613EB000D00B63AEC /* 649.pdf */,
-				7CD9D53713EB000D00B63AEC /* 650.pdf */,
-				7CD9D53813EB000D00B63AEC /* 651.pdf */,
-				7CD9D53913EB000D00B63AEC /* 652.pdf */,
-				7CD9D53A13EB000D00B63AEC /* 653.pdf */,
+				7C045F33156BA1310065E2DC /* 642.pdf */,
+				7C045F34156BA1310065E2DC /* 643.pdf */,
+				7C045F35156BA1310065E2DC /* 644.pdf */,
+				7C045F36156BA1310065E2DC /* 645.pdf */,
+				7C045F37156BA1310065E2DC /* 646.pdf */,
+				7C045F38156BA1310065E2DC /* 647.pdf */,
+				7C045F39156BA1310065E2DC /* 648.pdf */,
+				7C045F3A156BA1310065E2DC /* 649.pdf */,
+				7C045F3B156BA1310065E2DC /* 650.pdf */,
+				7C045F3C156BA1310065E2DC /* 651.pdf */,
+				7C045F3D156BA1310065E2DC /* 652.pdf */,
+				7C045F3E156BA1310065E2DC /* 653.pdf */,
 				7CD9D53B13EB000D00B63AEC /* 654.pdf */,
 				7CD9D53C13EB000D00B63AEC /* 655.pdf */,
 				7CD9D53D13EB000D00B63AEC /* 656.pdf */,
@@ -3637,6 +3656,7 @@
 		7C8AAA8613E6ECE900C70B2E = {
 			isa = PBXGroup;
 			children = (
+				7C045F4E156BA88F0065E2DC /* Analytics */,
 				7C9D619713F44006008F18AC /* Entitlements.plist */,
 				7C79514F13E82FC7001950EA /* Settings.bundle */,
 				7C79505113E800DD001950EA /* App Files */,
@@ -3667,6 +3687,8 @@
 		7C8AAA9413E6ECE900C70B2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C045F54156BBECA0065E2DC /* CFNetwork.framework */,
+				7C045F52156BBEBF0065E2DC /* libsqlite3.0.dylib */,
 				7C79517313E85373001950EA /* libsqlite3.dylib */,
 				7C79516F13E8503E001950EA /* SystemConfiguration.framework */,
 				7C79516D13E83E26001950EA /* StoreKit.framework */,
@@ -4429,18 +4451,6 @@
 				7CD9D94313EB001000B63AEC /* 639.pdf in Resources */,
 				7CD9D94413EB001000B63AEC /* 640.pdf in Resources */,
 				7CD9D94513EB001000B63AEC /* 641.pdf in Resources */,
-				7CD9D94613EB001000B63AEC /* 642.pdf in Resources */,
-				7CD9D94713EB001000B63AEC /* 643.pdf in Resources */,
-				7CD9D94813EB001000B63AEC /* 644.pdf in Resources */,
-				7CD9D94913EB001000B63AEC /* 645.pdf in Resources */,
-				7CD9D94A13EB001000B63AEC /* 646.pdf in Resources */,
-				7CD9D94B13EB001000B63AEC /* 647.pdf in Resources */,
-				7CD9D94C13EB001000B63AEC /* 648.pdf in Resources */,
-				7CD9D94D13EB001000B63AEC /* 649.pdf in Resources */,
-				7CD9D94E13EB001000B63AEC /* 650.pdf in Resources */,
-				7CD9D94F13EB001000B63AEC /* 651.pdf in Resources */,
-				7CD9D95013EB001000B63AEC /* 652.pdf in Resources */,
-				7CD9D95113EB001000B63AEC /* 653.pdf in Resources */,
 				7CD9D95213EB001000B63AEC /* 654.pdf in Resources */,
 				7CD9D95313EB001000B63AEC /* 655.pdf in Resources */,
 				7CD9D95413EB001000B63AEC /* 656.pdf in Resources */,
@@ -4843,6 +4853,18 @@
 				7C6A5AC2150A6C5700DA9D9A /* Maths.m4v in Resources */,
 				7C6A5AC3150A6C5700DA9D9A /* Physics.m4v in Resources */,
 				7C6A5AC5150A6C6800DA9D9A /* Maths.png in Resources */,
+				7C045F3F156BA1310065E2DC /* 642.pdf in Resources */,
+				7C045F40156BA1310065E2DC /* 643.pdf in Resources */,
+				7C045F41156BA1310065E2DC /* 644.pdf in Resources */,
+				7C045F42156BA1310065E2DC /* 645.pdf in Resources */,
+				7C045F43156BA1310065E2DC /* 646.pdf in Resources */,
+				7C045F44156BA1310065E2DC /* 647.pdf in Resources */,
+				7C045F45156BA1310065E2DC /* 648.pdf in Resources */,
+				7C045F46156BA1310065E2DC /* 649.pdf in Resources */,
+				7C045F47156BA1310065E2DC /* 650.pdf in Resources */,
+				7C045F48156BA1310065E2DC /* 651.pdf in Resources */,
+				7C045F49156BA1310065E2DC /* 652.pdf in Resources */,
+				7C045F4A156BA1310065E2DC /* 653.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
