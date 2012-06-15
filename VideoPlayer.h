@@ -10,11 +10,19 @@
 #import <MediaPlayer/MediaPlayer.h> 
 
 @interface VideoPlayer : UIViewController {
-
-	MPMoviePlayerController *moviePlayerController;
+    
+	//MPMoviePlayerController *moviePlayerController;
 	NSString *VideoFileName;
+    
+    NSString *ServerLocation;
+    NSURLCredential *credential;
+    NSURLProtectionSpace *protectionSpace;
+    MPMoviePlayerViewController *moviePlayerViewController;
 	
 }
 @property (nonatomic, retain) NSString *VideoFileName;
-
+@property (nonatomic, retain) NSString *ServerLocation;
+@property (nonatomic, retain) NSURLCredential *credential;
+@property (nonatomic, retain) NSURLProtectionSpace *protectionSpace;
+@property (nonatomic, retain) MPMoviePlayerViewController *moviePlayerViewController;
 @end

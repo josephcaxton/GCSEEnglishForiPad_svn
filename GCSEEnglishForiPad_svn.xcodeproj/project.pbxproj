@@ -24,10 +24,6 @@
 		7C045F55156BBECA0065E2DC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C045F54156BBECA0065E2DC /* CFNetwork.framework */; };
 		7C25C8F214FB96FB0019E899 /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C25C8F114FB96FB0019E899 /* GCSEEnglish.sqlite */; };
 		7C5DBE7913EAA16100E404BB /* Evaluator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DBE7613EAA16100E404BB /* Evaluator.xcdatamodeld */; };
-		7C6A5AC0150A6C5700DA9D9A /* Chemistry.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A5ABC150A6C5700DA9D9A /* Chemistry.m4v */; };
-		7C6A5AC1150A6C5700DA9D9A /* English.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A5ABD150A6C5700DA9D9A /* English.m4v */; };
-		7C6A5AC2150A6C5700DA9D9A /* Maths.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A5ABE150A6C5700DA9D9A /* Maths.m4v */; };
-		7C6A5AC3150A6C5700DA9D9A /* Physics.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A5ABF150A6C5700DA9D9A /* Physics.m4v */; };
 		7C6A5AC5150A6C6800DA9D9A /* Maths.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A5AC4150A6C6800DA9D9A /* Maths.png */; };
 		7C79506313E80979001950EA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79506113E80979001950EA /* Icon@2x.png */; };
 		7C79506413E80979001950EA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C79506213E80979001950EA /* Icon.png */; };
@@ -1182,10 +1178,6 @@
 		7C25C8F114FB96FB0019E899 /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
 		7C5DBE7713EAA16100E404BB /* Evaluator 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Evaluator 2.xcdatamodel"; sourceTree = "<group>"; };
 		7C5DBE7813EAA16100E404BB /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evaluator.xcdatamodel; sourceTree = "<group>"; };
-		7C6A5ABC150A6C5700DA9D9A /* Chemistry.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chemistry.m4v; sourceTree = "<group>"; };
-		7C6A5ABD150A6C5700DA9D9A /* English.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = English.m4v; sourceTree = "<group>"; };
-		7C6A5ABE150A6C5700DA9D9A /* Maths.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maths.m4v; sourceTree = "<group>"; };
-		7C6A5ABF150A6C5700DA9D9A /* Physics.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Physics.m4v; sourceTree = "<group>"; };
 		7C6A5AC4150A6C6800DA9D9A /* Maths.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Maths.png; sourceTree = "<group>"; };
 		7C79506113E80979001950EA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		7C79506213E80979001950EA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -3593,11 +3585,7 @@
 				7C79508B13E80F07001950EA /* Default-Portrait.png */,
 				7C79508C13E80F07001950EA /* Default-PortraitUpsideDown.png */,
 				7C79509213E80F30001950EA /* Graph_Ipad.png */,
-				7C6A5ABC150A6C5700DA9D9A /* Chemistry.m4v */,
-				7C6A5ABD150A6C5700DA9D9A /* English.m4v */,
-				7C6A5ABE150A6C5700DA9D9A /* Maths.m4v */,
 				7C6A5AC4150A6C6800DA9D9A /* Maths.png */,
-				7C6A5ABF150A6C5700DA9D9A /* Physics.m4v */,
 				7C79509613E80F7C001950EA /* English.png */,
 				7C79509813E80F91001950EA /* Physics.png */,
 				7C79509A13E80FA6001950EA /* Chemistry.png */,
@@ -4848,10 +4836,6 @@
 				7C9D619813F44006008F18AC /* Entitlements.plist in Resources */,
 				7CAFD7A214502EB000E1EA5E /* 828.pdf in Resources */,
 				7C25C8F214FB96FB0019E899 /* GCSEEnglish.sqlite in Resources */,
-				7C6A5AC0150A6C5700DA9D9A /* Chemistry.m4v in Resources */,
-				7C6A5AC1150A6C5700DA9D9A /* English.m4v in Resources */,
-				7C6A5AC2150A6C5700DA9D9A /* Maths.m4v in Resources */,
-				7C6A5AC3150A6C5700DA9D9A /* Physics.m4v in Resources */,
 				7C6A5AC5150A6C6800DA9D9A /* Maths.png in Resources */,
 				7C045F3F156BA1310065E2DC /* 642.pdf in Resources */,
 				7C045F40156BA1310065E2DC /* 643.pdf in Resources */,

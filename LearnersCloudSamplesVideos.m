@@ -29,14 +29,14 @@
 	listofItems = [[NSMutableArray alloc] init];
 	ImageNames = [[NSMutableArray alloc] init];
 	// Add items to the array this is hardcoded for now .. may need to be migrated to the database
-	[listofItems addObject:@"Maths"];
+	[listofItems addObject:@"Maths - Collecting and recording data"];
 	[ImageNames addObject:@"Maths.png"];
-	[listofItems addObject:@"  English"];
+	[listofItems addObject:@"Conflict peom - Bayonet Charge"];
 	[ImageNames addObject:@"English.png"];
-	[listofItems addObject:@" Physics"];
-	[ImageNames addObject:@"Physics.png"];
-	[listofItems addObject:@" Chemistry"];
-	[ImageNames addObject:@"Chemistry.png"];
+	//[listofItems addObject:@" Physics"];
+	//[ImageNames addObject:@"Physics.png"];
+	//[listofItems addObject:@" Chemistry"];
+	//[ImageNames addObject:@"Chemistry.png"];
 //	[listofItems addObject:@"French"];
 //	[ImageNames addObject:@"French.png"];
 //	[listofItems addObject:@"Batteries"];
@@ -186,8 +186,7 @@
         WebText.delegate = self;
 		NSString *Visit = @"Visit ";
 		NSString *Website =[Visit stringByAppendingString: @"<a target=/'_blank/'  href=http://www.learnerscloud.com/?utm_source=itunes&utm_medium=link&utm_content=Maths&utm_campaign=App > LearnersCloud</a>"];
-		NSString *videos = [Website stringByAppendingString:@" <p>Watch hundreds of more HD videos <br/>Complete GCSE English & Maths available<br/><b>Sign up for a FREE trial account now</b></p><br/> Also for schools and colleges."];
-		
+		NSString *videos = [Website stringByAppendingString:@" <p>Watch hundreds of more HD videos <br/>Complete GCSE English & Maths available, Physics and Chemistry coming in september 2012<br/><b>Sign up for a FREE trial account now</b></p><br/> Also for schools and colleges."];		
         [WebText loadHTMLString:videos baseURL:nil];
 		
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
