@@ -13,7 +13,7 @@
 #import "SelectQuestionTemplate.h"
 #import "ClientEngine.h"
 
-@interface Start : UIViewController  <UITableViewDataSource, UITableViewDelegate>{  //UIPickerViewDelegate, UIPickerViewDataSource
+@interface Start : UIViewController  <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>{  //UIPickerViewDelegate, UIPickerViewDataSource
 	
 	UIView *FirstView;
 	UIView *SecondView;
