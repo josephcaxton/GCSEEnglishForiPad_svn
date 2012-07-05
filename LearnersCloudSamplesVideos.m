@@ -26,6 +26,10 @@
     [super viewDidLoad];
 	
     self.navigationItem.title = @"GCSE Sample Videos";
+    
+    UINavigationController *nav =self.navigationController;
+    nav.navigationBar.tintColor = [UIColor blackColor];
+    
 	listofItems = [[NSMutableArray alloc] init];
 	ImageNames = [[NSMutableArray alloc] init];
 	// Add items to the array this is hardcoded for now .. may need to be migrated to the database

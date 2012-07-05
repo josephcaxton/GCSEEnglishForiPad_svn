@@ -11,7 +11,7 @@
 
 @implementation Start
 
-@synthesize FirstView, SecondView,FirstTable,SecondTable,QuestionPickerView,CustomDataSource,Sound,ShowAnswers,logoView,Copyright,WebText,StartPractice,btnStartTest,Instruction;
+@synthesize FirstView, SecondView,FirstTable,SecondTable,QuestionPickerView,CustomDataSource,Sound,ShowAnswers,logoView,Copyright,WebText,StartPractice,btnStartTest,Instruction,popover;
 
 
 #define SCREEN_WIDTH 768
@@ -49,6 +49,8 @@
 	//[self.view addSubview:SecondView];
 	//[self AddStartButton:2];
 	
+    UINavigationController *nav =self.navigationController;
+    nav.navigationBar.tintColor = [UIColor blackColor];
 	
 }
 
@@ -294,20 +296,64 @@
 		
 	}else {
 		
+        // create a toolbar where we can place some buttons
+        UIToolbar* toolbar = [[UIToolbar alloc]
+                              initWithFrame:CGRectMake(0, 0, 180, 45)];
+        [toolbar setBarStyle: UIBarStyleBlack];
+        
+        
+        // create an array for the buttons
+        NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:3];
+        
+        //Start button
+        UIBarButtonItem *StartTest = [[UIBarButtonItem alloc] initWithTitle:@"Start Test Here" style:UIBarButtonItemStyleBordered target:self action:@selector(StartTest:)];
+        
+        [buttons addObject:StartTest ];
+        
+        // create a spacer between the buttons
+        UIBarButtonItem *spacer = [[UIBarButtonItem alloc]
+                                   initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                   target:nil
+                                   action:nil];
+        [buttons addObject:spacer];
+        
+        
+        
+        // Create Share image button
+        UIImage *ShareImage = [UIImage imageNamed:@"shareIcon.png"];
+        UIButton *face = [UIButton buttonWithType:UIButtonTypeCustom];
+        face.bounds = CGRectMake( 0, 0, ShareImage.size.width, ShareImage.size.height );
+        [face setImage:ShareImage forState:UIControlStateNormal];
+        [face addTarget:self action:@selector(share:)forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *ShareButton = [[UIBarButtonItem alloc] initWithCustomView:face];
+        
+        [buttons addObject:ShareButton];
+        
+        [toolbar setItems:buttons animated:NO];
+        
+        // place the toolbar into the navigation bar
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                                  initWithCustomView:toolbar];
+        
+        [ShareButton release];
+        [spacer release];
+        [StartTest release];
+        //_____
+		
 		UIBarButtonItem *Back = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(Practice:)];
 		self.navigationItem.leftBarButtonItem = Back;
 		[Back release];
 		
 		
-		UIBarButtonItem *StartTest = [[UIBarButtonItem alloc] initWithTitle:@"Start Test Here" style:UIBarButtonItemStylePlain target:self action:@selector(StartTest:)];
-		self.navigationItem.rightBarButtonItem = StartTest;
-		[StartTest release];
 		
 		EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 		BOOL PlaySound = [[NSUserDefaults standardUserDefaults] boolForKey:@"PlaySound"];
 		if (PlaySound == YES) {
 			
 			[appDelegate PlaySound:@"ArrowWoodImpact"];
+			
+
 			
 		}
 		
@@ -710,6 +756,25 @@
     NSString *str = @"https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?id=454173809&type=Purple+Software"; 
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
 }
+
+- (IBAction)share:(id)sender{
+    UIButton *button = (UIButton*)sender;
+    
+    PopUpTableviewViewController *tableViewController = [[PopUpTableviewViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    
+    popover = [[UIPopoverController alloc] initWithContentViewController:tableViewController];
+    tableViewController.m_popover = popover;
+    tableViewController.StartPage = self;
+    [popover setPopoverContentSize:CGSizeMake(420, 380) animated:YES];
+    
+    [popover presentPopoverFromRect:CGRectMake(button.frame.size.width / 2, button.frame.size.height / 1, 1, 1) inView:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    
+    
+}
+
+
+
 
 
 

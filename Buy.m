@@ -59,6 +59,10 @@ int dontShowPriceList = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UINavigationController *nav =self.navigationController;
+    nav.navigationBar.tintColor = [UIColor blackColor];
+    
 	observer = [[CustomStoreObserver alloc] init];
 	dontShowPriceList = 0;
 	
@@ -68,7 +72,7 @@ int dontShowPriceList = 0;
 - (void)AddProgress{
 	
 	
-	UIActivityIndicatorView * activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+	UIActivityIndicatorView * activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 	[activityIndicator stopAnimating];
 	[activityIndicator hidesWhenStopped];
 	UIBarButtonItem * barButton = [[UIBarButtonItem alloc] initWithCustomView:activityIndicator];

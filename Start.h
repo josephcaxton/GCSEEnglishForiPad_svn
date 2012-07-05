@@ -12,6 +12,7 @@
 #import "SelectTopic.h"
 #import "SelectQuestionTemplate.h"
 #import "ClientEngine.h"
+#import "PopUpTableviewViewController.h"
 
 @interface Start : UIViewController  <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>{  //UIPickerViewDelegate, UIPickerViewDataSource
 	
@@ -32,6 +33,7 @@
 	UIButton *StartPractice;
 	UIButton *btnStartTest;
      UILabel *Instruction;
+     UIPopoverController *popover;
 	
 }
 
@@ -50,8 +52,11 @@
 @property (nonatomic, assign) UIButton *StartPractice;
 @property (nonatomic, assign) UIButton *btnStartTest;
 @property (nonatomic, assign) UILabel *Instruction;
+@property (nonatomic, retain)  UIPopoverController *popover;
 
 -(IBAction)Practice:(id)sender;
 -(IBAction)StartTest:(id)sender;
 -(void)PageButton:(int)sender;
+
+- (void)reviewPressed;
 @end
