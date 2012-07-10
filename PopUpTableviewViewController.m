@@ -451,7 +451,7 @@ self.contentSizeForViewInPopover = CGSizeMake(108,400);
         NSString *UrlString = @"http://itunes.apple.com/us/app/gcse-english-language-english/id454173809?ls=1&mt=8";
         
         TWTweetComposeViewController *tweetSheet = [[TWTweetComposeViewController alloc] init];
-        [tweetSheet setInitialText:@"Checkout @LearnersCloud #GCSE App for English Literature and English Language  - Learn, revise and test yourself on the go"];
+        [tweetSheet setInitialText:@"Checkout @LearnersCloud #GCSE App for English Language and Literature - Learn, revise and test yourself on the go"];
         [tweetSheet addImage:[UIImage imageNamed:@"Icon.png"]];
         [tweetSheet addURL:[NSURL URLWithString:UrlString]];
         
