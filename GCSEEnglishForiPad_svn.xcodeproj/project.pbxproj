@@ -22,6 +22,7 @@
 		7C045F51156BA8B80065E2DC /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C045F50156BA8B80065E2DC /* libGoogleAnalytics.a */; };
 		7C045F53156BBEBF0065E2DC /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C045F52156BBEBF0065E2DC /* libsqlite3.0.dylib */; };
 		7C045F55156BBECA0065E2DC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C045F54156BBECA0065E2DC /* CFNetwork.framework */; };
+		7C0D1F5015E5202600999411 /* buttonbackgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D1F4F15E5202600999411 /* buttonbackgroud.png */; };
 		7C25C8F214FB96FB0019E899 /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C25C8F114FB96FB0019E899 /* GCSEEnglish.sqlite */; };
 		7C5DBE7913EAA16100E404BB /* Evaluator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DBE7613EAA16100E404BB /* Evaluator.xcdatamodeld */; };
 		7C6A5AC5150A6C6800DA9D9A /* Maths.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C6A5AC4150A6C6800DA9D9A /* Maths.png */; };
@@ -1186,6 +1187,7 @@
 		7C045F50156BA8B80065E2DC /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
 		7C045F52156BBEBF0065E2DC /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		7C045F54156BBECA0065E2DC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7C0D1F4F15E5202600999411 /* buttonbackgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonbackgroud.png; sourceTree = "<group>"; };
 		7C25C8F114FB96FB0019E899 /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
 		7C5DBE7713EAA16100E404BB /* Evaluator 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Evaluator 2.xcdatamodel"; sourceTree = "<group>"; };
 		7C5DBE7813EAA16100E404BB /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evaluator.xcdatamodel; sourceTree = "<group>"; };
@@ -3632,6 +3634,7 @@
 				7C8AAAA013E6ECE900C70B2E /* InfoPlist.strings */,
 				7C8AAA9F13E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Info.plist */,
 				7CACF1F113F2DFE1000F6CBA /* BlackBackGround.png */,
+				7C0D1F4F15E5202600999411 /* buttonbackgroud.png */,
 				7CCEF3A415A5D7CF00A1438A /* shareIcon.png */,
 				7CCEF3A615A5D8E100A1438A /* mail.png */,
 				7CCEF3A815A5D8F800A1438A /* facebook.png */,
@@ -4928,6 +4931,7 @@
 				7CCEF3AD15A5D92300A1438A /* LikeUsOnFaceBook.png in Resources */,
 				7CCEF3AF15A5D95700A1438A /* FollowUsOnTwitter.png in Resources */,
 				7CCEF3B515A5DD9300A1438A /* logoutfacebook.png in Resources */,
+				7C0D1F5015E5202600999411 /* buttonbackgroud.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
