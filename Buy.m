@@ -60,11 +60,26 @@ int dontShowPriceList = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UINavigationController *nav =self.navigationController;
-    nav.navigationBar.tintColor = [UIColor blackColor];
+    NSString *HeaderLocation = [[NSBundle mainBundle] pathForResource:@"header_bar" ofType:@"png"];
+    UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
+    [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];
+    [HeaderBackImage release];
     
-	observer = [[CustomStoreObserver alloc] init];
-	dontShowPriceList = 0;
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,185,55)];
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.text = self.navigationItem.title;
+    label.font = [UIFont fontWithName:@"Helvetica-Bold" size:24.0];
+    self.navigationItem.titleView = label;
+    [label sizeToFit];
+    [label release];
+    
+    
+	
+    observer = [[CustomStoreObserver alloc] init];
+    dontShowPriceList = 0;
+    
+
 	
     
 }
@@ -259,14 +274,14 @@ int dontShowPriceList = 0;
 	[numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
 	[numberFormatter setLocale:product.priceLocale];
 	
-	UIButton *BuyNow = [UIButton buttonWithType:UIButtonTypeRoundedRect];  
+	UIButton *BuyNow = [UIButton buttonWithType:UIButtonTypeCustom]; 
 	
 	//[BuyNow setTitle:@"                   >"  forState:UIControlStateNormal];
-	BuyNow.frame = CGRectMake(400, 0, 120, 44);
+	BuyNow.frame = CGRectMake(600, 2, 100, 39);
 	BuyNow.tag = indexPath.row + 1;
 	[BuyNow addTarget:self action:@selector(BuyQuestion:) forControlEvents:UIControlEventTouchUpInside];
 	
-	UIImage *buttonImageNormal = [UIImage imageNamed:@"buynow.jpeg"];
+	UIImage *buttonImageNormal = [UIImage imageNamed:@"buy_now.png"];
 	//UIImage *strechableButtonImageNormal = [buttonImageNormal stretchableImageWithLeftCapWidth:0 topCapHeight:0];
 	[BuyNow setBackgroundImage:buttonImageNormal forState:UIControlStateNormal];
 	

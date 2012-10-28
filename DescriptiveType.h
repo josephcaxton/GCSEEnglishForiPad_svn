@@ -40,7 +40,7 @@
 	
 	BOOL ShowAnswer;
 	UIButton *ShowAnswerHere;  // To show answer on question page
-	UIButton *Continue;
+	UIBarButtonItem *Continue;
 	UIWebView *WebControl;
     UILabel *Instruction;
 }
@@ -66,7 +66,7 @@
 //@property (nonatomic, retain) UIButton *newLine;
 @property (nonatomic, assign) BOOL ShowAnswer;
 @property (nonatomic, retain) UIButton *ShowAnswerHere;
-@property (nonatomic, retain) UIButton *Continue;
+@property (nonatomic, retain) UIBarButtonItem *Continue;
 @property (nonatomic, retain) UIWebView *WebControl;
 @property (nonatomic, assign) UILabel *Instruction;
 

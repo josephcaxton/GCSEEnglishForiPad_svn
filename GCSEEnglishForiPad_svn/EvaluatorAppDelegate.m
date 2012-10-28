@@ -26,6 +26,7 @@ static NSString* const kAnalyticsAccountId = @"UA-31954687-1";
     //Remove the my admin tabbarItem ..
     NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:tabBarController.viewControllers];
     [viewControllers removeObjectAtIndex:5];
+     [viewControllers removeObjectAtIndex:2];
     [tabBarController setViewControllers:viewControllers];
 
     
@@ -116,9 +117,9 @@ static NSString* const kAnalyticsAccountId = @"UA-31954687-1";
 	NSString *MyAccessLevel = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:AccessLevel];
 	//[[NSUserDefaults standardUserDefaults] setObject:@"5" forKey:@"AccessLevel"]; //For testing only
 	//[[NSUserDefaults standardUserDefaults] synchronize];
-	if (MyAccessLevel == nil) {
+	if (MyAccessLevel == nil || [MyAccessLevel intValue] == 1) {
 		
-		NSDictionary *appDefaults  = [NSDictionary dictionaryWithObjectsAndKeys:@"1", AccessLevel, nil];
+		NSDictionary *appDefaults  = [NSDictionary dictionaryWithObjectsAndKeys:@"2", AccessLevel, nil];
 		[[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 		[[NSUserDefaults standardUserDefaults] synchronize];
 	}
@@ -159,7 +160,7 @@ static NSString* const kAnalyticsAccountId = @"UA-31954687-1";
     if (![[GANTracker sharedTracker] trackEvent:@"English iPad Started"
                                          action:@"Launch iOS"
                                           label:@"Launch iOS"
-                                          value:99
+                                          value:1
                                       withError:&error]) {
         NSLog(@"error in trackEvent");
     }
@@ -378,94 +379,47 @@ static NSString* const kAnalyticsAccountId = @"UA-31954687-1";
 	return YES;
 }
 
--(void) AddSplashScreen
-{
-	
-	if ([UIDevice currentDevice].orientation != UIDeviceOrientationPortrait){
-		
-	//fade time
-	//CFTimeInterval animation_duration = 0.5;
-	
-	//SplashScreen 
-	splashView = [[[UIImageView alloc] initWithFrame:CGRectMake(0,0, 768, 950)]autorelease];
-	splashView.image = [UIImage imageNamed:@"LandScapePic_Ipad_Splash.png"];
-	[window addSubview:splashView];
-	[window bringSubviewToFront:splashView];
-	
-	//Animation (fade away with zoom effect)
-	//[UIView beginAnimations:nil context:nil];
-	//[UIView setAnimationDuration:animation_duration];
-	//[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:window cache:YES];
-	//[UIView setAnimationDelegate:splashView]; 
-	//[UIView setAnimationDidStopSelector:@selector(removeFromSuperview)];
-	//splashView.alpha = 0.0;
-	//splashView.frame = CGRectMake(-60, -60, 440, 600);
-	
-	//[UIView commitAnimations];
-	}
-	
-	else {
-		//fade time
-		//CFTimeInterval animation_duration = 0.5;
-		
-		//SplashScreen 
-		splashView = [[[UIImageView alloc] initWithFrame:CGRectMake(0,0, 768, 950)]autorelease];
-		splashView.image = [UIImage imageNamed:@"PortraitPic_Ipad_Splash.png"];
-		[window addSubview:splashView];
-		[window bringSubviewToFront:splashView];
-		
-		//Animation (fade away with zoom effect)
-		//[UIView beginAnimations:nil context:nil];
-		//[UIView setAnimationDuration:animation_duration];
-		//[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:window cache:YES];
-		//[UIView setAnimationDelegate:splashView]; 
-		//[UIView setAnimationDidStopSelector:@selector(removeFromSuperview)];
-		//splashView.alpha = 0.0;
-		//splashView.frame = CGRectMake(-60, -60, 440, 600);
-		
-		//[UIView commitAnimations];
-	}
-
-	
+-(BOOL)isDeviceConnectedToInternet{
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    
+    BOOL internetActive = NO;
+    switch (networkStatus)
+    {
+        case NotReachable:
+        {
+            NSLog(@"The internet is down.");
+            
+            internetActive = NO;
+            
+            break;
+        }
+        case ReachableViaWiFi:
+        {
+            NSLog(@"The internet is working via WIFI.");
+            
+            internetActive = YES;
+            
+            break;
+        }
+            
+        case ReachableViaWWAN:
+        {
+            NSLog(@"The internet is working via WWAN.");
+            
+            internetActive = YES;
+            
+            break;
+        }
+    }
+    return internetActive;
+    
+    
 }
 
--(void) Removesplash{
-	
-	[splashView removeFromSuperview];
-	[splashView release];
-	
-	
-	
-}
 
-/*- (void) removeBuyTabIfNotNeededFromTabController:(UITabBarController *)tbController{
-	
-	UIBarItem *itemToRemove = nil;
-	NSString *AccessLevel = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"AccessLevel"];
-	
-	if([AccessLevel intValue] == 5){
-		
-		NSMutableArray *ControllerItems = [NSMutableArray arrayWithArray:tbController.];
-		
-		for (UIViewController *aView in ControllerItems) 
-        {
-            if ([[aView tabBarItem].title isEqualToString:@"Buy"])
-            {
-                itemToRemove = aView.tabBarItem;
-            }
-        }
-        if (itemToRemove)
-        {
-            [ControllerItems removeObject:itemToRemove];
-            [tbController setViewControllers:ControllerItems];
-        }
-	
-	}
-	
-	
-	
-	
-} */
+
 
 
 #pragma mark -

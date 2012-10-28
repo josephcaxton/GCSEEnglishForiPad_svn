@@ -15,8 +15,7 @@
 	
 	//UIWebView *WebBox;
 	NSMutableArray *CollectionofArrays;
-	UIButton *ClearLog;
-	UIImageView *imageView;
+    UIImageView *imageView;
 	NSString *FinalString;
 	UITableView *ThisTable;
 	UIButton *Refresh;
@@ -24,7 +23,6 @@
 
 //@property (nonatomic, retain) UIWebView *WebBox;
 @property (nonatomic, retain) NSMutableArray *CollectionofArrays;
-@property (nonatomic, retain) UIButton *ClearLog;
 @property (nonatomic, retain) UIImageView *imageView;
 @property (nonatomic, retain) NSString *FinalString;
 @property (nonatomic, retain) UITableView *ThisTable;
@@ -35,6 +33,5 @@
 -(IBAction)ClearAllLogs:(id)sender;
 -(IBAction)RefreshTable:(id)sender;
 - (BOOL)isDataSourceAvailable;
-//- (UIImage*)PictureOrientation:(UIInterfaceOrientation)interfaceOrientation;
-//- (void)AddProgress;
+
 @end

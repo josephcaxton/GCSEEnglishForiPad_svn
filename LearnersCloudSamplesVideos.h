@@ -9,15 +9,24 @@
 #import <UIKit/UIKit.h>
 #import "EvaluatorAppDelegate.h"
 
-@interface LearnersCloudSamplesVideos : UITableViewController <UIWebViewDelegate>{
+@interface LearnersCloudSamplesVideos : UIViewController <UITableViewDataSource, UITableViewDelegate> {
 
 	NSMutableArray *listofItems;
-	UIWebView *WebText;
-	NSMutableArray *ImageNames;
+    NSMutableArray *ImageNames;
+	UIButton *LCButton;
+    UITableView *FirstTable;
+    CGRect FirstViewframe;
+    UIImageView *PromoImageView;
+	
 }
 
 @property (nonatomic, retain) NSMutableArray *listofItems;
-@property (nonatomic, retain) UIWebView *WebText;
 @property (nonatomic, retain) NSMutableArray *ImageNames;
+@property (nonatomic, retain) UIButton *LCButton;
+@property (nonatomic, retain) UITableView *FirstTable;
+@property (nonatomic, assign)  CGRect FirstViewframe;
+@property (nonatomic, assign)  UIImageView *PromoImageView;
+
+- (void)WebsitebuttonPressed;
 
 @end

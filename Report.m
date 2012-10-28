@@ -13,7 +13,7 @@
 
 @implementation Report
 
-@synthesize CollectionofArrays,ClearLog,imageView,FinalString,ThisTable,Refresh; //WebBox
+@synthesize CollectionofArrays,imageView,FinalString,ThisTable,Refresh; //WebBox
 
 #define SCREEN_WIDTH 768
 #define SCREEN_HEIGHT 950
@@ -23,9 +23,28 @@
 - (void)viewDidLoad {
 	
 	[super viewDidLoad];
+    
+    
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,185,55)];
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.text = self.navigationItem.title;
+    label.font = [UIFont fontWithName:@"Helvetica-Bold" size:24.0];
+    self.navigationItem.titleView = label;
+    [label sizeToFit];
+    [label release];
+    
+
+    NSString *HeaderLocation = [[NSBundle mainBundle] pathForResource:@"header_bar" ofType:@"png"];
+    UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
+    [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];
+    [HeaderBackImage release];
 	
-	UINavigationController *nav =self.navigationController;
-    nav.navigationBar.tintColor = [UIColor blackColor];	
+    UIBarButtonItem *ClearLogs = [[UIBarButtonItem alloc] initWithTitle:@"Clear logs" style:UIBarButtonItemStylePlain target:self action:@selector(ClearAllLogs:)];
+    self.navigationItem.rightBarButtonItem = ClearLogs;
+    [ClearLogs release];
+    
+
 		
 }
 
@@ -46,6 +65,17 @@
 	ThisTable.delegate = self;
 	ThisTable.dataSource = self;
 	ThisTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+    
+    self.ThisTable.backgroundView = nil;
+    NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"Background" ofType:@"png"];
+	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
+    self.ThisTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
+    
+    [BackImage release];
+    
+    
+	
+
 	
 	[self.view addSubview:ThisTable];
 	
@@ -102,7 +132,7 @@
 			int MaxValue = [[Totals valueForKeyPath:@"@max.intValue"]intValue];
 			[Totals release];
 			
-			NSString *SiteAddress = [NSString stringWithString:@"http://chart.apis.google.com/chart?"];
+			NSString *SiteAddress = @"http://chart.apis.google.com/chart?";
 			NSString *PlusChartSize = [SiteAddress stringByAppendingString:@"chs=600x500&"];
 			NSString *PlusChartType = [PlusChartSize stringByAppendingString:@"cht=bvs&"];
 			NSString *PlusChartColor = [PlusChartType stringByAppendingString:@"chco=0000FF,FF0000&"];
@@ -154,7 +184,7 @@
 	
 	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
 	[appDelegate.SecondThread cancel];
-	appDelegate.SecondThread = nil;
+	
 	
 	
 }
@@ -356,8 +386,7 @@
 		imageView.frame = CustomFrame;
 		
 		
-		self.ClearLog.frame = CGRectMake(580,760,140,40);
-		//self.Refresh.frame = CGRectMake(400,760,140,40);
+		
 			}
 	
 	else {
@@ -367,8 +396,7 @@
 		imageView.frame = CustomFrame;
 		
 		
-		self.ClearLog.frame = CGRectMake(780,760,140,40);
-		//self.Refresh.frame = CGRectMake(600,760,140,40);
+		
 	}
 	
 	
@@ -454,24 +482,6 @@
 		[cell addSubview:imageView];
 	
 	
-		
-		self.ClearLog = [UIButton buttonWithType:UIButtonTypeRoundedRect];   
-		//self.ClearLog.frame = CGRectMake(580,760,140,40);
-		[ClearLog setTitle:@"Clear Logs" forState:UIControlStateNormal];
-		[ClearLog addTarget:self action:@selector(ClearAllLogs:) forControlEvents:UIControlEventTouchUpInside];
-	
-		[cell addSubview:ClearLog];
-		
-		
-		//self.Refresh = [UIButton buttonWithType:UIButtonTypeRoundedRect];   
-//		//self.Refresh.frame = CGRectMake(400,760,140,40);
-//		[Refresh setTitle:@"Refresh" forState:UIControlStateNormal];
-//		[Refresh addTarget:self action:@selector(RefreshTable:) forControlEvents:UIControlEventTouchUpInside];
-//		
-//		[cell addSubview:Refresh];
-		
-	
-	
 	cell.backgroundColor = [UIColor whiteColor];
 		
 	}
@@ -492,25 +502,6 @@
 	
 }
 
-/*- (UIImage*)PictureOrientation:(UIInterfaceOrientation)interfaceOrientation{
-	
-	if (interfaceOrientation == UIInterfaceOrientationPortrait  || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-		
-			NSString *FilePath = [[NSBundle mainBundle] pathForResource:@"Graph_Ipad_Portrait" ofType:@"png"];
-			UIImage *image = [[UIImage alloc]initWithContentsOfFile:FilePath];
-			return image;
-
-		}
-		
-		else {
-			NSString *FilePath = [[NSBundle mainBundle] pathForResource:@"Graph_Ipad_LandScape" ofType:@"png"];
-			UIImage *image = [[UIImage alloc]initWithContentsOfFile:FilePath];
-			return image;
-		}
-
-	
-	
-}*/
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -534,7 +525,6 @@
 	//[WebBox release];
 	[imageView release];
 	[CollectionofArrays release];
-	[ClearLog release];
 	[ThisTable release];
 	[FinalString release];
 	

@@ -34,10 +34,19 @@ static UIWebView *QuestionHeaderBox = nil;
 	}
 	QuestionHeaderBox.scalesPageToFit = YES;
 	
-	self.FileListTable = [[UITableView alloc] initWithFrame:CGRectMake(2, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170) style:UITableViewStyleGrouped];
+	self.FileListTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170) style:UITableViewStyleGrouped];
 	FileListTable.delegate = self;
 	FileListTable.dataSource = self;
 	FileListTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+    
+    
+    [self.FileListTable setBackgroundView:nil];
+    NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"Background" ofType:@"png"];
+	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
+    self.FileListTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
+    [BackImage release];
+    
+
 	
 	// Now I have added 1000 pdfs to the bundle. App is now ver slow
 	// I don't need this to go live, it is just for admin only so i comment out CheckExistingFiles
@@ -80,9 +89,14 @@ static UIWebView *QuestionHeaderBox = nil;
 			self.Answer1 =[[UITextView alloc] initWithFrame:frame];
 			
 			UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
-			self.navigationItem.rightBarButtonItem = SendSupportMail;
+			self.navigationItem.leftBarButtonItem = SendSupportMail;
+
 			[SendSupportMail release];
 			
+            Continue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style: UIBarButtonItemStyleBordered target:self action:@selector(NextQuestion:)];
+			self.navigationItem.rightBarButtonItem = Continue;
+			[Continue release];
+
 		}
 		
 		
@@ -360,14 +374,14 @@ static UIWebView *QuestionHeaderBox = nil;
 	if (self.interfaceOrientation == UIInterfaceOrientationPortrait || self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown ) {
 		
 		QuestionHeaderBox.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 400);
-		self.FileListTable.frame = CGRectMake(2, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
+		self.FileListTable.frame = CGRectMake(0, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
 		Answer1.frame = CGRectMake(5, 5, 670, 140);
-		//newLine.frame = CGRectMake(380, 5, 80, 30);
-		ShowAnswerHere.frame = CGRectMake(470, 5, 120, 30);
-		Continue.frame = CGRectMake(600,5,120,30);
+		
+		ShowAnswerHere.frame = CGRectMake(560, 5, 109, 30);
+        
 		if (WebControl !=nil) {
 			WebControl.frame = CGRectMake(0, 0, 670, 140);
-	}
+        }
 		
 	}
 	
@@ -376,11 +390,11 @@ static UIWebView *QuestionHeaderBox = nil;
 		QuestionHeaderBox.frame = CGRectMake(140, 0,  SCREEN_HEIGHT - 182, 320);
 		self.FileListTable.frame = CGRectMake(0, 260, SCREEN_HEIGHT + 80, SCREEN_HEIGHT - 160);
 		Answer1.frame = CGRectMake(5, 5, 930, 140);
-		//newLine.frame = CGRectMake(600, 5, 80, 30);
-		ShowAnswerHere.frame = CGRectMake(700, 5, 120, 30);
-		Continue.frame = CGRectMake(850,5,120,30);
+		
+		ShowAnswerHere.frame = CGRectMake(820, 5, 109, 30);
+		
 		if (WebControl !=nil) {
-		WebControl.frame = CGRectMake(0, 0, 930, 140);
+            WebControl.frame = CGRectMake(0, 0, 930, 140);
 		}
 		
 	}
@@ -491,33 +505,28 @@ static UIWebView *QuestionHeaderBox = nil;
 		 }
 		 else {
 			 
-			 //newLine = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-			 ShowAnswerHere = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-			 Continue = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+             UIImage *ShowAnswerImage = [UIImage imageNamed:@"btn_show_answer.png"];
+             ShowAnswerHere = [UIButton buttonWithType:UIButtonTypeCustom];
+             
+             [ShowAnswerHere setBackgroundImage:ShowAnswerImage forState:UIControlStateNormal];
+             
 			 
 			 if (self.interfaceOrientation == UIInterfaceOrientationPortrait || self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown ){
 				 
-			 //newLine.frame = CGRectMake(380, 5, 80, 30);
-			 ShowAnswerHere.frame = CGRectMake(470, 5, 120, 30);
-				 Continue.frame = CGRectMake(600,5,120,30);
+                 
+                 ShowAnswerHere.frame = CGRectMake(560, 5, 109, 30);
+                 
 			 }
 			 else {
-				 //newLine.frame = CGRectMake(600, 5, 80, 30);
-				 ShowAnswerHere.frame = CGRectMake(700, 5, 120, 30);
-				 Continue.frame = CGRectMake(850,5,120,30);
+				 
+				 ShowAnswerHere.frame = CGRectMake(820, 5, 109, 30);
+				 
 			 }
-
-			 
-			 [Continue setTitle:@"Continue" forState:UIControlStateNormal];
-			 [Continue addTarget:self action:@selector(NextQuestion:) forControlEvents:UIControlEventTouchUpInside];
-			 [cell addSubview:Continue];
+             
 			 
 			 
-			 
-			 [ShowAnswerHere setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-			 [ShowAnswerHere setTitle:@"Show Answer" forState:UIControlStateNormal];
 			 [ShowAnswerHere addTarget:self action:@selector(ShowCorrectAnswer:) forControlEvents:UIControlEventTouchUpInside];
-			 [cell addSubview:ShowAnswerHere];
+			 [cell.contentView addSubview:ShowAnswerHere];
 			 
 			 //[newLine setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
 			 //[newLine setTitle:@"New Line" forState:UIControlStateNormal];
@@ -525,33 +534,32 @@ static UIWebView *QuestionHeaderBox = nil;
 			 cell.selectionStyle = UITableViewCellSelectionStyleNone;
 			 //[cell addSubview:newLine];
 			 
-				if (ShowAnswer) {
-					cell.textLabel.text =@"";
-					//newLine.hidden = YES;
-					ShowAnswerHere.hidden = YES;
-					Continue.hidden = YES;
-				}
+             if (ShowAnswer) {
+                 cell.textLabel.text =@"";
+                 
+                 ShowAnswerHere.hidden = YES;
+                 
+             }
 			 else {
-				 //cell.textLabel.text =@"Mark not added to score";
-				 //newLine.hidden = NO;
+                 
 				 ShowAnswerHere.hidden = NO;
-				 Continue.hidden = NO;
+				 
 			 }
-
+             
 			 
 			 return cell;
 		 }
-
+         
 		 
 	 }
 	
-	else
-	{
-		NSString *FileName = [NSString stringWithFormat:@"%@",[fileList objectAtIndex:indexPath.row]];
-		cell.textLabel.text = [FileName lastPathComponent];
-		return cell;
-		
-	}
+     else
+     {
+         NSString *FileName = [NSString stringWithFormat:@"%@",[fileList objectAtIndex:indexPath.row]];
+         cell.textLabel.text = [FileName lastPathComponent];
+         return cell;
+         
+     }
 	
 	
 }
@@ -691,7 +699,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	[ShowCorrectAnswer release];
 	//[newLine release];
 	//[ShowAnswerHere release];
-	//[Continue release];
 	[WebControl release];
     [super dealloc];
 }

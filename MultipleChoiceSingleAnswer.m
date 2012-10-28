@@ -33,10 +33,19 @@ static UIWebView *QuestionHeaderBox = nil;
 	QuestionHeaderBox =[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 400)];
 	}
 	QuestionHeaderBox.scalesPageToFit = YES;
-	self.FileListTable = [[UITableView alloc] initWithFrame:CGRectMake(2, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170) style:UITableViewStyleGrouped];
+	self.FileListTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170) style:UITableViewStyleGrouped];
 	FileListTable.delegate = self;
 	FileListTable.dataSource = self;
 	FileListTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+    
+    
+    [self.FileListTable setBackgroundView:nil];
+    NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"Background" ofType:@"png"];
+	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
+    self.FileListTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
+    [BackImage release];
+    
+
 	
 	// Now I have added 1000 pdfs to the bundle. App is now ver slow
 	// I don't need this to go live, it is just for admin only so i comment out CheckExistingFiles
@@ -73,10 +82,15 @@ static UIWebView *QuestionHeaderBox = nil;
 			// This is QItem_View  : View Mode
 			
 			UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
-			self.navigationItem.rightBarButtonItem = SendSupportMail;
+			self.navigationItem.leftBarButtonItem = SendSupportMail;
 			[SendSupportMail release];
-			
-			
+            
+            Continue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style: UIBarButtonItemStyleBordered target:self action:@selector(ContinueToNextQuestion:)];
+			self.navigationItem.rightBarButtonItem = Continue;
+			[Continue release];
+            
+            
+
 			NSString *result = [NSString stringWithFormat:@"%@",[QItem_View Question]];
 			SFileName_Edit = result;
 			
@@ -313,8 +327,8 @@ static UIWebView *QuestionHeaderBox = nil;
 	if (self.interfaceOrientation == UIInterfaceOrientationPortrait || self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown ) {
 		
 		QuestionHeaderBox.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 400);
-		self.FileListTable.frame = CGRectMake(2, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
-		Continue.frame = CGRectMake(625, 0, 100, 44);
+		self.FileListTable.frame = CGRectMake(0, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
+		
 		
 	}
 	
@@ -322,9 +336,10 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		QuestionHeaderBox.frame = CGRectMake(140, 0,  SCREEN_HEIGHT - 182, 320);
 		self.FileListTable.frame = CGRectMake(0, 260, SCREEN_HEIGHT + 80, SCREEN_HEIGHT - 160);
-		Continue.frame = CGRectMake(885, 0, 100, 44);
-
+		
+        
 	}
+	
 	
 	
 }
@@ -355,7 +370,7 @@ static UIWebView *QuestionHeaderBox = nil;
 #define  SECTION_TWO  1
 #define  SECTION_THREE 2
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+/*- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	
 	NSString *title;
 	
@@ -376,7 +391,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	
 	
-}
+}*/
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -390,7 +405,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	}
 	else if (QItem_View && section == 1){
 		
-		count = [CorrectAnswers count]+ 1 ;// I am adding one more row here to add Continue button
+		count = [CorrectAnswers count];
 	}
 		else {
 		
@@ -403,7 +418,7 @@ static UIWebView *QuestionHeaderBox = nil;
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = nil;
     
     WebViewInCell *cell = (WebViewInCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -438,7 +453,7 @@ static UIWebView *QuestionHeaderBox = nil;
 			
 			//i have had to use the detailtextLabel here because some text are very long
 			if (indexPath.section == 1) {
-				 // This will show the answers and add a button to continue
+				 // This will show the answers 
 				if (indexPath.row < [CorrectAnswers count]) {
 					//NSLog(@"%i -- %i", indexPath.row,[CorrectAnswers count]);
 				
@@ -469,26 +484,8 @@ static UIWebView *QuestionHeaderBox = nil;
 				}
 				else {
 					
-					Continue = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-										[Continue setTitle:@"Continue" forState:UIControlStateNormal];
-										
-										[Continue addTarget:self action:@selector(ContinueToNextQuestion:) forControlEvents:UIControlEventTouchUpInside];
-										[cell addSubview:Continue];
-					
-					cell.selectionStyle = UITableViewCellSelectionStyleNone;
-					if (self.interfaceOrientation == UIInterfaceOrientationPortrait || self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-						
-						Continue.frame = CGRectMake(625, 0, 100, 44);
 					}
-					else {
-						
-						Continue.frame = CGRectMake(885, 0, 100, 44);
-					}
-
-				}
-
-				
-			}
+            }
 			
 			else{
 			
@@ -542,10 +539,10 @@ static UIWebView *QuestionHeaderBox = nil;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // increase the size of the answer cell, but ignore the the continue button cell 
+    // increase the size of the answer cell
     if (indexPath.section == 1 && indexPath.row != [CorrectAnswers count] && ThereIsAnswerReasonflag == 1) {
         
-		return 80.0;
+		return 140.0;
 		
 	}
 	return 44;
@@ -636,7 +633,7 @@ static UIWebView *QuestionHeaderBox = nil;
 			if (ShowMyAnswer == YES){
 				
 				//  Don't worry about this madness it works All i am trying to so is add a section to the table dynamically 
-				//to show answer and the continue button.
+				//to show answer
 				Answerflag = 1;
 				[tableView beginUpdates];
 				NSIndexSet *indices = [NSIndexSet indexSetWithIndex:1];
@@ -829,7 +826,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	[MultichoiceAnswers release];
 	[SelectedAnswers release];
 	[AnswerCounter release];
-	//[Continue release];
 	[HighlightedAnswers release];
     [super dealloc];
 	

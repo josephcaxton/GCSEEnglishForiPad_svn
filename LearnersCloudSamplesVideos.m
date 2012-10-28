@@ -11,7 +11,9 @@
 
 @implementation LearnersCloudSamplesVideos
 
-@synthesize listofItems,WebText,ImageNames;
+@synthesize listofItems,ImageNames,LCButton,FirstTable,FirstViewframe,PromoImageView;
+#define SCREEN_WIDTH 768
+#define SCREEN_HEIGHT 950
 
 //static MPMoviePlayerController *moviePlayerController = nil; 
 
@@ -27,20 +29,38 @@
 	
     self.navigationItem.title = @"GCSE Sample Videos";
     
-    UINavigationController *nav =self.navigationController;
-    nav.navigationBar.tintColor = [UIColor blackColor];
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,185,55)];
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.text = self.navigationItem.title;
+    label.font = [UIFont fontWithName:@"Helvetica-Bold" size:24.0];
+    self.navigationItem.titleView = label;
+    [label sizeToFit];
     
+    
+    NSString *HeaderLocation = [[NSBundle mainBundle] pathForResource:@"header_bar" ofType:@"png"];
+    UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
+    [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];
+    [HeaderBackImage release];
+    
+    
+    NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"Background" ofType:@"png"];
+	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:BackImage];
+    [BackImage release];
+    
+	
 	listofItems = [[NSMutableArray alloc] init];
 	ImageNames = [[NSMutableArray alloc] init];
 	// Add items to the array this is hardcoded for now .. may need to be migrated to the database
-	[listofItems addObject:@"Maths - Collecting and recording data"];
+	[listofItems addObject:@"   Maths - Trailer"];
 	[ImageNames addObject:@"Maths.png"];
-	[listofItems addObject:@"Conflict peom - Bayonet Charge"];
+	[listofItems addObject:@"   English - Trailer"];
 	[ImageNames addObject:@"English.png"];
-	//[listofItems addObject:@" Physics"];
-	//[ImageNames addObject:@"Physics.png"];
-	//[listofItems addObject:@" Chemistry"];
-	//[ImageNames addObject:@"Chemistry.png"];
+	[listofItems addObject:@"   Physics - Trailer"];
+	[ImageNames addObject:@"Physics.png"];
+	[listofItems addObject:@"   Chemistry - Trailer"];
+	[ImageNames addObject:@"Chemistry.png"];
 //	[listofItems addObject:@"French"];
 //	[ImageNames addObject:@"French.png"];
 //	[listofItems addObject:@"Batteries"];
@@ -58,6 +78,16 @@
 //	[listofItems addObject:@"Concave Convex Rap"];
 //	[ImageNames addObject:@"Convexrap.png"];
 	
+    
+    FirstViewframe = CGRectMake(0 ,0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    self.FirstTable = [[UITableView alloc] initWithFrame:FirstViewframe style:UITableViewStyleGrouped];
+    FirstTable.delegate = self;
+	FirstTable.dataSource = self;
+    FirstTable.backgroundColor = [UIColor clearColor];
+    FirstTable.backgroundView = nil;
+    [self.view addSubview:FirstTable];
+    
+
 	
 }
 
@@ -65,18 +95,7 @@
     [super viewWillAppear:animated];
 	
 	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
-	//[self.tableView reloadData];
-	
-	//UIActivityIndicatorView *Activity =(UIActivityIndicatorView *)[self.tabBarController.view viewWithTag:1];
-//	[Activity removeFromSuperview];
-//	
-//	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
-//	[appDelegate.SecondThread cancel];
-//	[appDelegate.SecondThread release];
-//	appDelegate.SecondThread = nil;
-    
-    
-	
+		
 }
 
 
@@ -89,45 +108,29 @@
 }
 
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	
-	NSString *title=@""; 
-	
-	
-		return title; 
-	
-	
-	
-}
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
     // Return the number of rows in the section.
 	if (section == 0) {
 		
 		return [listofItems count];
 	}
-	else if(section == 1){
-        
-        return 2;
-    }
 	else {
-		return 0;
+        
+		return 1;
 	}
+    
     
 	
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if (indexPath.section == 1 && indexPath.row == 1  ) {		
-        return [indexPath row] + 180;
+    if (indexPath.section == 1 && indexPath.row == 0  ) {
+        return  371;
     }
-    //        else if (indexPath.section == 1 && indexPath.row == 2){
-    //               return [indexPath row] + 120; 
-    //            }
-	
+    
     else
         return 50;
 }
@@ -148,58 +151,68 @@
     
     if (indexPath.section == 0) {
 		
+        
+        // Configure the cell...
+        
+        NSString *cellValue = [[NSString alloc] initWithFormat:@"%@",[listofItems objectAtIndex:indexPath.row]];
+        NSString *PicLocation = [[NSString alloc] initWithFormat:@"%@",[ImageNames objectAtIndex:indexPath.row]];
+        UILabel *Title = [[UILabel alloc] initWithFrame:CGRectMake(80.0,0.0,240,50)];
+        Title.backgroundColor = [UIColor clearColor];
+        Title.text = cellValue;
+        [cell.contentView addSubview:Title];
+        [Title release];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        UIImage* theImage = [UIImage imageNamed:PicLocation];
+        cell.imageView.image = theImage;
+        
+		[PicLocation release];
+		[cellValue release];
+		
+	}
 	
-    // Configure the cell...
+	else if (indexPath.section == 1) {
+        
+        cell.backgroundView = [ [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"Background.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ]autorelease];
+        
+        UIView *PromoView = [[UIView alloc] init];
+        NSString *PromoImagePath = [[NSBundle mainBundle] pathForResource:@"website_promo" ofType:@"png"];
+        UIImage *PromoImage = [[UIImage alloc] initWithContentsOfFile:PromoImagePath];
+        PromoImageView = [[UIImageView alloc] initWithImage:PromoImage];
+        PromoImageView.frame = CGRectMake(5.0, 05.0, 665, 361);
+        [PromoView addSubview:PromoImageView];
+        [cell.contentView addSubview:PromoView];
+        
+        [PromoImage release];
+        
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        
+        
+        ///// LC image
+        
+        NSString *LCImageLocation = [[NSBundle mainBundle] pathForResource:@"web_promo_btn" ofType:@"png"];
+        
+        UIImage *LCImage = [[UIImage alloc] initWithContentsOfFile:LCImageLocation];
+        
+        
+        LCButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [LCButton setImage:LCImage forState:UIControlStateNormal];
+        LCButton.frame = CGRectMake(225, 280, 250, 50);
+        [LCButton addTarget:self action:@selector(WebsitebuttonPressed) forControlEvents:UIControlEventTouchUpInside];
+        [cell.contentView addSubview:LCButton];
+        
+        
+        [LCImage release];
+        [PromoView release];
+        
+		
+	}
     
-    NSString *cellValue = [[NSString alloc] initWithFormat:@"%@",[listofItems objectAtIndex:indexPath.row]];
-	NSString *PicLocation = [[NSString alloc] initWithFormat:@"%@",[ImageNames objectAtIndex:indexPath.row]];
-	cell.textLabel.text = cellValue;
-	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-		
-	// Just want to show the thumbnail image
-	//NSString *filepath   =   [[NSBundle mainBundle] pathForResource:cellValue ofType:@"m4v"];
-//	NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath]; 
-//	moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
-//	 
-//	UIImage* theImage = [moviePlayerController thumbnailImageAtTime:8 timeOption:MPMovieTimeOptionNearestKeyFrame];	
-		UIImage* theImage = [UIImage imageNamed:PicLocation];
-		cell.imageView.image = theImage;
-		
-		//[moviePlayerController pause];
-//		moviePlayerController.initialPlaybackTime = -1.0;
-//	[moviePlayerController stop];
-//	[moviePlayerController release];
-//	moviePlayerController = nil;
-		
-	[PicLocation release];		
-	[cellValue release];
 	
-		
-	}
+    
 	
-	else if (indexPath.section == 1 && indexPath.row == 1){
-	
-		if (!WebText) {
-			
-			WebText =[[UIWebView alloc] initWithFrame:CGRectMake(250,0,480,240)]; 
-		}
-		
-		
-		WebText.backgroundColor = [UIColor clearColor];
-		WebText.dataDetectorTypes = UIDataDetectorTypeLink;
-        WebText.delegate = self;
-		NSString *Visit = @"Visit ";
-		NSString *Website =[Visit stringByAppendingString: @"<a target=/'_blank/'  href=http://www.learnerscloud.com/?utm_source=itunes&utm_medium=link&utm_content=Maths&utm_campaign=App > LearnersCloud</a>"];
-		NSString *videos = [Website stringByAppendingString:@" <p>Watch hundreds of more HD videos <br/>Complete GCSE English & Maths available, Physics and Chemistry coming in september 2012<br/><b>Sign up for a FREE trial account now</b></p><br/> Also for schools and colleges."];		
-        [WebText loadHTMLString:videos baseURL:nil];
-		
-		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		cell.imageView.image = nil;
-		[cell addSubview:WebText];
-		
-		[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
-	}
-
 	
 	return cell;
 	
@@ -211,145 +224,63 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     int index = indexPath.row;
 	
-	switch (index) {
-			
-		case 0:
-			;
-			VideoPlayer *VP1 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-			VP1.VideoFileName =[NSString stringWithString:@"Maths"];
-			[self.navigationController pushViewController:VP1 animated:YES];
-			[VP1 release];
-			break;
-			
-		case 1:
-			;
-			VideoPlayer *VP2 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-			VP2.VideoFileName =[NSString stringWithString:@"English"];
-			[self.navigationController pushViewController:VP2 animated:YES];
-			[VP2 release];
-			break;
-			
-		case 2:
-			;
-			
-			VideoPlayer *VP3 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-			VP3.VideoFileName =[NSString stringWithString:@"Physics"];
-			[self.navigationController pushViewController:VP3 animated:YES];
-			[VP3 release];
-			
-			
-			
-			break; 
-			
-		case 3:
-			;
-			VideoPlayer *VP4 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-			VP4.VideoFileName =[NSString stringWithString:@"Chemistry"];
-			[self.navigationController pushViewController:VP4 animated:YES];
-			[VP4 release];
-			
-			
-			
-			break;
-			
-//		case 4:
-//			;
-//			VideoPlayer *VP5 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP5.VideoFileName =[NSString stringWithString:@"French"];
-//			[self.navigationController pushViewController:VP5 animated:YES];
-//			[VP5 release];
-//			
-//			
-//			
-//			break;
-//			
-//			
-//		case 5:
-//			;
-//			VideoPlayer *VP6 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP6.VideoFileName =[NSString stringWithString:@"Batteries"];
-//			[self.navigationController pushViewController:VP6 animated:YES];
-//			[VP6 release];
-//			
-//			
-//			
-//			break;
-//			
-//		case 6:
-//			;
-//			VideoPlayer *VP7 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP7.VideoFileName =[NSString stringWithString:@"Ruined_maid"];
-//			[self.navigationController pushViewController:VP7 animated:YES];
-//			[VP7 release];
-//			
-//			
-//			
-//			break;
-//			
-//		case 7:
-//			;
-//			VideoPlayer *VP8 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP8.VideoFileName =[NSString stringWithString:@"LesGrandSeignors"];
-//			[self.navigationController pushViewController:VP8 animated:YES];
-//			[VP8 release];
-//			
-//			
-//			
-//			break;
-//			
-//		case 8:
-//			;
-//			VideoPlayer *VP9 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP9.VideoFileName =[NSString stringWithString:@"HorseWhisperer"];
-//			[self.navigationController pushViewController:VP9 animated:YES];
-//			[VP9 release];
-//			
-//			
-//			
-//			break;
-//			
-//		case 9:
-//			;
-//			VideoPlayer *VP10 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP10.VideoFileName =[NSString stringWithString:@"Hunchback"];
-//			[self.navigationController pushViewController:VP10 animated:YES];
-//			[VP10 release];
-//			
-//			
-//			
-//			break;
-//		case 10:
-//			;
-//			VideoPlayer *VP11 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP11.VideoFileName =[NSString stringWithString:@"ClownPunk"];
-//			[self.navigationController pushViewController:VP11 animated:YES];
-//			[VP11 release];
-//			
-//			
-//			
-//			break;
-//		case 11:
-//			;
-//			VideoPlayer *VP12 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
-//			VP12.VideoFileName =[NSString stringWithString:@"Convexrap"];
-//			[self.navigationController pushViewController:VP12 animated:YES];
-//			[VP12 release];
-//			
-//			
-//			
-//			break;
-	}
+    if (indexPath.section == 0) {
+        
+        switch (index) {
+                
+            case 0:
+                ;
+                VideoPlayer *VP1 = [[VideoPlayer alloc] initWithNibName:nil bundle:nil];
+                VP1.VideoFileName =@"Maths";
+                VP1.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:VP1 animated:NO];
+                [VP1 release];
+                break;
+                
+            case 1:
+                ;
+                VideoPlayer *VP2 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
+                VP2.VideoFileName =@"English";
+                VP2.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:VP2 animated:YES];
+                [VP2 release];
+                break;
+                
+            case 2:
+                ;
+                
+                VideoPlayer *VP3 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
+                VP3.VideoFileName =@"Physics";
+                VP3.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:VP3 animated:YES];
+                [VP3 release];
+                
+                
+                
+                break;
+                
+            case 3:
+                ;
+                VideoPlayer *VP4 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
+                VP4.VideoFileName =@"Chemistry";
+                VP4.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:VP4 animated:YES];
+                [VP4 release];
+                
+                
+                
+                break;
+                
+        }
+        
+    }
+}
+- (void)WebsitebuttonPressed {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.learnerscloud.com"]];
+    
 }
 
-// This stops the link in UIWebView open in the application. It should open in safari
--(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
-    if ( inType == UIWebViewNavigationTypeLinkClicked ) {
-        [[UIApplication sharedApplication] openURL:[inRequest URL]];
-        return NO;
-    }
-    
-    return YES;
-}
 
 
 
@@ -363,18 +294,18 @@
 	
 	if (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown ) {
 		
-		WebText.frame = CGRectMake(250,0,480,240);
-		
+        FirstTable.frame = CGRectMake(0,0,SCREEN_WIDTH,SCREEN_HEIGHT);
+        PromoImageView.frame  = CGRectMake(5.0, 05.0, 665, 361);
+        LCButton.frame = CGRectMake(225, 280, 250, 50);
 	}
 	
 	else {
 		
-		WebText.frame = CGRectMake(350,0,480,240);
-		
+        FirstTable.frame = CGRectMake(50.0,0,SCREEN_HEIGHT,SCREEN_WIDTH);
+		PromoImageView.frame  = CGRectMake(100, 05.0, 665, 361);
+        LCButton.frame = CGRectMake(315, 280, 250, 50);
 		
 	}
-	
-	
 	
 	
 	
@@ -402,7 +333,6 @@
 - (void)dealloc {
 	[listofItems release];
 	[ImageNames release];
-	[WebText release];
     [super dealloc];
 }
 

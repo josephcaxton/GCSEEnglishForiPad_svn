@@ -22,7 +22,7 @@ static NSString *kViewKey = @"viewKey";
 
 @synthesize QuestionTemplate, SelectedTopic; //, QuestionHeaderBox; //Search;  //QuestionItemBox
 @synthesize fileList, FileListTable, DirLocation,SFileName;
-@synthesize  SFileName_Edit,QItem_Edit,QItem_View,AnswerObjects,AnswerControls,True,False,ShowAnswer,RemoveContinueButton,Continue;
+@synthesize  SFileName_Edit,QItem_Edit,QItem_View,AnswerObjects,AnswerControls,True,False,ShowAnswer,Continue;
 
 int Answerflag_Show = 0;
 static UIWebView *QuestionHeaderBox = nil;
@@ -41,10 +41,19 @@ static UIWebView *QuestionHeaderBox = nil;
 	QuestionHeaderBox =[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 400)];
 	QuestionHeaderBox.scalesPageToFit = YES;
 	
-	self.FileListTable = [[UITableView alloc] initWithFrame:CGRectMake(2, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170) style:UITableViewStyleGrouped];
+	self.FileListTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170) style:UITableViewStyleGrouped];
 	FileListTable.delegate = self;
 	FileListTable.dataSource = self;
 	FileListTable.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+    
+    
+    [self.FileListTable setBackgroundView:nil];
+    NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"Background" ofType:@"png"];
+	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
+    self.FileListTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
+    [BackImage release];
+    
+
 	
 	
 	// Now I have added 1000 pdfs to the bundle. App is now ver slow
@@ -99,9 +108,15 @@ static UIWebView *QuestionHeaderBox = nil;
 			
 			AnswerObjects=  [[NSMutableArray alloc] initWithArray:[[QItem_View Answers1] allObjects]];
 			
-			UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
-			self.navigationItem.rightBarButtonItem = SendSupportMail;
+            UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
+			self.navigationItem.leftBarButtonItem = SendSupportMail;
 			[SendSupportMail release];
+            
+            Continue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style: UIBarButtonItemStyleBordered target:self action:@selector(ContinueToNextQuestion:)];
+			self.navigationItem.rightBarButtonItem = Continue;
+			[Continue release];
+			
+
 			
 			
 		}
@@ -244,8 +259,8 @@ static UIWebView *QuestionHeaderBox = nil;
 	if (self.interfaceOrientation == UIInterfaceOrientationPortrait || self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
 		
 		QuestionHeaderBox.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 400);
-		self.FileListTable.frame = CGRectMake(2, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
-		Continue.frame = CGRectMake(625, 0, 100, 44);
+		self.FileListTable.frame = CGRectMake(0, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
+		
 		
 	}
 	
@@ -253,9 +268,8 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		QuestionHeaderBox.frame = CGRectMake(140, 0,  SCREEN_HEIGHT - 182, 320);
 		self.FileListTable.frame = CGRectMake(0, 260, SCREEN_HEIGHT + 80, SCREEN_HEIGHT - 160);
-		Continue.frame = CGRectMake(885, 0, 100, 44);
+		
 	}
-	
 	
 }
 
@@ -270,7 +284,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+/*- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	
 	NSString *title;
 	
@@ -295,7 +309,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	
 	
-}
+}*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger count;
@@ -307,7 +321,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	}
 	else if (QItem_View && ShowAnswer){
 		
-		count = [AnswerControls count] + 1 ;// I am adding one more row here to add Continue button
+		count = [AnswerControls count] ;
 	}
 	
 	else {
@@ -407,11 +421,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		}
 		else if (indexPath.row ==2){
 			
-			Continue = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-			[Continue setTitle:@"Continue" forState:UIControlStateNormal];
 			
-			[Continue addTarget:self action:@selector(ContinueToNextQuestion:) forControlEvents:UIControlEventTouchUpInside];
-			[cell addSubview:Continue];
             NSMutableString *Reason = [NSMutableString stringWithFormat:@"%@",[[AnswerObjects objectAtIndex:0] valueForKey:@"Reason"]];
             
             
@@ -435,29 +445,14 @@ static UIWebView *QuestionHeaderBox = nil;
             }
 
 			
-			if (self.interfaceOrientation == UIInterfaceOrientationPortrait || self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-				
-				Continue.frame = CGRectMake(625, 0, 100, 44);
-			}
-			else {
-				
-				Continue.frame = CGRectMake(885, 0, 100, 44);
-			}
-			
-			
+						
 	}
 		
 		if (ShowAnswer) {
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		}
 		
-		if(ShowAnswer && RemoveContinueButton)
-        {
-            
-            Continue.hidden = YES;
-        }
-
-		
+				
 		
 		return cell;
 	}
@@ -482,7 +477,7 @@ static UIWebView *QuestionHeaderBox = nil;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // increase the size of the answer cell, but ignore the the continue button cell 
+    // increase the size of the answer cell
     
 	return 44;
 }
@@ -647,7 +642,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	[AnswerControls release];
 	[True release];
 	[False release];
-	//[Continue release];
     [super dealloc];
 }
 

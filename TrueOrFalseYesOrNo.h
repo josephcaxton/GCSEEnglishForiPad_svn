@@ -44,8 +44,8 @@
 	UILabel *True;
 	UILabel *False;
 	BOOL ShowAnswer;
-    BOOL RemoveContinueButton;
-	UIButton *Continue;
+    
+	UIBarButtonItem *Continue;
 
 }
 @property (nonatomic, retain) lk_QuestionTemplate *QuestionTemplate;
@@ -71,8 +71,7 @@
 @property (nonatomic, retain) UILabel		*True;
 @property (nonatomic, retain) UILabel		*False;
 @property (nonatomic, assign) BOOL ShowAnswer;
-@property (nonatomic, assign) BOOL RemoveContinueButton;
-@property (nonatomic, retain) UIButton *Continue;
+@property (nonatomic, retain) UIBarButtonItem  *Continue;
 
 -(void)loadDocument:(NSString*)documentName inView:(UIWebView*)webView;
 -(IBAction)ContinueToNextQuestion:(id)sender;

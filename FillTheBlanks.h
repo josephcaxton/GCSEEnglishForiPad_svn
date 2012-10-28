@@ -54,7 +54,7 @@
 	BOOL ShowAnswer;
     BOOL RemoveContinueButton;
     BOOL Specialflag;
-	UIButton *Continue;
+	UIBarButtonItem *Continue;
 
 }
 @property (nonatomic, retain) lk_QuestionTemplate *QuestionTemplate;
@@ -84,7 +84,7 @@
 @property (nonatomic, assign) BOOL ShowAnswer;
 @property (nonatomic, assign) BOOL RemoveContinueButton;
 @property (nonatomic, assign) BOOL Specialflag;
-@property (nonatomic, retain) UIButton *Continue;
+@property (nonatomic, retain) UIBarButtonItem *Continue;
 
 //@property (nonatomic, retain) IBOutlet UIWebView *QuestionItemBox;
 //@property (nonatomic, retain) IBOutlet UISearchBar *Search;

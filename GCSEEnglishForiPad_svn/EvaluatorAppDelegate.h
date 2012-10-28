@@ -14,6 +14,7 @@
 #import "GANTracker.h"
 #import <netinet/in.h>
 #import "FBConnect.h"
+#import "Reachability.h"
 
 @interface EvaluatorAppDelegate : NSObject <UIApplicationDelegate> {
     
@@ -62,8 +63,8 @@
 - (NSString *)applicationDocumentsDirectory;
 - (void)PlaySound:(NSString *)FileName;
 -(BOOL)CopyDataBase;
--(void) AddSplashScreen;
--(void) Removesplash;
+-(BOOL)isDeviceConnectedToInternet;
+
 //-(void) removeBuyTabIfNotNeededFromTabController:(UITabBarController *)tbController;
 
 @end

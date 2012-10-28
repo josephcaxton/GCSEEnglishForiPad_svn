@@ -23,7 +23,7 @@
 	if([item.title isEqualToString:@"Results"] &&  ![activetab isEqualToString:@"Results"]){ //||[item.title isEqualToString:@"Videos"]
 		
 		
-		appDelegate.SecondThread = [[NSThread alloc]initWithTarget:self selector:@selector(ShowActivity) object:nil];
+		appDelegate.SecondThread = [[[NSThread alloc]initWithTarget:self selector:@selector(ShowActivity) object:nil]autorelease];
 		[appDelegate.SecondThread start];
 		
 		
