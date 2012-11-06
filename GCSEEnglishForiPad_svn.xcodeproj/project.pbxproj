@@ -139,6 +139,7 @@
 		7C8AAA9C13E6ECE900C70B2E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8AAA9B13E6ECE900C70B2E /* CoreData.framework */; };
 		7C8AAAA213E6ECE900C70B2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA013E6ECE900C70B2E /* InfoPlist.strings */; };
 		7C8AAAA413E6ECE900C70B2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8AAAA313E6ECE900C70B2E /* main.m */; };
+		7C97C80316492C0E0053577F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C97C80216492C0E0053577F /* AVFoundation.framework */; };
 		7C9D619813F44006008F18AC /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D619713F44006008F18AC /* Entitlements.plist */; };
 		7CACF1F213F2DFE1000F6CBA /* BlackBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CACF1F113F2DFE1000F6CBA /* BlackBackGround.png */; };
 		7CAFD7A214502EB000E1EA5E /* 828.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CAFD7A114502EB000E1EA5E /* 828.pdf */; };
@@ -1366,6 +1367,7 @@
 		7C8AAAA113E6ECE900C70B2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C8AAAA313E6ECE900C70B2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GCSEEnglishForiPad_svn/main.m; sourceTree = "<group>"; };
 		7C8AAAA513E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GCSEEnglishForiPad_svn-Prefix.pch"; path = "GCSEEnglishForiPad_svn/GCSEEnglishForiPad_svn-Prefix.pch"; sourceTree = "<group>"; };
+		7C97C80216492C0E0053577F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7C9D619713F44006008F18AC /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		7CACF1F113F2DFE1000F6CBA /* BlackBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackBackGround.png; sourceTree = "<group>"; };
 		7CAFD7A114502EB000E1EA5E /* 828.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 828.pdf; sourceTree = "<group>"; };
@@ -2428,6 +2430,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C97C80316492C0E0053577F /* AVFoundation.framework in Frameworks */,
 				7CCEF3A315A5D76600A1438A /* Twitter.framework in Frameworks */,
 				7C045F55156BBECA0065E2DC /* CFNetwork.framework in Frameworks */,
 				7C045F53156BBEBF0065E2DC /* libsqlite3.0.dylib in Frameworks */,
@@ -3730,6 +3733,7 @@
 		7C8AAA8613E6ECE900C70B2E = {
 			isa = PBXGroup;
 			children = (
+				7C97C80216492C0E0053577F /* AVFoundation.framework */,
 				7CCEF38C15A5CEAA00A1438A /* facebook-ios-sdk */,
 				7C045F4E156BA88F0065E2DC /* Analytics */,
 				7C9D619713F44006008F18AC /* Entitlements.plist */,
