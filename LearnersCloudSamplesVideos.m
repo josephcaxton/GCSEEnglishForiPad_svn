@@ -94,7 +94,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	
-	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
+	
 		
 }
 
@@ -212,7 +212,7 @@
     
 	
     
-	
+	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
 	
 	return cell;
 	
