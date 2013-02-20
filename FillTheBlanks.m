@@ -388,7 +388,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	if (self.interfaceOrientation == UIInterfaceOrientationPortrait || self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown ) {
 		
 		QuestionHeaderBox.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 400);
-		self.FileListTable.frame = CGRectMake(0, 260, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
+		self.FileListTable.frame = CGRectMake(0, 460, SCREEN_WIDTH, SCREEN_HEIGHT - 170);
         //Continue.frame = CGRectMake(625, 0, 100, 44);
         
 		
