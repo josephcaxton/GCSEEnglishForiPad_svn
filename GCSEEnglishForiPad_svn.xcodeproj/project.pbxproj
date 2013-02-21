@@ -61,7 +61,6 @@
 		7C1D7BF1163AA13F00C0DF26 /* icon_share_on_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1D7BE7163AA13F00C0DF26 /* icon_share_on_facebook.png */; };
 		7C1D7BF4163AA30400C0DF26 /* TransparentToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D7BF3163AA18700C0DF26 /* TransparentToolBar.m */; };
 		7C1D7BF8163AC04A00C0DF26 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D7BF6163AC00D00C0DF26 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		7C25C8F214FB96FB0019E899 /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C25C8F114FB96FB0019E899 /* GCSEEnglish.sqlite */; };
 		7C5DBE7913EAA16100E404BB /* Evaluator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DBE7613EAA16100E404BB /* Evaluator.xcdatamodeld */; };
 		7C79507713E80DBD001950EA /* ArrowWoodImpact.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7C79507613E80DBD001950EA /* ArrowWoodImpact.aiff */; };
 		7C79507B13E80DE4001950EA /* Cough.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7C79507A13E80DE4001950EA /* Cough.aiff */; };
@@ -142,6 +141,7 @@
 		7C9D619813F44006008F18AC /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C9D619713F44006008F18AC /* Entitlements.plist */; };
 		7CACF1F213F2DFE1000F6CBA /* BlackBackGround.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CACF1F113F2DFE1000F6CBA /* BlackBackGround.png */; };
 		7CAFD7A214502EB000E1EA5E /* 828.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CAFD7A114502EB000E1EA5E /* 828.pdf */; };
+		7CC34FCB16D6376D00EB5E8E /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7CC34FCA16D6375E00EB5E8E /* GCSEEnglish.sqlite */; };
 		7CCEF39C15A5CEAA00A1438A /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7CCEF38F15A5CEAA00A1438A /* FBDialog.bundle */; };
 		7CCEF39D15A5CEAA00A1438A /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCEF39515A5CEAA00A1438A /* libfacebook_ios_sdk.a */; };
 		7CCEF3A115A5D75500A1438A /* PopUpTableviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCEF3A015A5D25800A1438A /* PopUpTableviewViewController.m */; };
@@ -1240,7 +1240,6 @@
 		7C1D7BF3163AA18700C0DF26 /* TransparentToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransparentToolBar.m; sourceTree = "<group>"; };
 		7C1D7BF5163AC00D00C0DF26 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7C1D7BF6163AC00D00C0DF26 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		7C25C8F114FB96FB0019E899 /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
 		7C5DBE7713EAA16100E404BB /* Evaluator 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Evaluator 2.xcdatamodel"; sourceTree = "<group>"; };
 		7C5DBE7813EAA16100E404BB /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evaluator.xcdatamodel; sourceTree = "<group>"; };
 		7C79507613E80DBD001950EA /* ArrowWoodImpact.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ArrowWoodImpact.aiff; sourceTree = "<group>"; };
@@ -1369,6 +1368,7 @@
 		7C9D619713F44006008F18AC /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		7CACF1F113F2DFE1000F6CBA /* BlackBackGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackBackGround.png; sourceTree = "<group>"; };
 		7CAFD7A114502EB000E1EA5E /* 828.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 828.pdf; sourceTree = "<group>"; };
+		7CC34FCA16D6375E00EB5E8E /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
 		7CCEF38D15A5CEAA00A1438A /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		7CCEF38E15A5CEAA00A1438A /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
 		7CCEF38F15A5CEAA00A1438A /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
@@ -3510,7 +3510,7 @@
 				7CD9D6C213EB000F00B63AEC /* 1045.pdf */,
 				7CD9D6C313EB000F00B63AEC /* 1046.pdf */,
 				7CD9D6C413EB000F00B63AEC /* 1047.pdf */,
-				7C25C8F114FB96FB0019E899 /* GCSEEnglish.sqlite */,
+				7CC34FCA16D6375E00EB5E8E /* GCSEEnglish.sqlite */,
 				7C79514113E82411001950EA /* AttributionIpad.pdf */,
 				7C79514313E82427001950EA /* Results.xml */,
 				7C79514513E82434001950EA /* DescriptiveAnswers.xml */,
@@ -3874,6 +3874,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CC34FCB16D6376D00EB5E8E /* GCSEEnglish.sqlite in Resources */,
 				7C8AAAA213E6ECE900C70B2E /* InfoPlist.strings in Resources */,
 				7C79507713E80DBD001950EA /* ArrowWoodImpact.aiff in Resources */,
 				7C79507B13E80DE4001950EA /* Cough.aiff in Resources */,
@@ -4927,7 +4928,6 @@
 				7CACF1F213F2DFE1000F6CBA /* BlackBackGround.png in Resources */,
 				7C9D619813F44006008F18AC /* Entitlements.plist in Resources */,
 				7CAFD7A214502EB000E1EA5E /* 828.pdf in Resources */,
-				7C25C8F214FB96FB0019E899 /* GCSEEnglish.sqlite in Resources */,
 				7C045F3F156BA1310065E2DC /* 642.pdf in Resources */,
 				7C045F40156BA1310065E2DC /* 643.pdf in Resources */,
 				7C045F41156BA1310065E2DC /* 644.pdf in Resources */,
