@@ -61,6 +61,7 @@
 		7C1D7BF1163AA13F00C0DF26 /* icon_share_on_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C1D7BE7163AA13F00C0DF26 /* icon_share_on_facebook.png */; };
 		7C1D7BF4163AA30400C0DF26 /* TransparentToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D7BF3163AA18700C0DF26 /* TransparentToolBar.m */; };
 		7C1D7BF8163AC04A00C0DF26 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D7BF6163AC00D00C0DF26 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7C32EE2416DF621B0095954B /* restore.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C32EE2316DF621B0095954B /* restore.png */; };
 		7C5DBE7913EAA16100E404BB /* Evaluator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DBE7613EAA16100E404BB /* Evaluator.xcdatamodeld */; };
 		7C79507713E80DBD001950EA /* ArrowWoodImpact.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7C79507613E80DBD001950EA /* ArrowWoodImpact.aiff */; };
 		7C79507B13E80DE4001950EA /* Cough.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7C79507A13E80DE4001950EA /* Cough.aiff */; };
@@ -1240,6 +1241,7 @@
 		7C1D7BF3163AA18700C0DF26 /* TransparentToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransparentToolBar.m; sourceTree = "<group>"; };
 		7C1D7BF5163AC00D00C0DF26 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7C1D7BF6163AC00D00C0DF26 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		7C32EE2316DF621B0095954B /* restore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restore.png; sourceTree = "<group>"; };
 		7C5DBE7713EAA16100E404BB /* Evaluator 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Evaluator 2.xcdatamodel"; sourceTree = "<group>"; };
 		7C5DBE7813EAA16100E404BB /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evaluator.xcdatamodel; sourceTree = "<group>"; };
 		7C79507613E80DBD001950EA /* ArrowWoodImpact.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ArrowWoodImpact.aiff; sourceTree = "<group>"; };
@@ -3631,6 +3633,7 @@
 		7C79505A13E8024F001950EA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7C32EE2316DF621B0095954B /* restore.png */,
 				7C1D7BB8163A9F0200C0DF26 /* btn_show_answer.png */,
 				7C1D7BB9163A9F0200C0DF26 /* btn_show_answer@2x.png */,
 				7C1D7BBA163A9F0200C0DF26 /* btn_start_test.png */,
@@ -4982,6 +4985,7 @@
 				7C8C191E165E35FC0026CBB5 /* Icon-72@2x.png in Resources */,
 				7C8C1921165E36110026CBB5 /* Icon-Small-50.png in Resources */,
 				7C8C1922165E36110026CBB5 /* Icon-Small-50@2x.png in Resources */,
+				7C32EE2416DF621B0095954B /* restore.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

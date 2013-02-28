@@ -21,6 +21,7 @@
 	NSArray *ProductsToIStoreInArray;
 	NSArray *SortedDisplayProducts;
 	CustomStoreObserver *observer;
+    UIButton *Restore;
 }
 
 @property (nonatomic, retain) NSArray *ProductFromIstore;
@@ -28,6 +29,7 @@
 @property (nonatomic, retain) NSArray *ProductsToIStoreInArray;
 @property (nonatomic, retain) NSArray *SortedDisplayProducts;
 @property (nonatomic, retain) CustomStoreObserver *observer;
+@property (nonatomic, retain) UIButton *Restore;
 
 - (void)AddProgress;
 - (BOOL)isDataSourceAvailable;
