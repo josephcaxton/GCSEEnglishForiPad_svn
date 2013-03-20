@@ -61,8 +61,8 @@
 	[ImageNames addObject:@"Physics.png"];
 	[listofItems addObject:@"   Chemistry - Trailer"];
 	[ImageNames addObject:@"Chemistry.png"];
-//	[listofItems addObject:@"French"];
-//	[ImageNames addObject:@"French.png"];
+    [listofItems addObject:@"    Biology - Trailer"];
+    [ImageNames addObject:@"Biology.png"];
 //	[listofItems addObject:@"Batteries"];
 //	[ImageNames addObject:@"Batteries.png"];
 //	[listofItems addObject:@"The Ruined Maid"];
@@ -270,6 +270,19 @@
                 
                 
                 break;
+            
+            case 4:
+                ;
+                VideoPlayer *VP5 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
+                VP5.VideoFileName =@"Biology";
+                VP5.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:VP5 animated:YES];
+                [VP5 release];
+                
+                
+                
+                break;
+                
                 
         }
         
