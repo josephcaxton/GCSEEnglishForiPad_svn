@@ -40,7 +40,7 @@
 
 - (id)reverseTransformedValue:(id)value {
 	UIImage *uiImage = [[UIImage alloc] initWithData:value];
-	return [uiImage autorelease];
+	return uiImage ;
 }
 
 @end

@@ -51,7 +51,7 @@ static UIWebView *QuestionHeaderBox = nil;
     NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"Background" ofType:@"png"];
 	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
     self.FileListTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
-    [BackImage release];
+   
     
 
 	
@@ -81,7 +81,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		UIBarButtonItem *NextButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style: UIBarButtonItemStyleBordered target:self action:@selector(Edit:)];
 		self.navigationItem.rightBarButtonItem = NextButton;
-		[NextButton release];
+		
 		
 		}
 		else
@@ -110,11 +110,11 @@ static UIWebView *QuestionHeaderBox = nil;
 			
             UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
 			self.navigationItem.leftBarButtonItem = SendSupportMail;
-			[SendSupportMail release];
+			
             
             Continue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style: UIBarButtonItemStyleBordered target:self action:@selector(ContinueToNextQuestion:)];
 			self.navigationItem.rightBarButtonItem = Continue;
-			[Continue release];
+			
 			
 
 			
@@ -131,15 +131,15 @@ static UIWebView *QuestionHeaderBox = nil;
 		UIBarButtonItem *NextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style: UIBarButtonItemStyleBordered target:self action:@selector(Next:)];
 		
 		self.navigationItem.rightBarButtonItem = NextButton;
-		[NextButton release];
+		
 		
 		[self loadDocument:[SFileName stringByDeletingPathExtension] inView:QuestionHeaderBox];
 	}
 	
 	[self.view addSubview:QuestionHeaderBox];
-	[QuestionHeaderBox release];
+	
 	[self.view addSubview:FileListTable];
-	[FileListTable release];
+	
 	
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -160,7 +160,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	[self.navigationController pushViewController:T_view1 animated:YES];
 	
-	[T_view1 release];
+	
 	
 	
 }
@@ -175,7 +175,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	[self.navigationController pushViewController:T_view1 animated:YES];
 	
-	[T_view1 release];
+	
 	
 	
 }
@@ -204,7 +204,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		[SendMailcontroller setMessageBody:[NSString stringWithFormat:@"Question Number %@ -- \n Additional Messages can be added to this email ", [[NSString stringWithFormat:@"%@",QItem_View.Question] stringByDeletingPathExtension]] isHTML:NO];
 		[self presentModalViewController:SendMailcontroller animated:YES];
-		[SendMailcontroller release];
+		
 		
 	}
 	
@@ -217,7 +217,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		[Alert show];
 		
-		[Alert release];
+		
 	}
 	
 	
@@ -341,7 +341,7 @@ static UIWebView *QuestionHeaderBox = nil;
     
      WebViewInCell *cell = (WebViewInCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[WebViewInCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[WebViewInCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
     }
     
 	if (QItem_Edit != nil) {
@@ -440,7 +440,7 @@ static UIWebView *QuestionHeaderBox = nil;
                 [FormatedString appendString:Reason]; 
                 [FormatedString appendString:@"</font></p>"];
                 [self configureCell:cell HTMLStr:FormatedString];
-                [FormatedString release];
+                
                 
             }
 
@@ -623,27 +623,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	QuestionHeaderBox = nil;
 }
 
-
-- (void)dealloc {
-	[QuestionTemplate release];
-	[SelectedTopic release];
-	//[QuestionHeaderBox release];
-	
-	[fileList release];
-	[FileListTable release];
-	[SFileName release];
-	[DirLocation release];
-	//[SFileName_Edit release];
-	
-	[QItem_Edit release];
-	
-	[QItem_View release];
-	[AnswerObjects release];
-	[AnswerControls release];
-	[True release];
-	[False release];
-    [super dealloc];
-}
 
 
 @end

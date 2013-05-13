@@ -23,7 +23,7 @@
 	if([item.title isEqualToString:@"Results"] &&  ![activetab isEqualToString:@"Results"]){ //||[item.title isEqualToString:@"Videos"]
 		
 		
-		appDelegate.SecondThread = [[[NSThread alloc]initWithTarget:self selector:@selector(ShowActivity) object:nil]autorelease];
+		appDelegate.SecondThread = [[NSThread alloc]initWithTarget:self selector:@selector(ShowActivity) object:nil];
 		[appDelegate.SecondThread start];
 		
 		
@@ -38,14 +38,14 @@
 
 - (void)ShowActivity {
 	
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
 	
 	ActivityIndicator *indicator = [[ActivityIndicator alloc]initWithFrame:CGRectMake(0,0,1040,720)];
 	indicator.tag = 1;
 	[self.view addSubview:indicator];
-	[indicator release];
 	
-	[pool release];
+	
+	
 }
 
 
@@ -71,7 +71,7 @@
 
 
 - (void)dealloc {
-    [super dealloc];
+   
 }
 
 

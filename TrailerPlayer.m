@@ -1,60 +1,43 @@
-    //
-//  VideoPlayer.m
-//  EvaluatorForIPad
 //
-//  Created by Joseph caxton-Idowu on 21/02/2011.
-//  Copyright 2011 caxtonidowu. All rights reserved.
+//  TrailerPlayer.m
+//  VideoStreamer
+//
+//  Created by Joseph caxton-Idowu on 30/04/2013.
+//  Copyright (c) 2013 caxtonidowu. All rights reserved.
 //
 
-#import "VideoPlayer.h"
-#import "GANTracker.h"
+#import "TrailerPlayer.h"
 #import "EvaluatorAppDelegate.h"
+#import "GANTracker.h"
 
+@implementation TrailerPlayer
 
-@implementation VideoPlayer
-
-@synthesize VideoFileName,ServerLocation,credential,protectionSpace,moviePlayerViewController;
+@synthesize VideoFileName,ServerLocation,credential,protectionSpace,domain,ImageViewer1,moviePlayerViewController,FreeView;
 
 #define SCREEN_WIDTH 768
 #define SCREEN_HEIGHT 950
 
 
-
-//Old code
-/*- (void)moviePlaybackComplete:(NSNotification *)notification  {  
-	
-	moviePlayerController = [notification object];  
-	[[NSNotificationCenter defaultCenter] removeObserver:self  
-													name:MPMoviePlayerPlaybackDidFinishNotification  
-												  object:moviePlayerController];  
-	
-	[moviePlayerController.view removeFromSuperview];  
-	
-	
-	[self.navigationController popViewControllerAnimated:YES];
-	
-	
-} */ 
-
-- (void)movieFinishedCallback:(NSNotification*) notification  {  
+- (void)movieFinishedCallback:(NSNotification*) notification  {
 	
     NSError *error;
     // Report to  analytics
     if (![[GANTracker sharedTracker] trackEvent:@"Finished playing video"
                                          action:@"Playing Finished"
                                           label:@"Playing Finished"
-                                          value:1
+                                          value:69
                                       withError:&error]) {
         NSLog(@"error in trackEvent");
     }
     
+    //[self RecordStatusToLearnersCloud: NO];
     
-    MPMoviePlayerController *player = [notification object];  
-	[[NSNotificationCenter defaultCenter] removeObserver:self  
-													name:MPMoviePlayerPlaybackDidFinishNotification  
-												  object:player];  
+    MPMoviePlayerController *player = [notification object];
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:MPMoviePlayerPlaybackDidFinishNotification
+												  object:player];
 	[player stop];
-	[moviePlayerViewController.view removeFromSuperview];  
+	[moviePlayerViewController.view removeFromSuperview];
 	
 	
 	[self.navigationController popViewControllerAnimated:YES];
@@ -67,48 +50,35 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+    domain = appDelegate.DomainName;
+    //ServerLocation = [NSString stringWithFormat:@"%@/iosStreamv2/Trailers/",domain];
 	
-	
-	
+    NSError *error;
+    // Report to  analytics
+    if (![[GANTracker sharedTracker] trackPageview:@"/VideoPlayerPage"
+                                         withError:&error]) {
+        NSLog(@"error in trackPageview");
+    }
+    
+	//[self RecordStatusToLearnersCloud: YES];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
 	
-    EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+   EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
     
     if(appDelegate.isDeviceConnectedToInternet){
         
         NSError *error;
         // Report to  analytics
-        if (![[GANTracker sharedTracker] trackPageview:@"/VideoPlayer"
-                                             withError:&error]) {
-            NSLog(@"error in trackPageview");
-        }
-        
-        
-        if([VideoFileName isEqualToString:@"Maths"]){
-            
-            ServerLocation = @"http://learnerscloud.com/iosStreamv2/maths/MathsTtrailerv6";
-        }
-        else if ([VideoFileName isEqualToString:@"English"]){
-            
-            ServerLocation = @"http://learnerscloud.com/iosStreamv2/english/EnglishTrailerv5";
-            
-        }
-        else if ([VideoFileName isEqualToString:@"Physics"]){
-            
-            ServerLocation = @"http://learnerscloud.com/iosStreamv2/Physics/PhysicsTrailerV5";
-            
-        }
-        else if ([VideoFileName isEqualToString:@"Chemistry"]){
-            
-            ServerLocation = @"http://learnerscloud.com/iosStreamv2/Chemistry/ChemistryPromoFINAL";
-            
-        }
-        else if ([VideoFileName isEqualToString:@"Biology"]){
-            
-            ServerLocation = @"http://learnerscloud.com/iosStreamv2/Biology/BIO-Trailer";
-            
+        if (![[GANTracker sharedTracker] trackEvent:@"Playing Video"
+                                             action:@"Playing"
+                                              label:@"Playing"
+                                              value:69
+                                          withError:&error]) {
+            NSLog(@"error in trackEvent");
         }
         
         
@@ -120,8 +90,8 @@
                                         persistence: NSURLCredentialPersistenceForSession];
         self.credential = credential1;
         
-        NSString *DomainLocation = @"www.learnerscloud.com";
-        
+        NSString *DomainLocation = @"www.learnerscloud.com"; //[domain stringByReplacingOccurrencesOfString:@"http://" withString:@""];
+        //NSString *DomainLocationPlus = [DomainLocation stringByAppendingString:@"/maths"];
         NSURLProtectionSpace *protectionSpace1 = [[NSURLProtectionSpace alloc]
                                                   initWithHost: DomainLocation
                                                   port:443
@@ -135,9 +105,16 @@
                                                             forProtectionSpace:protectionSpace];
         
         
-        NSString *Finalpath = [ServerLocation stringByAppendingString:@"/all.m3u8"];
         
-        NSURL    *fileURL =   [NSURL URLWithString:Finalpath];
+        NSString *ServerpathAndVideoFileName = [ServerLocation stringByAppendingString:VideoFileName];
+        
+        // We can implement diffeerent Bandwidth size here..... TODO
+        
+        NSString *Finalpath = [ServerpathAndVideoFileName stringByAppendingString:@"/all.m3u8"];
+        //NSLog(@"this is my final path ... %@", Finalpath);
+        
+        NSURL    *fileURL    =   [NSURL URLWithString:Finalpath];
+        
         
         moviePlayerViewController = [[MPMoviePlayerViewController alloc] initWithContentURL:fileURL];
         moviePlayerViewController.moviePlayer.movieSourceType = MPMovieSourceTypeStreaming;
@@ -146,17 +123,18 @@
                                                  selector:@selector(movieFinishedCallback:)
                                                      name:MPMoviePlayerPlaybackDidFinishNotification
                                                    object:[moviePlayerViewController moviePlayer]];
-        
         NSError *_error = nil;
         
         [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error:&_error];
         
+        
+        
         [self presentMoviePlayerViewControllerAnimated:moviePlayerViewController];
         
-    }
-    
-    else{
         
+    }
+    else
+    {
         NSString *message = [[NSString alloc] initWithFormat:@"Your device is not connected to the internet. You need access to the internet to stream our videos "];
         
         UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"Important Notice"
@@ -165,19 +143,21 @@
         [alert show];
         
         
-        
         [self.navigationController popViewControllerAnimated:YES];
         
     }
 }
 
 
+
+
 - (void)viewWillDisappear:(BOOL)animated {
-	//old code
-	//[moviePlayerController stop];
 	
 	[moviePlayerViewController.moviePlayer stop];
-}
+    
+    
+	}
+
 
 
 
@@ -191,22 +171,25 @@
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration{
 	
 	if (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-		//old code
-		//[[moviePlayerController view] setFrame:CGRectMake(30 ,150, 700, 600)];
-        [[moviePlayerViewController view] setFrame:CGRectMake(30 ,150, 700, 600)];
+		
+		[[moviePlayerViewController view] setFrame:CGRectMake(30 ,150, 700, 600)];
 		
 	}
 	
 	else {
-		//old code
-		//[[moviePlayerController view] setFrame:CGRectMake(180 ,20, 700, 600)];
 		
 		[[moviePlayerViewController view] setFrame:CGRectMake(180 ,20, 700, 600)];
+		
+		
 	}
 	
 	
 	
 }
+
+    
+
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -224,7 +207,5 @@
 }
 
 
-
-
-
 @end
+

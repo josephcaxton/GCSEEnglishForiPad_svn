@@ -35,6 +35,7 @@
 	UIImageView *splashView;
 	UITableViewController *buyScreen;
 	NSThread *SecondThread;
+     NSString *DomainName;
 	
 	// this is to handle return from facebook
     
@@ -46,6 +47,7 @@
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (nonatomic, retain) NSString *DomainName;
 @property (nonatomic, retain) NSNumber *AllocatedMarks;
 @property (nonatomic, retain) NSString *Difficulty;
 @property (nonatomic, retain) NSString *Topic;

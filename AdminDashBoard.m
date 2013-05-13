@@ -67,7 +67,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...
@@ -75,7 +75,7 @@
     NSString *cellValue = [[NSString alloc] initWithFormat:@"%@",[listofItems objectAtIndex:indexPath.row]];
 	cell.textLabel.text = cellValue;
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	[cellValue release];
+	
 	
 	return cell;
 }
@@ -101,39 +101,41 @@
 	
 	switch (index) {
 		case 0:
-			;
+        {
 			lk_QuestionLists *QL = [[lk_QuestionLists alloc] initWithStyle:UITableViewStyleGrouped];
 			[self.navigationController pushViewController:QL animated:YES];
-			[QL release];
+		
 			break;
+        }
 			
 		case 1:
-			;
+        {
 			lk_Topics *T = [[lk_Topics alloc] initWithStyle:UITableViewStyleGrouped];
 			[self.navigationController pushViewController:T animated:YES];
-			[T release];
+		
 				
 			break;
+        }
 		case 2:
-			;
+        {
 			ViewQuestionList *VQL = [[ViewQuestionList alloc] initWithStyle:UITableViewStyleGrouped];
 			[self.navigationController pushViewController:VQL animated:YES];
-			[VQL release];
+		
 			
 				
 			break;
+        }
 		case 3:
-			;
+        {
 			Uploads *Up = [[Uploads alloc] initWithStyle:UITableViewStyleGrouped];
 			[self.navigationController pushViewController:Up animated:YES];
-			[Up release];
+		
 			
 			
 			break;
 			
-
-		default:
-			break;
+        }
+		
 	}
 
 	
@@ -161,10 +163,7 @@
 }
 
 
-- (void)dealloc {
-	[listofItems release];
-    [super dealloc];
-}
+
 
 
 @end

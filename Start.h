@@ -13,6 +13,7 @@
 #import "SelectQuestionTemplate.h"
 #import "ClientEngine.h"
 #import "PopUpTableviewViewController.h"
+#import "SelectNumberofQuestionsViewController.h"
 
 @interface Start : UIViewController  <UITableViewDataSource, UITableViewDelegate,UIAlertViewDelegate>{  //UIPickerViewDelegate, UIPickerViewDataSource
 	
@@ -21,8 +22,8 @@
 	UITableView *FirstTable;
 	UITableView *SecondTable;
 	
-	UIPickerView *QuestionPickerView;
-	CustomPickerDataSource_Num_Questions *CustomDataSource;
+	//UIPickerView *QuestionPickerView;
+	//CustomPickerDataSource_Num_Questions *CustomDataSource;
 	
 	UISwitch *Sound;
 	UISwitch *ShowAnswers;
@@ -42,17 +43,17 @@
 @property (nonatomic, retain) UIView *SecondView;
 @property (nonatomic, retain) UITableView *FirstTable;
 @property (nonatomic, retain) UITableView *SecondTable;
-@property (nonatomic, retain) UIPickerView *QuestionPickerView;
+//@property (nonatomic, retain) UIPickerView *QuestionPickerView;
 
-@property (nonatomic, retain) CustomPickerDataSource_Num_Questions *CustomDataSource;
+//@property (nonatomic, retain) CustomPickerDataSource_Num_Questions *CustomDataSource;
 @property (nonatomic, retain) UISwitch *Sound;
 @property (nonatomic, retain) UISwitch *ShowAnswers;
 @property (nonatomic, retain) UIImageView *logoView;
 @property (nonatomic, retain) UILabel *Copyright;
 @property (nonatomic, retain) UITextView *WebText;
-@property (nonatomic, assign) UIButton *StartPractice;
-@property (nonatomic, assign) UIButton *btnStartTest;
-@property (nonatomic, assign) UILabel *Instruction;
+@property (nonatomic, retain) UIButton *StartPractice;
+@property (nonatomic,retain) UIButton *btnStartTest;
+@property (nonatomic, retain) UILabel *Instruction;
 @property (nonatomic, retain)  UIPopoverController *popover;
 @property (nonatomic, retain)  UIImageView *TVHeaderImageView;
 

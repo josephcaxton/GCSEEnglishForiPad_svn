@@ -123,7 +123,7 @@ self.contentSizeForViewInPopover = CGSizeMake(108,400);
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier]autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     if (indexPath.section == 0 ){
         
@@ -136,9 +136,7 @@ self.contentSizeForViewInPopover = CGSizeMake(108,400);
         HeaderImageView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         [headerView addSubview:HeaderImageView];
         [cell addSubview:headerView];
-        [HeaderImageView release];
-        [headerView release];
-        
+             
         
         
         
@@ -155,7 +153,7 @@ self.contentSizeForViewInPopover = CGSizeMake(108,400);
         sharedividerView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         [shareView addSubview: sharedividerView];
         [cell addSubview:shareView];
-        [sharedividerView release];
+        
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
@@ -215,7 +213,7 @@ self.contentSizeForViewInPopover = CGSizeMake(108,400);
         NotdividerView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         [NotView addSubview: NotdividerView];
         [cell addSubview:NotView];
-        [NotdividerView release];
+        
         
         
         
@@ -295,7 +293,7 @@ self.contentSizeForViewInPopover = CGSizeMake(108,400);
         
         [SendMailcontroller setMessageBody:[NSString stringWithFormat:@"Checkout the FREE LearnersCloud English App loaded with thousands of test questions and answers. To download this App for iPad<a href=http://itunes.apple.com/us/app/gcse-english-language-english/id454173809?ls=1&mt=8> click here</a>. For iPhone<a href=http://itunes.apple.com/us/app/gcse-english-language-english/id435896386?ls=1&mt=8>  click here</a>. Or search LearnersCloud on your device’s App store. Don’t forget to come and see us for loads more: www.Learnerscloud.com"] isHTML:YES];
         [self presentModalViewController:SendMailcontroller animated:YES];
-        [SendMailcontroller release];
+        
 		
 	}
 	
@@ -307,7 +305,7 @@ self.contentSizeForViewInPopover = CGSizeMake(108,400);
 		
 		
 		[Alert show];
-		[Alert release];
+		
 		
 	}
     
@@ -517,8 +515,7 @@ self.contentSizeForViewInPopover = CGSizeMake(108,400);
                         
                     break;
                     
-                default:
-                    break;
+             
             }
             [self dismissModalViewControllerAnimated:YES];
         };
@@ -527,7 +524,7 @@ self.contentSizeForViewInPopover = CGSizeMake(108,400);
         [ activityIndicator stopAnimating];
         
 	    [self presentModalViewController:tweetSheet animated:YES];
-        [tweetSheet release];
+       
     }
     else
     {
@@ -539,7 +536,7 @@ self.contentSizeForViewInPopover = CGSizeMake(108,400);
                                   cancelButtonTitle:@"OK"                                                   
                                   otherButtonTitles:nil];
         [alertView show];
-        [alertView release];
+      
     }
     
 }
@@ -556,7 +553,7 @@ self.contentSizeForViewInPopover = CGSizeMake(108,400);
         
         [self.view addSubview:activityIndicator];
         [activityIndicator startAnimating];
-        [activityIndicator release];
+        
         
     }
 	

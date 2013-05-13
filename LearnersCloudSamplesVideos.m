@@ -8,6 +8,7 @@
 
 #import "LearnersCloudSamplesVideos.h"
 #import "VideoPlayer.h"
+#import "TrailerPlayer.h"
 
 @implementation LearnersCloudSamplesVideos
 
@@ -41,13 +42,13 @@
     NSString *HeaderLocation = [[NSBundle mainBundle] pathForResource:@"header_bar" ofType:@"png"];
     UIImage *HeaderBackImage = [[UIImage alloc] initWithContentsOfFile:HeaderLocation];
     [self.navigationController.navigationBar setBackgroundImage:HeaderBackImage forBarMetrics:UIBarMetricsDefault];
-    [HeaderBackImage release];
+  
     
     
     NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"Background" ofType:@"png"];
 	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
     self.view.backgroundColor = [UIColor colorWithPatternImage:BackImage];
-    [BackImage release];
+   
     
 	
 	listofItems = [[NSMutableArray alloc] init];
@@ -63,8 +64,8 @@
 	[ImageNames addObject:@"Chemistry.png"];
     [listofItems addObject:@"    Biology - Trailer"];
     [ImageNames addObject:@"Biology.png"];
-//	[listofItems addObject:@"Batteries"];
-//	[ImageNames addObject:@"Batteries.png"];
+    [listofItems addObject:@"    Hear from Students"];
+    [ImageNames addObject:@"Testimonial.png"];
 //	[listofItems addObject:@"The Ruined Maid"];
 //	[ImageNames addObject:@"Ruined_maid.png"];
 //	[listofItems addObject:@"Les Grand Seigneurs"];
@@ -94,7 +95,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	
-	
+	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
 		
 }
 
@@ -146,7 +147,7 @@
 	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
     if (indexPath.section == 0) {
@@ -160,20 +161,20 @@
         Title.backgroundColor = [UIColor clearColor];
         Title.text = cellValue;
         [cell.contentView addSubview:Title];
-        [Title release];
+      
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
         UIImage* theImage = [UIImage imageNamed:PicLocation];
         cell.imageView.image = theImage;
         
-		[PicLocation release];
-		[cellValue release];
+		
+		
 		
 	}
 	
 	else if (indexPath.section == 1) {
         
-        cell.backgroundView = [ [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"Background.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ]autorelease];
+        cell.backgroundView =  [[UIImageView alloc] initWithImage:[ [UIImage imageNamed:@"Background.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0] ];
         
         UIView *PromoView = [[UIView alloc] init];
         NSString *PromoImagePath = [[NSBundle mainBundle] pathForResource:@"website_promo" ofType:@"png"];
@@ -183,7 +184,7 @@
         [PromoView addSubview:PromoImageView];
         [cell.contentView addSubview:PromoView];
         
-        [PromoImage release];
+        
         
         cell.accessoryType = UITableViewCellAccessoryNone;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -204,9 +205,7 @@
         [cell.contentView addSubview:LCButton];
         
         
-        [LCImage release];
-        [PromoView release];
-        
+              
 		
 	}
     
@@ -229,63 +228,81 @@
         switch (index) {
                 
             case 0:
-                ;
+            {
                 VideoPlayer *VP1 = [[VideoPlayer alloc] initWithNibName:nil bundle:nil];
                 VP1.VideoFileName =@"Maths";
                 VP1.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:VP1 animated:NO];
-                [VP1 release];
+               
                 break;
+            }
                 
             case 1:
-                ;
+            {
                 VideoPlayer *VP2 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
                 VP2.VideoFileName =@"English";
                 VP2.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:VP2 animated:YES];
-                [VP2 release];
+               
                 break;
+            }
                 
             case 2:
-                ;
+            {
                 
                 VideoPlayer *VP3 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
                 VP3.VideoFileName =@"Physics";
                 VP3.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:VP3 animated:YES];
-                [VP3 release];
+               
                 
                 
                 
                 break;
+            }
                 
             case 3:
-                ;
+            {
                 VideoPlayer *VP4 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
                 VP4.VideoFileName =@"Chemistry";
                 VP4.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:VP4 animated:YES];
-                [VP4 release];
+                
                 
                 
                 
                 break;
+            }
             
             case 4:
-                ;
+            {
                 VideoPlayer *VP5 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
                 VP5.VideoFileName =@"Biology";
                 VP5.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:VP5 animated:YES];
-                [VP5 release];
+                
                 
                 
                 
                 break;
+            }
                 
-                
-        }
         
+    case 5:
+        {
+            TrailerPlayer *VP6 = [[TrailerPlayer	alloc] initWithNibName:nil bundle:nil];
+            VP6.VideoFileName =@"TESTIMONIALSTUDENTS";
+            VP6.ServerLocation = @"http://learnerscloud.com/iosStreamv2/Trailers/";
+            VP6.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:VP6 animated:YES];
+            
+            
+            
+            
+            break;
+        }
+
+        }
     }
 }
 - (void)WebsitebuttonPressed {
@@ -343,11 +360,6 @@
 }
 
 
-- (void)dealloc {
-	[listofItems release];
-	[ImageNames release];
-    [super dealloc];
-}
 
 
 @end

@@ -83,7 +83,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     
@@ -92,7 +92,7 @@
     NSString *cellValue = [[NSString alloc] initWithFormat:@"%@",[listofItems objectAtIndex:indexPath.row]];
 	cell.textLabel.text = cellValue;
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	[cellValue release];
+	
 	
 	return cell;
 	
@@ -109,12 +109,12 @@
 	switch (index) {
 			
 		case 0:
-			;
+        {
 			HelpVideo *Hlpv = [[HelpVideo alloc] initWithNibName:nil bundle:nil];
 			[self.navigationController pushViewController:Hlpv animated:YES];
-			[Hlpv release];
-			break;
 			
+			break;
+        }
 		//case 1:
 //			;
 //			Help1 *Hlp = [[Help1 alloc] initWithNibName:nil bundle:nil];
@@ -131,12 +131,13 @@
 //			break; 
 			
 		case 1:
-			;
+        {
 			Attribution *Attr = [[Attribution alloc] initWithNibName:nil bundle:nil];
 			[self.navigationController pushViewController:Attr animated:YES];
-			[Attr release];
 			
-			break; 
+			
+			break;
+        }
 	}
 }
 
@@ -156,10 +157,6 @@
 }
 
 
-- (void)dealloc {
-	[listofItems release];
-    [super dealloc];
-}
 
 
 @end

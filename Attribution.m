@@ -100,10 +100,6 @@
 }
 
 
-- (void)dealloc {
-	[WebBox release];
-    [super dealloc];
-}
 
 
 @end

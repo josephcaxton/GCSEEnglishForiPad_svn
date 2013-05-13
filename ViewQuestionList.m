@@ -50,7 +50,7 @@
 		
 		[DataError show];
 		
-		[DataError release];
+		
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		
 		
@@ -97,7 +97,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -162,10 +162,10 @@
 		aFetchedResultsController.delegate = self;
 		self.fetchedResultsController = aFetchedResultsController;
 		
-		[aFetchedResultsController release];
-		[fetchRequest release];
-		[sortDescriptor release];
-		[sortDescriptors release];
+		
+		
+		
+		
 	}
 	
 	return fetchedResultsController;
@@ -189,7 +189,7 @@
 		M_view.QItem_Edit = SelectedItem;
 		
 		[self.navigationController pushViewController:M_view animated:YES];
-		[M_view release];
+		
 	}
 	else if([TemplateType isEqualToString:@"Multiple Choice Multiple Answer"]){
 		
@@ -199,7 +199,7 @@
 		M_view.QItem_Edit = SelectedItem;
 		
 		[self.navigationController pushViewController:M_view animated:YES];
-		[M_view release];
+		
 		
 	}
 	else if([TemplateType isEqualToString:@"Descriptive Type"]){
@@ -211,7 +211,7 @@
 		D_view.QItem_Edit = SelectedItem;
 		
 		[self.navigationController pushViewController:D_view animated:YES];
-		[D_view release];
+		
 		
 		
 	}
@@ -224,7 +224,7 @@
 		T_view.QItem_Edit = SelectedItem;
 		
 		[self.navigationController pushViewController:T_view animated:YES];
-		[T_view release];
+		
 
 		
 	}
@@ -237,7 +237,7 @@
 		T_view.QItem_Edit = SelectedItem;
 		
 		[self.navigationController pushViewController:T_view animated:YES];
-		[T_view release];
+		
 		
 	}
 	else if ([TemplateType isEqualToString:@"Fill the Blanks"]){
@@ -249,7 +249,7 @@
 		F_view.QItem_Edit = SelectedItem;
 		
 		[self.navigationController pushViewController:F_view animated:YES];
-		[F_view release];
+		
 		
 		
 	}
@@ -279,9 +279,9 @@
 
 - (void)dealloc {
    
-	[fetchedResultsController release];
-	[managedObjectContext release];
-     [super dealloc];
+	
+	
+    
 }
 
 

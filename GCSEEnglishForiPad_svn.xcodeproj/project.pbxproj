@@ -61,6 +61,9 @@
 		7C1D7BF8163AC04A00C0DF26 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D7BF6163AC00D00C0DF26 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7C32EE2416DF621B0095954B /* restore.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C32EE2316DF621B0095954B /* restore.png */; };
 		7C5DBE7913EAA16100E404BB /* Evaluator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C5DBE7613EAA16100E404BB /* Evaluator.xcdatamodeld */; };
+		7C7370C2173E6C3000819A3A /* Testimonial.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7370C1173E6C3000819A3A /* Testimonial.png */; };
+		7C7370C3173E6CA500819A3A /* SelectNumberofQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7370BE173E6B6100819A3A /* SelectNumberofQuestionsViewController.m */; };
+		7C7370C4173E6CA500819A3A /* TrailerPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7370C0173E6B6100819A3A /* TrailerPlayer.m */; };
 		7C79507713E80DBD001950EA /* ArrowWoodImpact.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7C79507613E80DBD001950EA /* ArrowWoodImpact.aiff */; };
 		7C79507B13E80DE4001950EA /* Cough.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7C79507A13E80DE4001950EA /* Cough.aiff */; };
 		7C79507D13E80DF9001950EA /* Clapping.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 7C79507C13E80DF9001950EA /* Clapping.aiff */; };
@@ -143,7 +146,6 @@
 		7CC263EB16F9F80900868246 /* website_promo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC263E916F9F80900868246 /* website_promo.png */; };
 		7CC263EC16F9F80900868246 /* website_promo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC263EA16F9F80900868246 /* website_promo@2x.png */; };
 		7CC263EE16F9F8AA00868246 /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC263ED16F9F8AA00868246 /* VideoPlayer.m */; };
-		7CC34FCB16D6376D00EB5E8E /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7CC34FCA16D6375E00EB5E8E /* GCSEEnglish.sqlite */; };
 		7CCEF39C15A5CEAA00A1438A /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7CCEF38F15A5CEAA00A1438A /* FBDialog.bundle */; };
 		7CCEF39D15A5CEAA00A1438A /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CCEF39515A5CEAA00A1438A /* libfacebook_ios_sdk.a */; };
 		7CCEF3A115A5D75500A1438A /* PopUpTableviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCEF3A015A5D25800A1438A /* PopUpTableviewViewController.m */; };
@@ -1182,6 +1184,7 @@
 		7CD9DAD913EB001000B63AEC /* 1045.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D6C213EB000F00B63AEC /* 1045.pdf */; };
 		7CD9DADA13EB001000B63AEC /* 1046.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D6C313EB000F00B63AEC /* 1046.pdf */; };
 		7CD9DADB13EB001000B63AEC /* 1047.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D6C413EB000F00B63AEC /* 1047.pdf */; };
+		7CF84C43173FB50E00C87811 /* GCSEEnglish.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7C7370C5173E7CC600819A3A /* GCSEEnglish.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1243,6 +1246,12 @@
 		7C32EE2316DF621B0095954B /* restore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restore.png; sourceTree = "<group>"; };
 		7C5DBE7713EAA16100E404BB /* Evaluator 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Evaluator 2.xcdatamodel"; sourceTree = "<group>"; };
 		7C5DBE7813EAA16100E404BB /* Evaluator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Evaluator.xcdatamodel; sourceTree = "<group>"; };
+		7C7370BD173E6B6100819A3A /* SelectNumberofQuestionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectNumberofQuestionsViewController.h; sourceTree = "<group>"; };
+		7C7370BE173E6B6100819A3A /* SelectNumberofQuestionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectNumberofQuestionsViewController.m; sourceTree = "<group>"; };
+		7C7370BF173E6B6100819A3A /* TrailerPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailerPlayer.h; sourceTree = "<group>"; };
+		7C7370C0173E6B6100819A3A /* TrailerPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailerPlayer.m; sourceTree = "<group>"; };
+		7C7370C1173E6C3000819A3A /* Testimonial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Testimonial.png; sourceTree = "<group>"; };
+		7C7370C5173E7CC600819A3A /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
 		7C79507613E80DBD001950EA /* ArrowWoodImpact.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ArrowWoodImpact.aiff; sourceTree = "<group>"; };
 		7C79507A13E80DE4001950EA /* Cough.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Cough.aiff; sourceTree = "<group>"; };
 		7C79507C13E80DF9001950EA /* Clapping.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Clapping.aiff; sourceTree = "<group>"; };
@@ -1372,7 +1381,6 @@
 		7CC263E916F9F80900868246 /* website_promo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = website_promo.png; sourceTree = "<group>"; };
 		7CC263EA16F9F80900868246 /* website_promo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "website_promo@2x.png"; sourceTree = "<group>"; };
 		7CC263ED16F9F8AA00868246 /* VideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
-		7CC34FCA16D6375E00EB5E8E /* GCSEEnglish.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCSEEnglish.sqlite; sourceTree = "<group>"; };
 		7CCEF38D15A5CEAA00A1438A /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		7CCEF38E15A5CEAA00A1438A /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
 		7CCEF38F15A5CEAA00A1438A /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
@@ -3514,7 +3522,7 @@
 				7CD9D6C213EB000F00B63AEC /* 1045.pdf */,
 				7CD9D6C313EB000F00B63AEC /* 1046.pdf */,
 				7CD9D6C413EB000F00B63AEC /* 1047.pdf */,
-				7CC34FCA16D6375E00EB5E8E /* GCSEEnglish.sqlite */,
+				7C7370C5173E7CC600819A3A /* GCSEEnglish.sqlite */,
 				7C79514113E82411001950EA /* AttributionIpad.pdf */,
 				7C79514313E82427001950EA /* Results.xml */,
 				7C79514513E82434001950EA /* DescriptiveAnswers.xml */,
@@ -3565,6 +3573,10 @@
 				7CC263ED16F9F8AA00868246 /* VideoPlayer.m */,
 				7CCEF39F15A5D25800A1438A /* PopUpTableviewViewController.h */,
 				7CCEF3A015A5D25800A1438A /* PopUpTableviewViewController.m */,
+				7C7370BD173E6B6100819A3A /* SelectNumberofQuestionsViewController.h */,
+				7C7370BE173E6B6100819A3A /* SelectNumberofQuestionsViewController.m */,
+				7C7370BF173E6B6100819A3A /* TrailerPlayer.h */,
+				7C7370C0173E6B6100819A3A /* TrailerPlayer.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -3684,6 +3696,7 @@
 				7C8AAAA013E6ECE900C70B2E /* InfoPlist.strings */,
 				7C8AAA9F13E6ECE900C70B2E /* GCSEEnglishForiPad_svn-Info.plist */,
 				7CACF1F113F2DFE1000F6CBA /* BlackBackGround.png */,
+				7C7370C1173E6C3000819A3A /* Testimonial.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -3880,7 +3893,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CC34FCB16D6376D00EB5E8E /* GCSEEnglish.sqlite in Resources */,
+				7CF84C43173FB50E00C87811 /* GCSEEnglish.sqlite in Resources */,
 				7C8AAAA213E6ECE900C70B2E /* InfoPlist.strings in Resources */,
 				7C79507713E80DBD001950EA /* ArrowWoodImpact.aiff in Resources */,
 				7C79507B13E80DE4001950EA /* Cough.aiff in Resources */,
@@ -4990,6 +5003,7 @@
 				7CC263E816F9F7D100868246 /* Biology.png in Resources */,
 				7CC263EB16F9F80900868246 /* website_promo.png in Resources */,
 				7CC263EC16F9F80900868246 /* website_promo@2x.png in Resources */,
+				7C7370C2173E6C3000819A3A /* Testimonial.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5000,6 +5014,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C7370C3173E6CA500819A3A /* SelectNumberofQuestionsViewController.m in Sources */,
+				7C7370C4173E6CA500819A3A /* TrailerPlayer.m in Sources */,
 				7C1D7BF8163AC04A00C0DF26 /* Reachability.m in Sources */,
 				7C1D7BF4163AA30400C0DF26 /* TransparentToolBar.m in Sources */,
 				7CCEF3A115A5D75500A1438A /* PopUpTableviewViewController.m in Sources */,
@@ -5120,6 +5136,7 @@
 		7C8AAAB813E6ECE900C70B2E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -5149,6 +5166,7 @@
 		7C8AAAB913E6ECE900C70B2E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -5201,6 +5219,7 @@
 		7C9D619C13F44134008F18AC /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";

@@ -68,7 +68,7 @@
 @property (nonatomic, retain) UIButton *ShowAnswerHere;
 @property (nonatomic, retain) UIBarButtonItem *Continue;
 @property (nonatomic, retain) UIWebView *WebControl;
-@property (nonatomic, assign) UILabel *Instruction;
+@property (nonatomic, retain) UILabel *Instruction;
 
 //-(void)CheckAppDirectory:(NSString *)Location;
 //- (NSString *) getApplicationDirectory;

@@ -25,7 +25,7 @@
 @property (nonatomic, retain) UIButton *LCButton;
 @property (nonatomic, retain) UITableView *FirstTable;
 @property (nonatomic, assign)  CGRect FirstViewframe;
-@property (nonatomic, assign)  UIImageView *PromoImageView;
+@property (nonatomic, retain)  UIImageView *PromoImageView;
 
 - (void)WebsitebuttonPressed;
 

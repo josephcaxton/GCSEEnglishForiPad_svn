@@ -85,8 +85,8 @@
 -(void)setQuestionTemplate:(lk_QuestionTemplate *)newQuestionTemplate{
 
     if (newQuestionTemplate != QuestionTemplate) {
-		[QuestionTemplate release];
-		QuestionTemplate = [newQuestionTemplate retain];
+		
+		QuestionTemplate = newQuestionTemplate;
 		
 		
 	} 
@@ -99,7 +99,7 @@
 	lblLoggedDate.text =[dateFormat stringFromDate:QuestionTemplate.LoggedDate]; 
 	//NSLog(@"%@",lblLoggedDate.text);
 	
-	[dateFormat release];
+	
 	
 	
 
@@ -107,13 +107,6 @@
 }
 
 
-- (void)dealloc {
-	
-	[QuestionTemplate release];
-	[lblDescription release];
-	[lblLoggedDate release];
-    [super dealloc];
-}
 
 
 @end

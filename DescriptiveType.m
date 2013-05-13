@@ -44,7 +44,7 @@ static UIWebView *QuestionHeaderBox = nil;
     NSString *BackImagePath = [[NSBundle mainBundle] pathForResource:@"Background" ofType:@"png"];
 	UIImage *BackImage = [[UIImage alloc] initWithContentsOfFile:BackImagePath];
     self.FileListTable.backgroundColor = [UIColor colorWithPatternImage:BackImage];
-    [BackImage release];
+   
     
 
 	
@@ -74,7 +74,7 @@ static UIWebView *QuestionHeaderBox = nil;
 			
 		UIBarButtonItem *NextButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style: UIBarButtonItemStyleBordered target:self action:@selector(Edit:)];
 		self.navigationItem.rightBarButtonItem = NextButton;
-		[NextButton release];
+		
 		
 		}
 		else
@@ -91,11 +91,11 @@ static UIWebView *QuestionHeaderBox = nil;
 			UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
 			self.navigationItem.leftBarButtonItem = SendSupportMail;
 
-			[SendSupportMail release];
+			
 			
             Continue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style: UIBarButtonItemStyleBordered target:self action:@selector(NextQuestion:)];
 			self.navigationItem.rightBarButtonItem = Continue;
-			[Continue release];
+			
 
 		}
 		
@@ -110,7 +110,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		UIBarButtonItem *NextButton = [[UIBarButtonItem alloc] initWithTitle:@"Next" style: UIBarButtonItemStyleBordered target:self action:@selector(Next:)];
 		
 		self.navigationItem.rightBarButtonItem = NextButton;
-		[NextButton release];
+		
 		
 		[self loadDocument:[SFileName stringByDeletingPathExtension] inView:QuestionHeaderBox];
 	}
@@ -118,7 +118,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	[self.view addSubview:QuestionHeaderBox];
 	
 	[self.view addSubview:FileListTable];
-	[FileListTable release];
+	
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -141,7 +141,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	[formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
 	[formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
 	NSString *now = [formatter stringFromDate:[NSDate date]];
-    [formatter release];
+   
 	NSString *TextStart = @"\n\t<Result Date = ";
 	NSString *Date = [NSString stringWithFormat:@"\"%@\"" ,now];
 	NSString *DateEnd =@">";
@@ -189,7 +189,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	[self.navigationController pushViewController:D_view1 animated:YES];
 	
-	[D_view1 release];
+	
 	
 	
 }
@@ -204,7 +204,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	[self.navigationController pushViewController:D_view1 animated:YES];
 	
-	[D_view1 release];
+	
 	
 	
 }
@@ -268,8 +268,8 @@ static UIWebView *QuestionHeaderBox = nil;
 	[WebControl setBackgroundColor:[UIColor clearColor]];
 	[WebControl loadHTMLString:FormatedString baseURL:nil];
 	[Answer1 addSubview:WebControl];
-	[FormatedString release];
-	[WebControl release];
+	
+	
 	
 	//[ExistingText release];
 	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];
@@ -321,7 +321,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		[SendMailcontroller setMessageBody:[NSString stringWithFormat:@"Question Number %@ -- \n Additional Messages can be added to this email ", [[NSString stringWithFormat:@"%@",QItem_View.Question] stringByDeletingPathExtension]] isHTML:NO];
 		[self presentModalViewController:SendMailcontroller animated:YES];
-		[SendMailcontroller release];
+		
 		
 	}
 	
@@ -334,7 +334,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		
 		[Alert show];
 		
-		[Alert release];
+		
 	}
 	
 	
@@ -455,7 +455,7 @@ static UIWebView *QuestionHeaderBox = nil;
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     tableView.allowsSelection = NO;
 	
@@ -472,7 +472,7 @@ static UIWebView *QuestionHeaderBox = nil;
 		 
 		 if (indexPath.row == 0) {
 			
-             Instruction = [[[UILabel alloc] initWithFrame:CGRectMake(10, 13, 600, 20)] autorelease];
+             Instruction = [[UILabel alloc] initWithFrame:CGRectMake(10, 13, 600, 20)];
              Instruction.font = [UIFont boldSystemFontOfSize: 12.0];
              Instruction.textColor = [UIColor purpleColor];
              Instruction.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
@@ -680,28 +680,6 @@ static UIWebView *QuestionHeaderBox = nil;
 }
 
 
-- (void)dealloc {
-	
-	[QuestionTemplate release];
-	[SelectedTopic release];
-	//[QuestionHeaderBox release];
-	
-	[fileList release];
-	[FileListTable release];
-	[SFileName release];
-	[DirLocation release];
-	//[SFileName_Edit release];
-	//[DirLocation_Edit release];
-	[QItem_Edit release];
-	[QItem_View release];
-	[AnswerObjects release];
-	[Answer1 release];
-	[ShowCorrectAnswer release];
-	//[newLine release];
-	//[ShowAnswerHere release];
-	[WebControl release];
-    [super dealloc];
-}
 
 
 @end
