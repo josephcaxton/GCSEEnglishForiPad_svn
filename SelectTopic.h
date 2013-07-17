@@ -30,8 +30,9 @@
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic) BOOL UserConfigure;
--(IBAction)Back:(id)sender;
+
 
 - (NSManagedObjectContext *)ManagedObjectContext;
+-(void)goBack:(id)sender;
 
 @end

@@ -13,6 +13,7 @@
 #import "QuestionItems.h"
 #import "Answers.h"
 #import "TrueOrFalseYesOrNo1.h"
+#import "TransparentToolBar.h"
 
 static NSString *kViewKey = @"viewKey";
 
@@ -108,11 +109,59 @@ static UIWebView *QuestionHeaderBox = nil;
 			
 			AnswerObjects=  [[NSMutableArray alloc] initWithArray:[[QItem_View Answers1] allObjects]];
 			
-            UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
-			self.navigationItem.leftBarButtonItem = SendSupportMail;
-			
             
-            Continue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style: UIBarButtonItemStyleBordered target:self action:@selector(ContinueToNextQuestion:)];
+            // create a toolbar where we can place some buttons
+            TransparentToolBar* toolbar = [[TransparentToolBar alloc]
+                                           initWithFrame:CGRectMake(0, 0, 350, 45)];
+            
+            
+            
+            // create an array for the buttons
+            NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:3];
+            
+            // This is QItem_View  : View Mode
+            UIButton *ReportProbbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            [ReportProbbtn setBackgroundImage:[UIImage imageNamed:@"report_problem40.png"] forState:UIControlStateNormal];
+            [ReportProbbtn addTarget:self action:@selector(ReportProblem:) forControlEvents:UIControlEventTouchUpInside];
+            ReportProbbtn.frame=CGRectMake(0.0, 0.0, 127.0, 40.0);
+            UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithCustomView:ReportProbbtn];
+            
+            [buttons addObject:SendSupportMail];
+            
+            
+            // create a spacer between the buttons
+            UIBarButtonItem *spacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil
+                                       action:nil];
+            [buttons addObject:spacer];
+            
+            
+            if(!ShowAnswer){
+                
+                UIButton *EndTestbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+                [EndTestbtn setBackgroundImage:[UIImage imageNamed:@"StopTest40.png"] forState:UIControlStateNormal];
+                [EndTestbtn addTarget:self action:@selector(StopTest:) forControlEvents:UIControlEventTouchUpInside];
+                EndTestbtn.frame=CGRectMake(0.0, 0.0, 84.0, 40.0);
+                UIBarButtonItem *EndTestnow = [[UIBarButtonItem alloc] initWithCustomView:EndTestbtn];
+                
+                [buttons addObject:EndTestnow];
+            }
+            
+            
+            [toolbar setItems:buttons animated:NO];
+            
+            // place the toolbar into the navigation bar
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
+                                                     initWithCustomView:toolbar];
+			
+			
+            UIButton *Continuebtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            [Continuebtn setBackgroundImage:[UIImage imageNamed:@"Continue40.png"] forState:UIControlStateNormal];
+            [Continuebtn addTarget:self action:@selector(ContinueToNextQuestion:) forControlEvents:UIControlEventTouchUpInside];
+            Continuebtn.frame=CGRectMake(0.0, 0.0, 84.0, 40.0);
+            Continue = [[UIBarButtonItem alloc] initWithCustomView:Continuebtn];
+
 			self.navigationItem.rightBarButtonItem = Continue;
 			
 			
@@ -283,6 +332,23 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // increase the size of the answer cell
+    if(indexPath.row == 3){
+        
+        return 65.0;
+    }
+    
+    else{
+        
+        
+        return 44;
+    }
+}
+
+
+
 
 /*- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 	
@@ -321,7 +387,7 @@ static UIWebView *QuestionHeaderBox = nil;
 	}
 	else if (QItem_View && ShowAnswer){
 		
-		count = [AnswerControls count] ;
+		count = [AnswerControls count] ; // + 2 if there are answers
 	}
 	
 	else {
@@ -475,12 +541,6 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // increase the size of the answer cell
-    
-	return 44;
-}
 
 
 
@@ -602,7 +662,14 @@ static UIWebView *QuestionHeaderBox = nil;
 }
 	
 	
-	
+-(IBAction)StopTest:(id)sender {
+    
+    EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+    appDelegate.FinishTestNow = YES;
+    [self ContinueToNextQuestion:nil];
+}
+
+
 
 
 

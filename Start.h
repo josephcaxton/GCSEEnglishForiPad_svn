@@ -36,6 +36,10 @@
     UILabel *Instruction;
     UIPopoverController *popover;
     UIImageView *TVHeaderImageView;
+    
+    UIButton *DifficultybtnLock;
+    UIButton *TopicbtnLock;
+    UIButton *TypeofquestionbtnLock;
 	
 }
 
@@ -56,6 +60,11 @@
 @property (nonatomic, retain) UILabel *Instruction;
 @property (nonatomic, retain)  UIPopoverController *popover;
 @property (nonatomic, retain)  UIImageView *TVHeaderImageView;
+@property (nonatomic, retain) UIButton *DifficultybtnLock;
+@property (nonatomic, retain) UIButton *TopicbtnLock;
+@property (nonatomic, retain) UIButton *TypeofquestionbtnLock;
+
+
 
 -(IBAction)Practice:(id)sender;
 -(IBAction)StartTest:(id)sender;

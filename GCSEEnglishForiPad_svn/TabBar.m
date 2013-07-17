@@ -14,20 +14,21 @@
 - (void)tabBar:(UITabBar *)theTabBar didSelectItem:(UITabBarItem *)item  {
 	
 	NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-	NSString *activetab = [def objectForKey:@"activeTab"];
-	
-	EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
-
-	
-	
-	if([item.title isEqualToString:@"Results"] &&  ![activetab isEqualToString:@"Results"]){ //||[item.title isEqualToString:@"Videos"]
-		
-		
-		appDelegate.SecondThread = [[NSThread alloc]initWithTarget:self selector:@selector(ShowActivity) object:nil];
-		[appDelegate.SecondThread start];
-		
-		
-	}
+	/*NSString *activetab = [def objectForKey:@"activeTab"];
+     
+     EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+     
+     
+     
+     if([item.title isEqualToString:@"Results"]){ //||[item.title isEqualToString:@"Videos"]
+     
+     //appDelegate.SecondThread = [[NSThread alloc]initWithTarget:self selector:@selector(ShowActivity) object:nil];
+     //[appDelegate.SecondThread start];
+     
+     
+     
+     
+     } */
 	
 	[def setValue:item.title forKey:@"activeTab"];
 	[def synchronize];
@@ -38,20 +39,29 @@
 
 - (void)ShowActivity {
 	
-	
+	//NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
 	ActivityIndicator *indicator = [[ActivityIndicator alloc]initWithFrame:CGRectMake(0,0,1040,720)];
 	indicator.tag = 1;
 	[self.view addSubview:indicator];
+	//[indicator release];
 	
-	
-	
+	//[pool release];
 }
 
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations.
+    
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+	NSString *activetab = [def objectForKey:@"activeTab"];
+    if([activetab isEqualToString:@"Results"]){
+        
+        return NO;
+        
+    }
+    
     return YES;
 }
 
@@ -71,7 +81,7 @@
 
 
 - (void)dealloc {
-   
+    //[super dealloc];
 }
 
 

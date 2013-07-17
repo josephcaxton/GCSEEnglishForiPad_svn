@@ -17,7 +17,7 @@
 
 @property (nonatomic, retain)  NSMutableArray *QuestionsNumbers;
 
--(IBAction)Back:(id)sender;
+-(void)goBack:(id)sender;
 -(void)ConfigureList;
 
 @end

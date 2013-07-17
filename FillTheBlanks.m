@@ -7,6 +7,8 @@
 //
 
 #import "FillTheBlanks.h"
+#import "TransparentToolBar.h"
+
 
 
 static NSString *kViewKey = @"viewKey";
@@ -115,11 +117,59 @@ static UIWebView *QuestionHeaderBox = nil;
 			SFileName_Edit = result;
 			
 			AnswerObjects=  [[NSMutableArray alloc] initWithArray:[[QItem_View Answers1] allObjects]];
-			UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithTitle:@"Report Problem" style: UIBarButtonItemStyleBordered target:self action:@selector(ReportProblem:)];
-			self.navigationItem.leftBarButtonItem = SendSupportMail;
+            // create a toolbar where we can place some buttons
+            TransparentToolBar* toolbar = [[TransparentToolBar alloc]
+                                           initWithFrame:CGRectMake(0, 0, 350, 45)];
+            
+            
+            
+            // create an array for the buttons
+            NSMutableArray* buttons = [[NSMutableArray alloc] initWithCapacity:3];
+            
+            // This is QItem_View  : View Mode
+            UIButton *ReportProbbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            [ReportProbbtn setBackgroundImage:[UIImage imageNamed:@"report_problem40.png"] forState:UIControlStateNormal];
+            [ReportProbbtn addTarget:self action:@selector(ReportProblem:) forControlEvents:UIControlEventTouchUpInside];
+            ReportProbbtn.frame=CGRectMake(0.0, 0.0, 127.0, 40.0);
+            UIBarButtonItem *SendSupportMail = [[UIBarButtonItem alloc] initWithCustomView:ReportProbbtn];
+            
+            [buttons addObject:SendSupportMail];
+            
+            
+            // create a spacer between the buttons
+            UIBarButtonItem *spacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil
+                                       action:nil];
+            [buttons addObject:spacer];
+            
+            
+            if(!ShowAnswer){
+                
+                UIButton *EndTestbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+                [EndTestbtn setBackgroundImage:[UIImage imageNamed:@"StopTest40.png"] forState:UIControlStateNormal];
+                [EndTestbtn addTarget:self action:@selector(StopTest:) forControlEvents:UIControlEventTouchUpInside];
+                EndTestbtn.frame=CGRectMake(0.0, 0.0, 84.0, 40.0);
+                UIBarButtonItem *EndTestnow = [[UIBarButtonItem alloc] initWithCustomView:EndTestbtn];
+                
+                [buttons addObject:EndTestnow];
+            }
+            
+            
+            [toolbar setItems:buttons animated:NO];
+            
+            // place the toolbar into the navigation bar
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
+                                                     initWithCustomView:toolbar];
 			
             
-            Continue = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style: UIBarButtonItemStyleBordered target:self action:@selector(NextQuestion:)];
+			
+            
+            UIButton *Continuebtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            [Continuebtn setBackgroundImage:[UIImage imageNamed:@"Continue40.png"] forState:UIControlStateNormal];
+            [Continuebtn addTarget:self action:@selector(NextQuestion:) forControlEvents:UIControlEventTouchUpInside];
+            Continuebtn.frame=CGRectMake(0.0, 0.0, 84.0, 40.0);
+            Continue = [[UIBarButtonItem alloc] initWithCustomView:Continuebtn];
 			self.navigationItem.rightBarButtonItem = Continue;
 			
 			
@@ -741,6 +791,12 @@ static UIWebView *QuestionHeaderBox = nil;
 }
 
 
+-(IBAction)StopTest:(id)sender {
+    
+    EvaluatorAppDelegate *appDelegate = (EvaluatorAppDelegate *)[UIApplication sharedApplication].delegate;
+    appDelegate.FinishTestNow = YES;
+    [self ContinueToNextQuestion:nil];
+}
 
 
 

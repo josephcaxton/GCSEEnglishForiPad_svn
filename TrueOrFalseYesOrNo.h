@@ -76,5 +76,6 @@
 -(void)loadDocument:(NSString*)documentName inView:(UIWebView*)webView;
 -(IBAction)ContinueToNextQuestion:(id)sender;
 - (void)configureCell:(WebViewInCell *)mycell HTMLStr:(NSString *)value;
+-(IBAction)StopTest:(id)sender;
 
 @end

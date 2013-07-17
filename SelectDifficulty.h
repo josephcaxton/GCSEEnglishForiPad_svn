@@ -18,5 +18,5 @@
 @property (nonatomic, retain) QuestionItems	*QItem_ForEdit;
 @property (nonatomic) BOOL UserConfigure;
 
--(IBAction)Back:(id)sender;
+-(void)goBack:(id)sender;
 @end

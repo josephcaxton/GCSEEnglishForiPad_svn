@@ -34,8 +34,13 @@
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:BackImage];
    
     
-    UIBarButtonItem *Back = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(Back:)];
-    self.navigationItem.leftBarButtonItem = Back;
+    //Back to previous screen
+    UIButton *backbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backbtn setBackgroundImage:[UIImage imageNamed:@"back_arrow40.png"] forState:UIControlStateNormal];
+    [backbtn addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
+    backbtn.frame=CGRectMake(0.0, 0.0, 64.0, 40.0);
+    UIBarButtonItem *GoBack = [[UIBarButtonItem alloc] initWithCustomView:backbtn];
+    self.navigationItem.leftBarButtonItem = GoBack;
    
 
 }
@@ -48,10 +53,9 @@
     
 }
 
--(IBAction)Back:(id)sender{
-	
-	[self.navigationController popViewControllerAnimated:YES];
-	
+-(void)goBack:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)ConfigureList{
@@ -63,11 +67,11 @@
     
      if([AccessLevel intValue] == 1){
          
-         NSArray *one = [[NSArray alloc]initWithObjects:@"10",@"20", nil];
+         NSArray *one = [[NSArray alloc]initWithObjects:@"10",@"20",@"50", nil];
          [QuestionsNumbers addObjectsFromArray:one];
      }
      else if([AccessLevel intValue] == 2){
-          NSArray *two = [[NSArray alloc] initWithObjects:@"10",@"20",@"50",@"100",@"250",nil];
+          NSArray *two = [[NSArray alloc] initWithObjects:@"10",@"20",@"50",nil];
          [QuestionsNumbers addObjectsFromArray:two];
 
      }

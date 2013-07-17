@@ -58,8 +58,14 @@
 	
 	if (UserConfigure) {
 		
-		UIBarButtonItem *Back = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(Back:)];
-		self.navigationItem.leftBarButtonItem = Back;
+        //Back to previous screen
+        UIButton *backbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [backbtn setBackgroundImage:[UIImage imageNamed:@"back_arrow40.png"] forState:UIControlStateNormal];
+        [backbtn addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
+        backbtn.frame=CGRectMake(0.0, 0.0, 64.0, 40.0);
+        UIBarButtonItem *GoBack = [[UIBarButtonItem alloc] initWithCustomView:backbtn];
+        self.navigationItem.leftBarButtonItem = GoBack;
+
 		self.navigationItem.title = @"Difficulty";
 		
 	}
@@ -68,10 +74,9 @@
     
 }
 
--(IBAction)Back:(id)sender{
-	
-	[self.navigationController popViewControllerAnimated:YES];
-	
+-(void)goBack:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

@@ -2,12 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>250Questions</key>
-	<string>com.LearnersCloud.iEvaluatorForiPad.English.250</string>
-	<key>500Questions</key>
-	<string>com.LearnersCloud.iEvaluatorForiPad.English.500</string>
-	<key>750Questions</key>
-	<string>com.LearnersCloud.iEvaluatorForiPad.English.750</string>
+	
 	<key>1000Questions</key>
 	<string>com.LearnersCloud.iEvaluatorForiPad.English.1040</string>
 </dict>
