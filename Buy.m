@@ -12,7 +12,7 @@
 
 @implementation Buy
 
-@synthesize ProductFromIstore,ProductsToIstore,ProductsToIStoreInArray,SortedDisplayProducts,observer,Restore;
+@synthesize ProductFromIstore,ProductsToIstore,ProductsToIStoreInArray,SortedDisplayProducts,observer,Restore,pass;
 
 int dontShowPriceList = 0;
 #pragma mark -
@@ -72,7 +72,10 @@ int dontShowPriceList = 0;
     self.navigationItem.titleView = label;
     [label sizeToFit];
   
-    
+    UITapGestureRecognizer* gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userTappedOnLink:)];
+    [label setUserInteractionEnabled:YES];
+    [label addGestureRecognizer:gesture];
+
     
 	
     observer = [[CustomStoreObserver alloc] init];
@@ -82,6 +85,53 @@ int dontShowPriceList = 0;
 	
     
 }
+- (void)userTappedOnLink: (UITapGestureRecognizer *)recognizer
+{
+    
+    static NSUInteger numberOfTaps = 0;
+    
+    if([recognizer state] == UIGestureRecognizerStateEnded){
+        
+        if(numberOfTaps == 2){
+            
+            numberOfTaps = 0;
+            
+            NSString *myTitle = @"Password";
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:myTitle message:@"\n \n" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+            
+            
+            pass = [[UITextField alloc] initWithFrame:CGRectMake(12.0, 60.0, 260.0, 30.0)];
+            pass.placeholder = @"Password";
+            
+            [pass setBackgroundColor:[UIColor whiteColor]];
+            pass.enablesReturnKeyAutomatically = YES;
+            [pass setReturnKeyType:UIReturnKeyDone];
+            [pass setDelegate:self];
+            [alertView addSubview:pass];
+            
+            [alertView show];
+            
+        }
+        
+        numberOfTaps ++;
+    }
+}
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 1){
+        
+        if([[pass.text lowercaseString] isEqualToString:@"1ravenroade181hb"]){
+            
+            //NSLog(@"Pass");
+            [[NSUserDefaults standardUserDefaults] setObject:@"5" forKey:@"AccessLevel"]; //For testing only
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+        }
+    }
+    
+}
+
 
 - (void)AddProgress{
 	

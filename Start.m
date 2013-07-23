@@ -695,9 +695,13 @@
                 }
                 else{
                     
+                    [DifficultybtnLock removeFromSuperview];
+                    
+                    cell.userInteractionEnabled = YES;
+                    cell.textLabel.enabled = YES;
 
-                cell.textLabel.text = @"Difficulty";
-                cell.detailTextLabel.text = appDelegate.Difficulty;
+                    cell.textLabel.text = @"Difficulty";
+                    cell.detailTextLabel.text = appDelegate.Difficulty;
                 }
                 break;
             }
@@ -725,8 +729,14 @@
                     
                 }
                 else{
+                    
+                    [TopicbtnLock removeFromSuperview];
+                    
+                    cell.userInteractionEnabled = YES;
+                    cell.textLabel.enabled = YES;
+
                     cell.textLabel.text = @"Topic";
-                cell.detailTextLabel.text = appDelegate.Topic;
+                    cell.detailTextLabel.text = appDelegate.Topic;
                 }
                  break;
             
@@ -758,9 +768,13 @@
                 }
                 else {
                     
-
-                cell.textLabel.text = @"Type of question";
-                cell.detailTextLabel.text = appDelegate.TypeOfQuestion;
+                    [TypeofquestionbtnLock removeFromSuperview];
+                    
+                    
+                    cell.userInteractionEnabled = YES;
+                    cell.textLabel.enabled = YES;
+                    cell.textLabel.text = @"Type of question";
+                    cell.detailTextLabel.text = appDelegate.TypeOfQuestion;
                 }
                 break;
             }

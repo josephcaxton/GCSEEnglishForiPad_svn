@@ -13,7 +13,7 @@
 
 
 
-@interface Buy : UITableViewController <SKProductsRequestDelegate>{
+@interface Buy : UITableViewController <SKProductsRequestDelegate,UIGestureRecognizerDelegate,UIAlertViewDelegate,UITextFieldDelegate>{
 
 	
 	NSArray *ProductFromIstore;
@@ -22,6 +22,7 @@
 	NSArray *SortedDisplayProducts;
 	CustomStoreObserver *observer;
     UIButton *Restore;
+    UITextField *pass;
 }
 
 @property (nonatomic, retain) NSArray *ProductFromIstore;
@@ -30,6 +31,8 @@
 @property (nonatomic, retain) NSArray *SortedDisplayProducts;
 @property (nonatomic, retain) CustomStoreObserver *observer;
 @property (nonatomic, retain) UIButton *Restore;
+@property (nonatomic, retain) UITextField *pass;
+
 
 - (void)AddProgress;
 - (BOOL)isDataSourceAvailable;
