@@ -683,6 +683,9 @@ static UIWebView *QuestionHeaderBox = nil;
 			
 			if (ShowMyAnswer == YES){
 				
+                UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+                cell.contentView.backgroundColor=[UIColor redColor];
+                
 				//  Don't worry about this madness it works All i am trying to so is add a section to the table dynamically 
 				//to show answer
 				Answerflag = 1;

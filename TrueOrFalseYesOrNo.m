@@ -643,7 +643,6 @@ static UIWebView *QuestionHeaderBox = nil;
 			
 			if (ShowMyAnswer == YES){
 				
-				
 				ShowAnswer = TRUE;
 				[tableView reloadData];
 				
