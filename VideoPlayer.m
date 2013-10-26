@@ -54,7 +54,7 @@
 													name:MPMoviePlayerPlaybackDidFinishNotification  
 												  object:player];  
 	[player stop];
-	[moviePlayerViewController.view removeFromSuperview];  
+	//[moviePlayerViewController.view removeFromSuperview];
 	
 	
 	[self.navigationController popViewControllerAnimated:YES];

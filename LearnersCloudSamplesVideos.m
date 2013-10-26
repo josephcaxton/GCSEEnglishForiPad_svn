@@ -12,10 +12,10 @@
 
 @implementation LearnersCloudSamplesVideos
 
-@synthesize listofItems,ImageNames,LCButton,FirstTable,FirstViewframe,PromoImageView;
+@synthesize listofItems,ImageNames,LCButton,FirstTable,FirstViewframe,PromoImageView,PromoImage;
 #define SCREEN_WIDTH 768
 #define SCREEN_HEIGHT 950
-
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 //static MPMoviePlayerController *moviePlayerController = nil; 
 
 //- (id) initWithCoder: (NSCoder *) coder {
@@ -148,7 +148,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
-    }
+    
     
     if (indexPath.section == 0) {
 		
@@ -157,7 +157,7 @@
         
         NSString *cellValue = [[NSString alloc] initWithFormat:@"%@",[listofItems objectAtIndex:indexPath.row]];
         NSString *PicLocation = [[NSString alloc] initWithFormat:@"%@",[ImageNames objectAtIndex:indexPath.row]];
-        UILabel *Title = [[UILabel alloc] initWithFrame:CGRectMake(80.0,0.0,240,50)];
+        UILabel *Title = [[UILabel alloc] initWithFrame:CGRectMake(100.0,0.0,240,50)];
         Title.backgroundColor = [UIColor clearColor];
         Title.text = cellValue;
         [cell.contentView addSubview:Title];
@@ -178,9 +178,9 @@
         
         UIView *PromoView = [[UIView alloc] init];
         NSString *PromoImagePath = [[NSBundle mainBundle] pathForResource:@"website_promo" ofType:@"png"];
-        UIImage *PromoImage = [[UIImage alloc] initWithContentsOfFile:PromoImagePath];
+        PromoImage = [[UIImage alloc] initWithContentsOfFile:PromoImagePath];
         PromoImageView = [[UIImageView alloc] initWithImage:PromoImage];
-        PromoImageView.frame = CGRectMake(5.0, 05.0, 665, 361);
+        PromoImageView.frame = CGRectMake(0, 05.0, 665, 361);
         [PromoView addSubview:PromoImageView];
         [cell.contentView addSubview:PromoView];
         
@@ -200,12 +200,12 @@
         
         LCButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [LCButton setImage:LCImage forState:UIControlStateNormal];
-        LCButton.frame = CGRectMake(225, 280, 250, 50);
+        LCButton.frame = CGRectMake(200, 280, 250, 50);
         [LCButton addTarget:self action:@selector(WebsitebuttonPressed) forControlEvents:UIControlEventTouchUpInside];
         [cell.contentView addSubview:LCButton];
         
         
-              
+    }
 		
 	}
     
@@ -231,7 +231,7 @@
             {
                 VideoPlayer *VP1 = [[VideoPlayer alloc] initWithNibName:nil bundle:nil];
                 VP1.VideoFileName =@"Maths";
-                VP1.hidesBottomBarWhenPushed = YES;
+                //VP1.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:VP1 animated:NO];
                
                 break;
@@ -241,7 +241,7 @@
             {
                 VideoPlayer *VP2 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
                 VP2.VideoFileName =@"English";
-                VP2.hidesBottomBarWhenPushed = YES;
+                //VP2.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:VP2 animated:YES];
                
                 break;
@@ -252,7 +252,7 @@
                 
                 VideoPlayer *VP3 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
                 VP3.VideoFileName =@"Physics";
-                VP3.hidesBottomBarWhenPushed = YES;
+                //VP3.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:VP3 animated:YES];
                
                 
@@ -265,7 +265,7 @@
             {
                 VideoPlayer *VP4 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
                 VP4.VideoFileName =@"Chemistry";
-                VP4.hidesBottomBarWhenPushed = YES;
+                //VP4.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:VP4 animated:YES];
                 
                 
@@ -278,7 +278,7 @@
             {
                 VideoPlayer *VP5 = [[VideoPlayer	alloc] initWithNibName:nil bundle:nil];
                 VP5.VideoFileName =@"Biology";
-                VP5.hidesBottomBarWhenPushed = YES;
+                //VP5.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:VP5 animated:YES];
                 
                 
@@ -293,7 +293,7 @@
             TrailerPlayer *VP6 = [[TrailerPlayer	alloc] initWithNibName:nil bundle:nil];
             VP6.VideoFileName =@"TESTIMONIALSTUDENTS";
             VP6.ServerLocation = @"http://learnerscloud.com/iosStreamv2/Trailers/";
-            VP6.hidesBottomBarWhenPushed = YES;
+            //VP6.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:VP6 animated:YES];
             
             
@@ -324,18 +324,45 @@
 	
 	if (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown ) {
 		
-        FirstTable.frame = CGRectMake(0,0,SCREEN_WIDTH,SCREEN_HEIGHT);
-        PromoImageView.frame  = CGRectMake(5.0, 05.0, 665, 361);
-        LCButton.frame = CGRectMake(225, 280, 250, 50);
+        //To fix ios7 extending edges
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")){
+            
+            FirstViewframe = CGRectMake(0 ,0, SCREEN_WIDTH, SCREEN_HEIGHT);
+            FirstTable.frame = CGRectMake(0,0,SCREEN_WIDTH,SCREEN_HEIGHT);
+            PromoImageView.frame  = CGRectMake(60, 05.0, 665, 361);
+            LCButton.frame = CGRectMake(280, 280, 250, 50);
+        }
+        else{
+            
+            FirstViewframe = CGRectMake(0 ,0, SCREEN_WIDTH, SCREEN_HEIGHT);
+            FirstTable.frame = CGRectMake(0,0,SCREEN_WIDTH,SCREEN_HEIGHT);
+            PromoImageView.frame  = CGRectMake(0, 05.0, 665, 361);
+            LCButton.frame = CGRectMake(200, 280, 250, 50);
+        }
 	}
 	
 	else {
-		
-        FirstTable.frame = CGRectMake(50.0,0,SCREEN_HEIGHT,SCREEN_WIDTH);
-		PromoImageView.frame  = CGRectMake(100, 05.0, 665, 361);
-        LCButton.frame = CGRectMake(315, 280, 250, 50);
+        
+        //To fix ios7 extending edges
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")){
+            
+            FirstViewframe = CGRectMake(0 ,0, SCREEN_HEIGHT, SCREEN_WIDTH);
+            FirstTable.frame = CGRectMake(50.0,0,SCREEN_HEIGHT,SCREEN_WIDTH);
+            PromoImageView.frame  = CGRectMake(130, 05.0, 665, 361);
+            LCButton.frame = CGRectMake(340, 280, 250, 50);
+            
+            
+        }
+        else{
+            
+            FirstViewframe = CGRectMake(0 ,0, SCREEN_HEIGHT, SCREEN_WIDTH);
+            FirstTable.frame = CGRectMake(50.0,0,SCREEN_HEIGHT,SCREEN_WIDTH);
+            PromoImageView.frame  = CGRectMake(100, 05.0, 665, 361);
+            LCButton.frame = CGRectMake(340, 280, 250, 50);
+        }
 		
 	}
+	
 	
 	
 	

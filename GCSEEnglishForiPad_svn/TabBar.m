@@ -65,6 +65,22 @@
     return YES;
 }
 
+// This is used from ios6
+-(NSUInteger)supportedInterfaceOrientations{
+    
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+	NSString *activetab = [def objectForKey:@"activeTab"];
+    if([activetab isEqualToString:@"Results"]){
+        
+        return UIInterfaceOrientationMaskPortrait;
+        
+    }
+    
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscapeLeft;
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

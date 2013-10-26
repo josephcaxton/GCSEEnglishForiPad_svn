@@ -17,7 +17,8 @@
     UITableView *FirstTable;
     CGRect FirstViewframe;
     UIImageView *PromoImageView;
-	
+    UIImage *PromoImage;
+
 }
 
 @property (nonatomic, retain) NSMutableArray *listofItems;
@@ -26,7 +27,7 @@
 @property (nonatomic, retain) UITableView *FirstTable;
 @property (nonatomic, assign)  CGRect FirstViewframe;
 @property (nonatomic, retain)  UIImageView *PromoImageView;
-
+@property (nonatomic, retain)  UIImage *PromoImage;
 - (void)WebsitebuttonPressed;
 
 @end

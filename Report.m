@@ -25,7 +25,7 @@
 	[super viewDidLoad];
     
     
-    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,185,55)];
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,self.navigationItem.titleView.frame.origin.x,55)];
     label.textColor = [UIColor whiteColor];
     label.backgroundColor = [UIColor clearColor];
     label.text = self.navigationItem.title;
@@ -220,7 +220,7 @@
 
 
 - (BOOL)isDataSourceAvailable{
-    static BOOL checkNetwork = YES;
+    static BOOL checkNetwork = NO;
 	BOOL _isDataSourceAvailable;
     if (checkNetwork) { // Since checking the reachability of a host can be expensive, cache the result and perform the reachability check once.
        // checkNetwork = NO; don't cache
@@ -481,7 +481,7 @@
 		[cell addSubview:imageView];
 	
 	
-	cell.backgroundColor = [UIColor whiteColor];
+	cell.backgroundColor = [UIColor clearColor];
 		
 	}
 	[self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation duration:1];	
