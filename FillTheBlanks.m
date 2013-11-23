@@ -784,13 +784,13 @@ static UIWebView *QuestionHeaderBox = nil;
 	
 	[textField resignFirstResponder];
 	
-	/*[UIView beginAnimations:nil context:NULL];
+	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.3];
 	CGRect rect = self.view.frame;
-	rect.origin.y = 0;
+	rect.origin.y = 50;
 	rect.size.height = 450;
 	self.view.frame = rect;
-	[UIView commitAnimations];*/
+	[UIView commitAnimations];
 	
     [self NextQuestion:self];
 	
