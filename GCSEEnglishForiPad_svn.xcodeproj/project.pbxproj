@@ -1143,6 +1143,7 @@
 		7CD9DAD913EB001000B63AEC /* 1045.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D6C213EB000F00B63AEC /* 1045.pdf */; };
 		7CD9DADA13EB001000B63AEC /* 1046.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D6C313EB000F00B63AEC /* 1046.pdf */; };
 		7CD9DADB13EB001000B63AEC /* 1047.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD9D6C413EB000F00B63AEC /* 1047.pdf */; };
+		CD81ED7618A8495200FC551E /* NumberOfQuestionsToChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = CD81ED7518A8495200FC551E /* NumberOfQuestionsToChoose.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -2430,6 +2431,8 @@
 		7CD9D6C213EB000F00B63AEC /* 1045.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1045.pdf; sourceTree = "<group>"; };
 		7CD9D6C313EB000F00B63AEC /* 1046.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1046.pdf; sourceTree = "<group>"; };
 		7CD9D6C413EB000F00B63AEC /* 1047.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 1047.pdf; sourceTree = "<group>"; };
+		CD81ED7418A8495200FC551E /* NumberOfQuestionsToChoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOfQuestionsToChoose.h; sourceTree = "<group>"; };
+		CD81ED7518A8495200FC551E /* NumberOfQuestionsToChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberOfQuestionsToChoose.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3783,6 +3786,8 @@
 				7C7950D413E81EB8001950EA /* FillTheBlanks.m */,
 				7C7950D513E81EB8001950EA /* FillTheBlanks1.h */,
 				7C7950D613E81EB8001950EA /* FillTheBlanks1.m */,
+				CD81ED7418A8495200FC551E /* NumberOfQuestionsToChoose.h */,
+				CD81ED7518A8495200FC551E /* NumberOfQuestionsToChoose.m */,
 			);
 			name = "Template Views";
 			sourceTree = "<group>";
@@ -5078,6 +5083,7 @@
 				7C79512E13E82380001950EA /* CopyrightLicense.m in Sources */,
 				7C79513113E82390001950EA /* HelpVideo.m in Sources */,
 				7C79513413E8239E001950EA /* Attribution.m in Sources */,
+				CD81ED7618A8495200FC551E /* NumberOfQuestionsToChoose.m in Sources */,
 				7C79513713E823AE001950EA /* Buy.m in Sources */,
 				7C79513A13E823C3001950EA /* CustomStoreObserver.m in Sources */,
 				7C79513D13E823D4001950EA /* LearnersCloudSamplesVideos.m in Sources */,

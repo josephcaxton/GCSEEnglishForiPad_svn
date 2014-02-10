@@ -8,6 +8,7 @@
 
 #import "MultipleChoiceSingleAnswer.h"
 #import "TransparentToolBar.h"
+#import "NumberOfQuestionsToChoose.h"
 
 
 @implementation MultipleChoiceSingleAnswer
@@ -857,6 +858,47 @@ static UIWebView *QuestionHeaderBox = nil;
 }
 
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    // If is a multiple answer we want to tell the user to select x number of answers
+    if (CorrectAnswers.count > 1){
+        
+        NumberOfQuestionsToChoose *nb = [[NumberOfQuestionsToChoose alloc] initWithFrame:CGRectMake(-200, 100, 200, 40) NoOfQuestions:CorrectAnswers.count];
+        nb.backgroundColor = [UIColor colorWithRed:209.0/255.0 green:82.0/255.0 blue:23.0/255.0 alpha:0.9];
+        [UIView animateWithDuration:1.3f
+                         animations:^{
+                             [self.view addSubview:nb];
+                             nb.frame = CGRectMake(0, 100, 200, 40);
+                         }
+                         completion:^(BOOL finished){
+                             
+                             [self performSelector:@selector(AnimateBackView:) withObject:nb afterDelay:2.0f];
+                             
+                         }];
+        
+    }
+    
+    
+}
+
+-(void) AnimateBackView :(id)sender{
+    // Send back the animated view
+    NumberOfQuestionsToChoose *nb = (NumberOfQuestionsToChoose *)sender;
+    
+    [UIView animateWithDuration:1.3f
+                     animations:^{
+                         
+                         nb.frame = CGRectMake(-200, 100, 200, 40);
+                     }
+                     completion:^(BOOL finished){
+                         
+                         [nb removeFromSuperview];
+                         
+                     }];
+    
+    
+}
 
 
 #pragma mark -
